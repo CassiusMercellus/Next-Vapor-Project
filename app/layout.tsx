@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import Header from './components/header'
+import Client from './components/client'
+import Footer from './components/footer'
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -16,7 +19,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="">
+          <Client></Client>
+          <Header></Header>
+          {children}
+          <Footer></Footer>
+        </div>
+      </body>
+        
     </html>
   );
 }
