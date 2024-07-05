@@ -3,6 +3,7 @@ import Header from './components/header'
 import Profile from './profile/profile'
 import Client from './components/client'
 import Footer from './components/footer'
+import Filters from './components/filters'
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -23,7 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Client></Client>
         <Header></Header>
-        <Profile></Profile>
+        <Filters></Filters>
         <Footer></Footer>
       </body>
     </html>
