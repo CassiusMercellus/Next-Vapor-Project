@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function ProfileSection() {
     return (
-        <div className="flex flex-col w-64 mx-8 mr-12">
+        <div className="flex flex-col">
                 <div className="flex flex-col bg-slate-900 w-72">
                     <div className="flex flex-row bg-slate-950 justify-between p-2 m-2 mb-0 rounded-sm">
                         <p>Status</p>
@@ -11,48 +11,50 @@ export default function ProfileSection() {
                     </div>
                 </div>
                 <div className="flex flex-col bg-slate-900 w-72">
-                    <div className="flex flex-row bg-slate-950 justify-between p-2 m-2 mb-0 rounded-sm">
-                        <p>Badges</p>
-                        <p className="text-gray-300">84</p>
+                    <div className="flex flex-col bg-slate-950 p-2 m-2 mb-0 rounded-sm">
+                        <div className="flex flex-row justify-between ">
+                            <p>Badges</p>
+                            <p className="text-gray-300">84</p>
+                        </div>
+                        <div className="flex flex-row justify-evenly mt-2">
+                            <Image
+                                className="rounded-sm w-10 m-1" 
+                                src={PFP} 
+                                alt="Picture of the user"
+                                width={25} 
+                                height={25}  
+                            />
+                            <Image
+                                className="rounded-sm w-10 m-1" 
+                                src={PFP} 
+                                alt="Picture of the user"
+                                width={25} 
+                                height={25}  
+                            />
+                            <Image
+                                className="rounded-sm w-10 m-1" 
+                                src={PFP} 
+                                alt="Picture of the user"
+                                width={25} 
+                                height={25}  
+                            />
+                            <Image
+                                className="rounded-sm w-10 m-1" 
+                                src={PFP} 
+                                alt="Picture of the user"
+                                width={25} 
+                                height={25}  
+                            />
+                            <Image
+                                className="rounded-sm w-10 m-1" 
+                                src={PFP} 
+                                alt="Picture of the user"
+                                width={25} 
+                                height={25}  
+                            />
+                        </div>
                     </div>
                     
-                    <div className="flex flex-row justify-center">
-                    <Image
-                            className="rounded-sm w-10 m-2" 
-                            src={PFP} 
-                            alt="Picture of the user"
-                            width={25} 
-                            height={25}  
-                        />
-                    <Image
-                            className="rounded-sm w-10 m-2" 
-                            src={PFP} 
-                            alt="Picture of the user"
-                            width={25} 
-                            height={25}  
-                        />
-                    <Image
-                            className="rounded-sm w-10 m-2" 
-                            src={PFP} 
-                            alt="Picture of the user"
-                            width={25} 
-                            height={25}  
-                        />
-                    <Image
-                            className="rounded-sm w-10 m-2" 
-                            src={PFP} 
-                            alt="Picture of the user"
-                            width={25} 
-                            height={25}  
-                        />
-                    <Image
-                            className="rounded-sm w-10 m-2" 
-                            src={PFP} 
-                            alt="Picture of the user"
-                            width={25} 
-                            height={25}  
-                        />
-                    </div>
                 </div>
                 <div className="flex flex-col bg-slate-900 w-72">
                     <div className="flex flex-row bg-slate-950 justify-between p-2 m-2 mb-0 rounded-sm">

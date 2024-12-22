@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
-import Header from './components/header'
-import Profile from './profile/profile'
-import Client from './components/client'
-import Footer from './components/footer'
-import Filters from './components/filters'
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Page from "./page"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,10 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Client></Client>
-        <Header></Header>
-        <Filters></Filters>
-        <Footer></Footer>
+        <Page />
       </body>
     </html>
   );

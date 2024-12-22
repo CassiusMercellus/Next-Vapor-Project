@@ -6,9 +6,8 @@ import ProfileSection from "../components/profileSection"
 import GameCollector from "../components/gameCollector";
 import RecentActivity from "../components/recentActivity"
 import Friends from "../components/friends"
-import GameCard from "../components/gameCard";
 
-export default function Profile() {
+export default function Screenshots() {
     return (
       <div className="bg-gradient-to-t bg-slate-700 from-slate-950 h-full pt-12 pb-36">
         <div className="flex flex-row bg-slate-800 p-8 mx-48 justify-between">
@@ -61,7 +60,6 @@ export default function Profile() {
             <div className="flex flex-col w-full mr-8">
                 <GameCollector />
                 <RecentActivity />
-                <GameCard />
                 
             </div>
             <div className="flex flex-col">
