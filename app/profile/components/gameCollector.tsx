@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Game from "../halo.png"
+import Game from "../../halo.png"
 
 
 export default function GameCollector() {

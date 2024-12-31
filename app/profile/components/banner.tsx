@@ -1,15 +1,12 @@
-import PFP from "../pfp.png";
+import PFP from "../../pfp.png";
 import Image from 'next/image'
 import { MdKeyboardArrowDown } from "react-icons/md";
 import Game from "../halo.png"
-import ProfileSection from "../components/profileSection"
-import GameCollector from "../components/gameCollector";
-import RecentActivity from "../components/recentActivity"
-import Friends from "../components/friends"
 
-export default function Screenshots() {
+
+export default function Banner() {
     return (
-      <div className="bg-gradient-to-t bg-slate-700 from-slate-950 h-full pt-12 pb-36">
+      
         <div className="flex flex-row bg-slate-800 p-8 mx-48 justify-between">
             <div className="flex flex-row w-full">
                 <Image
@@ -54,20 +51,7 @@ export default function Screenshots() {
                 </div>
             </div>
         </div>
-
-        
-        <div className="flex flex-row bg-slate-800 mx-48 justify-between pl-8 pr-8 pb-5">
-            <div className="flex flex-col w-full mr-8">
-                <GameCollector />
-                <RecentActivity />
-                
-            </div>
-            <div className="flex flex-col">
-                <ProfileSection />
-                <Friends />
-            </div>
-        </div>
-      </div>
+      
     )
   }
   

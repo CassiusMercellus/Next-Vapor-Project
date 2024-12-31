@@ -3,8 +3,8 @@ import Profile from './profile/profile'
 import Client from './components/client'
 import Footer from './components/footer'
 import Filters from './components/filters'
-import Games from './profile/games'
-import GameCard from './components/gameCard'
+import Games from './profile/components/games'
+import GameCard from './profile/components/gameCard'
 
 export default function Page() {
   return (
@@ -12,7 +12,6 @@ export default function Page() {
       <Client></Client>
       <Header></Header>
       <Profile></Profile>
-      <Games></Games>
       
       <Footer></Footer>
     </>

@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import Game from "../halo.png"
+import Game from "../../halo.png"
 import { MdStars } from "react-icons/md";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaClock } from "react-icons/fa";
-import PFP from "../pfp.png";
+import PFP from "../../pfp.png";
 
 export default function RecentActivity() {
     return(

@@ -1,11 +1,11 @@
-import PFP from "../pfp.png";
+import PFP from "../../pfp.png";
 import Image from 'next/image'
 import { MdKeyboardArrowDown } from "react-icons/md";
-import Game from "../halo.png"
-import ProfileSection from "../components/profileSection"
-import GameCollector from "../components/gameCollector";
-import RecentActivity from "../components/recentActivity"
-import Friends from "../components/friends"
+import Game from "../../halo.png"
+import ProfileSection from "./profileSection"
+import GameCollector from "./gameCollector";
+import RecentActivity from "./recentActivity"
+import Friends from "./friends"
 import { MdStars } from "react-icons/md";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaClock } from "react-icons/fa";
