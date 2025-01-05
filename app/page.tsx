@@ -5,13 +5,14 @@ import Footer from './components/footer'
 import Filters from './components/filters'
 import Games from './profile/components/games'
 import GameCard from './profile/components/gameCard'
+import ClientStore from './store/clientstore'
 
 export default function Page() {
   return (
     <>
       <Client></Client>
       <Header></Header>
-      <Profile></Profile>
+      <ClientStore></ClientStore>
       
       <Footer></Footer>
     </>
