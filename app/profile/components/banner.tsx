@@ -1,7 +1,7 @@
-import PFP from "../../pfp.png";
+import PFP from "../../images/pfp.png";
 import Image from 'next/image'
 import { MdKeyboardArrowDown } from "react-icons/md";
-import Game from "../halo.png"
+import Game from "../images/halo.png"
 
 
 export default function Banner() {

@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import eldencover from '../../../eldencover.jpg'
-import eldensteam from '../../../eldensteam.jpg'
+import eldencover from '../../../images/eldencover.jpg'
+import eldensteam from '../../../images/eldensteam.jpg'
 import { FaWindows } from "react-icons/fa";
 import { IoIosAdd } from "react-icons/io";
 import { FaCircle } from "react-icons/fa";

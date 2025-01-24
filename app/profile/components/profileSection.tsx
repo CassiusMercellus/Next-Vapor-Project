@@ -1,4 +1,4 @@
-import PFP from "../../pfp.png";
+import PFP from "../../images/pfp.png";
 import Image from 'next/image'
 
 export default function ProfileSection() {

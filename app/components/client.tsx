@@ -4,7 +4,7 @@ import { IoGameController  } from "react-icons/io5";
 import { IoIosNotifications  } from "react-icons/io";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { FaUserFriends, FaAngleDown } from "react-icons/fa";
-import PFP from "../pfp.png";
+import PFP from "../images/pfp.png";
 
 
 export default function Client() {

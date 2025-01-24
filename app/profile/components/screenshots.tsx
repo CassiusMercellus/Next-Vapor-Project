@@ -1,7 +1,7 @@
 import { MdOutlineExpandMore } from "react-icons/md";
 import { FaSearch } from "react-icons/fa";
 import Image from 'next/image';
-import PNG from "../../space.jpg"
+import PNG from "../../images/space.jpg"
 import { IoMdThumbsUp } from "react-icons/io";
 import { BiSolidComment } from "react-icons/bi";
 

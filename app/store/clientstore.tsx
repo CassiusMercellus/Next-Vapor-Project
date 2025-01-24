@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import storebackground from '../storebackground.png'
+import storebackground from '../images/storebackground.png'
 import Featured from './components/clientstore/featured'
 import Special from './components/clientstore/special-offers'
 import Browse from './components/clientstore/browse'

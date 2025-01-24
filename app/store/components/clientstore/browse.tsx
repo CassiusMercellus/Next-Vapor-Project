@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import Action from '../../../action.png'
-import Rpg from '../../../rpg.png'
-import Fighting from '../../../fighting.png'
-import Freetoplay from '../../../freetoplay.png'
-import Sports from '../../../sports.png'
+import Action from '../../../images/action.png'
+import Rpg from '../../../images/rpg.png'
+import Fighting from '../../../images/fighting.png'
+import Freetoplay from '../../../images/freetoplay.png'
+import Sports from '../../../images/sports.png'
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 
