@@ -1,7 +1,12 @@
+import Topcategories from './components/browse/topcategories';
+import Browsesteam from './components/browse/browsesteam';
+
 export default function Browse() {
     return (
-        <div>
-            <h1>Browse</h1>
-        </div>
+        <>
+            <Topcategories></Topcategories>
+            <Browsesteam></Browsesteam>
+            
+        </>
     )
 }

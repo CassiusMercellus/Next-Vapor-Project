@@ -7,12 +7,14 @@ import Games from './profile/components/games'
 import GameCard from './profile/components/gameCard'
 import ClientStore from './store/clientstore'
 import Store from './store/page'
+import Browse from './store/browse'
 
 export default function Page() {
   return (
     <>
       <Client></Client>
       <Header></Header>
+      <Browse></Browse>
       <Store></Store>
       <Profile></Profile>
       <ClientStore></ClientStore>
