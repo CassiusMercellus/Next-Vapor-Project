@@ -12,7 +12,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 export default function GameMain() {
     return (
         <>
-            <div className="px-48 bg-gradient-to-b from-slate-950 to-slate-900 py-8">
+            
                 <div className="flex justify-between bg-gray-900 pl-4 p-2 rounded-md items-center">
                     <h2 className="text-xl font-bold">Elden Ring</h2>
                     <div className="flex flex-row gap-2">
@@ -77,7 +77,7 @@ export default function GameMain() {
                             </div>
                         </div>
                         <div className="w-1/3 ">
-                            <Image src={eldensteam} alt={'eldensteam'} className="rounded-sm"></Image>
+                            <Image src={eldencover} alt={'eldencover'} className="rounded-sm"></Image>
                             <p className="text-sm pt-4">
                                 THE NEW FANTASY eldensteam RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between
                             </p>
@@ -151,7 +151,7 @@ export default function GameMain() {
                     </div>
                     
                 </div>
-            </div>
+            
         </>
         );
     }
