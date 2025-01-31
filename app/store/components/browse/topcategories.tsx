@@ -13,7 +13,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 export default function Topcategories() {
     return (
         <>
-            <div className="bg-slate-900 pt-20 pb-5 px-40">
+            <div className="pt-20 pb-5 px-40">
                 <div className="flex justify-between">
                     <h1 className="mb-6 text-xl font-bold">Top Categories</h1>
                     

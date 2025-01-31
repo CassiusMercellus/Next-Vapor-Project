@@ -8,12 +8,20 @@ import GameCard from './profile/components/gameCard'
 import ClientStore from './store/clientstore'
 import Store from './store/page'
 import Browse from './store/browse'
+import Discover from './store/discover'
+import Wishlist from './store/wishlist'
+import Cart from './store/cart'
+import Pointshop from './store/pointshop'
 
 export default function Page() {
   return (
     <>
       <Client></Client>
       <Header></Header>
+      <Pointshop></Pointshop>
+      <Cart></Cart>
+      <Wishlist></Wishlist>
+      <Discover></Discover>
       <Browse></Browse>
       <Store></Store>
       <Profile></Profile>
