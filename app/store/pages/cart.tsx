@@ -1,6 +1,6 @@
 import { FaTrash } from "react-icons/fa";
-import Cartdlc from "./components/cart/cartdlc";
-import Cartgames from "./components/cart/cartgames";
+import Cartdlc from "../components/cart/cartdlc";
+import Cartgames from "../components/cart/cartgames";
 
 export default function Cart() {
     return (

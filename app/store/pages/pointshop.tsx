@@ -1,9 +1,8 @@
 import Image from 'next/image'
-import horror from '../images/horror.jpg'
+import horror from '../../images/horror.jpg'
 
 import { RiAccountCircleFill } from "react-icons/ri";
 import { FaSteam } from "react-icons/fa";
-
 
 import { CgLayoutList } from "react-icons/cg";
 import { CgLayoutGrid } from "react-icons/cg";

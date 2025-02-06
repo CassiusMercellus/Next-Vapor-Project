@@ -1,4 +1,4 @@
-import Gamediscover from './components/discover/gamediscover'
+import Gamediscover from '../components/discover/gamediscover'
 
 
 export default function Discover() {

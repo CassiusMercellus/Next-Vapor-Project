@@ -1,4 +1,4 @@
-import WishlistFilter from './components/wishlist/wishlistfilter'
+import WishlistFilter from '../components/wishlist/wishlistfilter'
 
 
 export default function Wishlist() {
