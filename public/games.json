@@ -1,0 +1,257 @@
+[
+    {
+        "id": 1,
+        "title": "Elden Ring",
+        "genres": "Action Games",
+        "description": "THE CRITICALLY ACCLAIMED FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
+        "release_date": "2022-02-24",
+        "developer": "FromSoftware, Inc.",
+        "publisher": [
+            "FromSoftware, Inc.",
+            "Bandai Nameco Entertainment"
+        ],
+        "tags": [
+            "Souls-like",
+            "Open World",
+            "Dark Fantasy",
+            "RPG"
+        ],
+        "packages": {
+            "Game": {
+                "Name": "ELDEN RING",
+                "Price": "59.99",
+                "Saleprice": "0",
+                "Discount": "0%",
+                "Platform": "Windows"
+            },
+            "DLC": {
+                "DLC1": {
+                    "Name": "ELDEN RING Shadow of the Erdtree Edition",
+                    "Price": "79.99",
+                    "Saleprice": "0",
+                    "Discount": "0%",
+                    "Platform": "Windows"
+                },
+                "DLC2": {
+                    "Name": "ELDEN RING Shadow of the Erdtree Deluxe Edition",
+                    "Price": "99.99",
+                    "Saleprice": "0",
+                    "Discount": "0%",
+                    "Platform": "Windows"
+                }
+            }
+        },
+        "features": [
+            "Single Player",
+            "Online Co-Op",
+            "Steam Achievements",
+            "Full Controller Support",
+            "Steam Trading Cards",
+            "Steam Cloud",
+            "Family Sharing"
+        ],
+        "Languages": {
+            "English": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Simplified Chinese": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "French": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Italian": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "German": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ]
+        },
+        "About": "",
+        "achievements": "",
+        "links": [
+            "Workshop",
+            "Discussions",
+            "News",
+            "Updates",
+            "Community Groups",
+            "Marketplace",
+            "Share",
+            "Embed",
+            "Report"
+        ],
+        "system_requirements": {
+            "minimum": {
+                "os": "Windows 10",
+                "processor": "Intel Core i5",
+                "memory": "8 GB",
+                "graphics": "NVIDIA GeForce GTX 1060",
+                "directX": "Version 12",
+                "storage": "1 TB",
+                "Soud Card": "Windows Compatible Audio Device"
+            },
+            "recommended": {
+                "os": "Windows 10",
+                "processor": "Intel Core i5",
+                "memory": "8 GB",
+                "graphics": "NVIDIA GeForce GTX 1060",
+                "directX": "Version 12",
+                "storage": "1 TB",
+                "Soud Card": "Windows Compatible Audio Device"
+            }
+        },
+        "platforms": [
+            {
+                "id": 1,
+                "name": "PC",
+                "image": "https://example.com/pc.png"
+            }
+        ],
+        "overall rating": 4.5,
+        "image": "https://example.com/game1.jpg",
+        "size": "",
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://example.com/screenshot1.jpg"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://example.com/video1.mp4"
+            }
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "streaming": "false"
+
+    },
+
+
+
+    {
+        "id": 2,
+        "title": "Cyber Game",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Role-Playing"
+        ],
+        "price": 59.99,
+        "rating": 4.5,
+        "description": "A game about cyber warfare.",
+        "image": "https://example.com/game1.jpg",
+        "release_date": "2020-01-01",
+        "size": "",
+        "achievements": "",
+        "system_requirements": {
+            "os": "Windows 10",
+            "processor": "Intel Core i5",
+            "memory": "8 GB",
+            "graphics": "NVIDIA GeForce GTX 1060",
+            "storage": "1 TB"
+        },
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "tags": "",
+        "developer": "Cyber Games Inc.",
+        "publisher": "Cyber Games Inc.",
+        "platforms": [
+            {
+                "id": 1,
+                "name": "PC",
+                "image": "https://example.com/pc.png"
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://example.com/screenshot1.jpg"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://example.com/video1.mp4"
+            }
+        ],
+        "streaming": "false"
+    },
+    {
+        "id": 3,
+        "title": "Cyber Game",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Role-Playing"
+        ],
+        "price": 59.99,
+        "rating": 4.5,
+        "description": "A game about cyber warfare.",
+        "image": "https://example.com/game1.jpg",
+        "release_date": "2020-01-01",
+        "size": "",
+        "achievements": "",
+        "system_requirements": {
+            "os": "Windows 10",
+            "processor": "Intel Core i5",
+            "memory": "8 GB",
+            "graphics": "NVIDIA GeForce GTX 1060",
+            "storage": "1 TB"
+        },
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "tags": "",
+        "developer": "Cyber Games Inc.",
+        "publisher": "Cyber Games Inc.",
+        "platforms": [
+            {
+                "id": 1,
+                "name": "PC",
+                "image": "https://example.com/pc.png"
+            }
+        ],
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://example.com/screenshot1.jpg"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://example.com/video1.mp4"
+            }
+        ],
+        "streaming": "false"
+    }
+]

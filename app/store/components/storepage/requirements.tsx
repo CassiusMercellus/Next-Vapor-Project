@@ -8,8 +8,8 @@ export default function Requirements() {
             <div className="flex flex-col bg-gray-900 pl-4 p-2 rounded-md items-center mt-4 w-full">
                 <div className="flex flex-row text-gray-500 w-full mt-2 mb-4 items-center gap-5">
                     <h2 className="font-bold">System Requirements</h2>
-                    <p className="text-white text-sm bg-gray-700 p-2 rounded-md">Souls-like</p>
-                    <p className="text-gray-500 text-sm bg-gray-800 p-2 rounded-md">RPG</p>
+                    <p className="text-white text-sm bg-gray-700 p-2 rounded-md">Windows</p>
+                    <p className="text-gray-500 text-sm bg-gray-800 p-2 rounded-md">Mac</p>
                     <p className="text-gray-500 text-sm bg-gray-800 p-2 rounded-md flex flex-row">Linux <IoIosAdd size={20}/> SteamOS</p>
                 </div>
                 <div className="flex w-full gap-8">

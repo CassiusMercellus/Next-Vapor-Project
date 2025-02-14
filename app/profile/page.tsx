@@ -6,6 +6,7 @@ import Friends from "./components/friends"
 import GameCard from "./components/gameCard";
 import Banner from "./components/banner"
 import Screenshots from "./components/screenshots"
+import Header from "../components/header"
 
 export default function Profile() {
     return (
