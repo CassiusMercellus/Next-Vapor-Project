@@ -30,14 +30,16 @@
                     "Price": "79.99",
                     "Saleprice": "0",
                     "Discount": "0%",
-                    "Platform": "Windows"
+                    "Platform": "Windows",
+                    "Image": "https://gaming-cdn.com/images/products/13652/orig/elden-ring-shadow-of-the-erdtree-pc-game-steam-europe-cover.jpg?v=1718975158"
                 },
                 "DLC2": {
-                    "Name": "ELDEN RING Shadow of the Erdtree Deluxe Edition",
+                    "Name": "ELDEN RING NIGHTREIGN",
                     "Price": "99.99",
                     "Saleprice": "0",
                     "Discount": "0%",
-                    "Platform": "Windows"
+                    "Platform": "Windows",
+                    "Image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2622380/800a6d64a1685c303bf985f084fbf5c08ac2ae5c/capsule_616x353.jpg?t=1739500611"
                 }
             }
         },
@@ -113,115 +115,50 @@
         "platforms": [
             {
                 "id": 1,
-                "name": "PC",
-                "image": "https://example.com/pc.png"
+                "name": "PC"
             }
         ],
         "overall rating": 4.5,
-        "image": "https://example.com/game1.jpg",
-        "size": "",
-        "screenshots": [
-            {
-                "id": 1,
-                "image": "https://example.com/screenshot1.jpg"
-            }
-        ],
-        "videos": [
-            {
-                "id": 1,
-                "url": "https://example.com/video1.mp4"
-            }
-        ],
-        "reviews": [
-            {
-                "id": 1,
-                "title": "Great game!",
-                "rating": 5,
-                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
-            }
-        ],
-        "streaming": "false"
-
-    },
-
-
-
-    {
-        "id": 2,
-        "title": "Cyber Game",
-        "genres": [
-            "Action",
-            "Adventure",
-            "Role-Playing"
-        ],
-        "price": 59.99,
-        "rating": 4.5,
-        "description": "A game about cyber warfare.",
-        "image": "https://example.com/game1.jpg",
-        "release_date": "2020-01-01",
-        "size": "",
-        "achievements": "",
-        "system_requirements": {
-            "os": "Windows 10",
-            "processor": "Intel Core i5",
-            "memory": "8 GB",
-            "graphics": "NVIDIA GeForce GTX 1060",
-            "storage": "1 TB"
+        "images": {
+            "icon": "https:",
+            "banner": "https://",
+            "main": "https://",
+            "about": "https://",
+            "achievements": "https://"
         },
-        "reviews": [
-            {
-                "id": 1,
-                "title": "Great game!",
-                "rating": 5,
-                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
-            }
-        ],
-        "tags": "",
-        "developer": "Cyber Games Inc.",
-        "publisher": "Cyber Games Inc.",
-        "platforms": [
-            {
-                "id": 1,
-                "name": "PC",
-                "image": "https://example.com/pc.png"
-            }
-        ],
-        "screenshots": [
-            {
-                "id": 1,
-                "image": "https://example.com/screenshot1.jpg"
-            }
-        ],
-        "videos": [
-            {
-                "id": 1,
-                "url": "https://example.com/video1.mp4"
-            }
-        ],
-        "streaming": "false"
-    },
-    {
-        "id": 3,
-        "title": "Cyber Game",
-        "genres": [
-            "Action",
-            "Adventure",
-            "Role-Playing"
-        ],
-        "price": 59.99,
-        "rating": 4.5,
-        "description": "A game about cyber warfare.",
-        "image": "https://example.com/game1.jpg",
-        "release_date": "2020-01-01",
         "size": "",
-        "achievements": "",
-        "system_requirements": {
-            "os": "Windows 10",
-            "processor": "Intel Core i5",
-            "memory": "8 GB",
-            "graphics": "NVIDIA GeForce GTX 1060",
-            "storage": "1 TB"
-        },
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://www.nme.com/wp-content/uploads/2022/02/Elden-Ring-preview-2-2000x1270-1.jpg"
+            },
+            {
+                "id": 2,
+                "image": "https://www.tomshw.it/storage/media/2024/06/24893/wallpapersden-com_elden-ring-shadow-of-the-erdtree-landscape_1920x1080.jpg"
+            },
+            {
+                "id": 3,
+                "image": "https://goombastomp.com/wp-content/uploads/2022/12/How-Elden-Rings-Open-World-Design-Changes-the-Dark-Souls-Formula.jpg"
+            },
+            {
+                "id": 4,
+                "image": "https://images.kinguin.net/g/carousel-main-mobile/media/images/products/_ss_3e556415d1bda00d749b2166ced264bec76f06ee.1920x1080.jpg"
+            },
+            {
+                "id": 5,
+                "image": "https://img.pikbest.com/origin/10/42/88/41MpIkbEsTruY.jpg!w700wp"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://www.youtube.com/watch?v=K_03kFqWfqs&ab_channel=BANDAINAMCOEurope"
+            },
+            {
+                "id": 2,
+                "url": "https://www.youtube.com/watch?v=AKXiKBnzpBQ&ab_channel=GameSpot"
+            }
+        ],
         "reviews": [
             {
                 "id": 1,
@@ -230,28 +167,7 @@
                 "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
             }
         ],
-        "tags": "",
-        "developer": "Cyber Games Inc.",
-        "publisher": "Cyber Games Inc.",
-        "platforms": [
-            {
-                "id": 1,
-                "name": "PC",
-                "image": "https://example.com/pc.png"
-            }
-        ],
-        "screenshots": [
-            {
-                "id": 1,
-                "image": "https://example.com/screenshot1.jpg"
-            }
-        ],
-        "videos": [
-            {
-                "id": 1,
-                "url": "https://example.com/video1.mp4"
-            }
-        ],
         "streaming": "false"
+
     }
 ]

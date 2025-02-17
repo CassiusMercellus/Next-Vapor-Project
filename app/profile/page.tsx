@@ -7,10 +7,13 @@ import GameCard from "./components/gameCard";
 import Banner from "./components/banner"
 import Screenshots from "./components/screenshots"
 import Header from "../components/header"
+import Client from '../components/client'
+import Footer from '../components/footer'
 
 export default function Profile() {
     return (
       <>
+      <Client></Client>
       <div className="bg-gradient-to-t bg-slate-700 from-slate-950 h-full pt-12 pb-36">
         <Banner />
         <div className="flex flex-row bg-slate-800 mx-48 justify-between pl-8 pr-8 pb-5">
@@ -26,6 +29,7 @@ export default function Profile() {
             </div>
         </div>
         </div>
+        <Footer></Footer>
       </>
     )
   }

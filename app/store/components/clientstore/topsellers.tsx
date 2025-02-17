@@ -38,7 +38,7 @@ export default function Topsellers() {
                                         </div>
                                     
                                         <div className="flex flex-row gap-4">
-                                            <div className="flex justify-center items-center">7
+                                            <div className="flex justify-center items-center">
                                                 <div className="flex flex-col">
                                                     <p className="rounded-md flex justify-center items-center text-white mr-3 ml-2 font-bold">$59.99</p>
                                                 </div>

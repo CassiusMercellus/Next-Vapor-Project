@@ -16,11 +16,14 @@ import Librarygamelist from './components/librarygamelist'
 import Friends from '../images/pfp.png'
 import eldenCover from '../images/eldencover.jpg'
 import { FaTools } from "react-icons/fa";
+import Client from '../components/client';
+import Footer from '../components/footer'
 
 
 export default function Library() {
   return (
     <>
+      <Client />
       <Libraryheader></Libraryheader>
       <div className="flex flex-row">
         <div className="flex flex-col w-1/5 bg-gray-800">
@@ -206,7 +209,7 @@ export default function Library() {
           </div>
         </div>
       </div>
-      
+      <Footer></Footer>
     </>
   )
 }

@@ -1,4 +1,9 @@
+"use client";
+
+
 import Image from 'next/image'
+import { useEffect, useState } from 'react';
+
 import { FaRegHeart } from "react-icons/fa";
 import eldencover from '../../../images/eldencover.jpg'
 import eldensteam from '../../../images/eldensteam.jpg'
@@ -7,14 +12,37 @@ import { BiSolidDislike } from "react-icons/bi";
 import { IoIosAdd } from "react-icons/io";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
+import games from '../../../../api/games.json';
 
+
+interface Game {
+    id: number;
+    title: string;
+    genres: string;
+    description: string;
+    release_date: string;
+    developer: string;
+    publisher: string[];
+    tags: string[];
+}
 
 export default function GameMain() {
+
+    const [game, setGame] = useState<Game | null>(null);
+
+    useEffect(() => {
+        console.log("Fetched Games:", games);
+        const foundGame = games.find((g: Game) => g.id === 1);
+        console.log("Found Game:", foundGame);
+        setGame(foundGame || null);
+    }, []);
+
+
     return (
         <>
             
                 <div className="flex justify-between bg-gray-900 pl-4 p-2 rounded-md items-center">
-                    <h2 className="text-xl font-bold">Elden Ring</h2>
+                    <h2 className="text-xl font-bold">{game ? game.title : 'Loading...'}</h2>
                     <div className="flex flex-row gap-2">
                         <p className="border border-gray-600 flex items-center p-3 px-4 rounded-md text-gray-500">Ignore</p>
                         <p className="border border-gray-600 flex items-center p-3 px-4 rounded-md text-gray-500">Follow</p>

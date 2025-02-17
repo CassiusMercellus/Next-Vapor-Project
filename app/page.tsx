@@ -16,7 +16,6 @@ export default function Page() {
     <>
       <Client></Client>
       <Header></Header>
-      <Store></Store>
       <Footer></Footer>
     </>
   )

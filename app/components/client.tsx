@@ -17,7 +17,7 @@ export default function Client() {
                 </Link>
                 
                 <Link href="/store" className="px-2 py-4 font-bold rounded-lg hover:text-blue-400">Store</Link>
-                <Link href="/" className="px-2 py-4 font-bold rounded-lg hover:text-blue-400">Community</Link>
+                <Link href="/community" className="px-2 py-4 font-bold rounded-lg hover:text-blue-400">Community</Link>
                 <Link href="/profile" className="px-2 py-4 font-bold rounded-lg hover:text-blue-400">LoginName</Link>
                 <Link href="/library" className="px-2 py-4 font-bold rounded-lg hover:text-blue-400">Library</Link>
                 <Link href="/download" className="px-2 py-4 font-bold rounded-lg hover:text-blue-400">Downloads</Link>
