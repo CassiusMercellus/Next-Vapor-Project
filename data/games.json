@@ -1,0 +1,482 @@
+[
+    {
+        "id": 1,
+        "title": "Elden Ring",
+        "genres": "Action Games",
+        "description": "THE CRITICALLY ACCLAIMED FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
+        "release_date": "2022-02-24",
+        "developer": "FromSoftware, Inc.",
+        "publisher": [
+            "FromSoftware, Inc.",
+            "Bandai Nameco Entertainment"
+        ],
+        "tags": [
+            "Souls-like",
+            "Open World",
+            "Dark Fantasy",
+            "RPG"
+        ],
+        "packages": {
+            "Game": {
+                "Name": "ELDEN RING",
+                "Price": "59.99",
+                "Saleprice": "0",
+                "Discount": "0%",
+                "Platform": [
+                    "Windows"
+                ]
+            },
+            "DLC": {
+                "DLC1": {
+                    "Name": "ELDEN RING Shadow of the Erdtree Edition",
+                    "Price": "79.99",
+                    "Saleprice": "0",
+                    "Discount": "0%",
+                    "Platform": [
+                        "Windows"
+                    ],
+                    "Image": "https://gaming-cdn.com/images/products/13652/orig/elden-ring-shadow-of-the-erdtree-pc-game-steam-europe-cover.jpg?v=1718975158"
+                },
+                "DLC2": {
+                    "Name": "ELDEN RING NIGHTREIGN",
+                    "Price": "99.99",
+                    "Saleprice": "0",
+                    "Discount": "0%",
+                    "Platform": [
+                        "Windows"
+                    ],
+                    "Image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2622380/800a6d64a1685c303bf985f084fbf5c08ac2ae5c/capsule_616x353.jpg?t=1739500611"
+                }
+            }
+        },
+        "features": [
+            "Single Player",
+            "Online Co-Op",
+            "Steam Achievements",
+            "Full Controller Support",
+            "Steam Trading Cards",
+            "Steam Cloud",
+            "Family Sharing"
+        ],
+        "Languages": {
+            "English": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Simplified_Chinese": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "French": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Italian": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "German": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ]
+        },
+        "About": "",
+        "achievements": "",
+        "links": [
+            "Workshop",
+            "Discussions",
+            "News",
+            "Updates",
+            "Community Groups",
+            "Marketplace",
+            "Share",
+            "Embed",
+            "Report"
+        ],
+        "system_requirements": {
+            "minimum": {
+                "os": "Windows 10",
+                "processor": "Intel Core i5",
+                "memory": "8 GB",
+                "graphics": "NVIDIA GeForce GTX 1060",
+                "directX": "Version 12",
+                "storage": "1 TB",
+                "SoundCard": "Windows Compatible Audio Device"
+            },
+            "recommended": {
+                "os": "Windows 10",
+                "processor": "Intel Core i5",
+                "memory": "8 GB",
+                "graphics": "NVIDIA GeForce GTX 1060",
+                "directX": "Version 12",
+                "storage": "1 TB",
+                "SoundCard": "Windows Compatible Audio Device"
+            }
+        },
+        "platforms": [
+            { "id": 1, "name": "Windows" }
+        ],
+        "overall_rating": "4.5",
+        "images": {
+            "icon": "https://cdn2.steamgriddb.com/icon/7316e11fe78963395fbab4a85d0b8f85/32/256x256.png",
+            "banner": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/capsule_616x353.jpg?t=1738690346",
+            "main": "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2778580/ss_c97bcad291f4f45d4be4594f34bd78921d961099.1920x1080.jpg?t=1721683108",
+            "about": "https://img.zeit.de/digital/games/2024-06/elden-ring-shadow-erdtree-bild/wide__1000x562",
+            "achievements": "https://"
+        },
+        "size": "",
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://www.nme.com/wp-content/uploads/2022/02/Elden-Ring-preview-2-2000x1270-1.jpg"
+            },
+            {
+                "id": 2,
+                "image": "https://www.tomshw.it/storage/media/2024/06/24893/wallpapersden-com_elden-ring-shadow-of-the-erdtree-landscape_1920x1080.jpg"
+            },
+            {
+                "id": 3,
+                "image": "https://goombastomp.com/wp-content/uploads/2022/12/How-Elden-Rings-Open-World-Design-Changes-the-Dark-Souls-Formula.jpg"
+            },
+            {
+                "id": 4,
+                "image": "https://images.kinguin.net/g/carousel-main-mobile/media/images/products/_ss_3e556415d1bda00d749b2166ced264bec76f06ee.1920x1080.jpg"
+            },
+            {
+                "id": 5,
+                "image": "https://img.pikbest.com/origin/10/42/88/41MpIkbEsTruY.jpg!w700wp"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://www.youtube.com/watch?v=K_03kFqWfqs&ab_channel=BANDAINAMCOEurope"
+            },
+            {
+                "id": 2,
+                "url": "https://www.youtube.com/watch?v=AKXiKBnzpBQ&ab_channel=GameSpot"
+            }
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "streaming": "false"
+
+    },
+
+    {
+        "id": 2,
+        "title": "Hollow Knight",
+        "genres": "Action Games",
+        "description": "Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs, all in a classic, hand-drawn 2D style.",
+        "release_date": "2017-02-24",
+        "developer": "Team Cherry",
+        "publisher": [
+            "Team Cherry"
+        ],
+        "tags": [
+            "Metroidvania",
+            "Souls-like",
+            "Platformer",
+            "Difficult"
+        ],
+        "packages": {
+            "Game": {
+                "Name": "Hollow Knight",
+                "Price": "14.99",
+                "Saleprice": "10.00",
+                "Discount": "10%",
+                "Platform": [
+                    "Windows",
+                    "Mac",
+                    "Steam"
+                ]
+            },
+            "DLC": {
+                "DLC1": {
+                    "Name": "Hollow Knight & Soundtracks Bundle",
+                    "Price": "29.99",
+                    "Saleprice": "24.99",
+                    "Discount": "-20%",
+                    "Platform": [
+                    "Windows",
+                    "Mac",
+                    "Steam",
+                    "Music"
+                ],
+                    "Image": "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/bundles/2828/118lez3sqfaqvjlc/header_586x192.jpg?t=1533834009"
+                },
+                "DLC2": {
+                    "Name": "Hollow Knight & Soundtracks Bundle",
+                    "Price": "4.99",
+                    "Saleprice": "0",
+                    "Discount": "0%",
+                    "Platform": [
+                    "Windows",
+                    "Mac",
+                    "Steam",
+                    "Music"
+                ],
+                    "Image": "https://images.gog-statics.com/ba0bcc156deec48e3a62a721f65bc5f55454e91ae7cfd53dd87aaf9b3942571e_product_card_v2_mobile_slider_639.jpg"
+                }
+            }
+        },
+        "features": [
+            "Single Player",
+            "Steam Achievements",
+            "Steam Trading Cards",
+            "Steam Cloud",
+            "Remote Play on Phone",
+            "Remote Play on Tablet",
+            "Remote Play on TV",
+            "Family Sharing",
+            "Full Controller Support"
+        ],
+        "Languages": {
+            "English": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Simplified_Chinese": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "French": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Italian": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "German": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ]
+        },
+        
+        "About": "Godmaster - Take your place amongst the Gods. New Characters and Quest. New Boss Fights. Available Now!\n\nLifeblood - A Kingdom Upgraded! New Boss. Upgraded Bosses. Tweaks and Refinements across the whole game.\n\nThe Grimm Troupe - Light the Nightmare Lantern. Summon the Troupe. New Major Quest. New Boss Fights. New Charms. New Enemies. New Friends.\n\nHidden Dreams - Mighty new foes emerge! New Boss fights. New Upgrades. New Music.\n\nBrave the Depths of a Forgotten Kingdom\nBeneath the fading town of Dirtmouth sleeps an ancient, ruined kingdom. Many are drawn below the surface, searching for riches, or glory, or answers to old secrets.\n\nHollow Knight is a classically styled 2D action adventure across a vast interconnected world. Explore twisting caverns, ancient cities and deadly wastes; battle tainted creatures and befriend bizarre bugs; and solve ancient mysteries at the kingdom's heart.\n\nGame Features\n- Classic side-scrolling action, with all the modern trimmings.\n- Tightly tuned 2D controls. Dodge, dash and slash your way through even the most deadly adversaries.\n- Explore a vast interconnected world of forgotten highways, overgrown wilds and ruined cities.\n- Forge your own path! The world of Hallownest is expansive and open. Choose which paths you take, which enemies you face and find your own way forward.\n- Evolve with powerful new skills and abilities! Gain spells, strength and speed. Leap to new heights on ethereal wings. Dash forward in a blazing flash. Blast foes with fiery Soul!\n- Equip Charms! Ancient relics that offer bizarre new powers and abilities. Choose your favourites and make your journey unique!\n- An enormous cast of cute and creepy characters all brought to life with traditional 2D frame-by-frame animation.\n- Over 130 enemies! 30 epic bosses! Face ferocious beasts and vanquish ancient knights on your quest through the kingdom. Track down every last twisted foe and add them to your Hunter's Journal!\n- Leap into minds with the Dream Nail. Uncover a whole other side to the characters you meet and the enemies you face.\n- Beautiful painted landscapes, with extravagant parallax, give a unique sense of depth to a side-on world.\n- Chart your journey with extensive mapping tools. Buy compasses, quills, maps and pins to enhance your understanding of Hollow Knight’s many twisting landscapes.\n- A haunting, intimate score accompanies the player on their journey, composed by Christopher Larkin. The score echoes the majesty and sadness of a civilisation brought to ruin.\n- Complete Hollow Knight to unlock Steel Soul Mode, the ultimate challenge!\n\nAn Evocative Hand-Crafted World\nThe world of Hollow Knight is brought to life in vivid, moody detail, its caverns alive with bizarre and terrifying creatures, each animated by hand in a traditional 2D style.\n\nEvery new area you’ll discover is beautifully unique and strange, teeming with new creatures and characters. Take in the sights and uncover new wonders hidden off of the beaten path.\n\nIf you like classic gameplay, cute but creepy characters, epic adventure and beautiful, gothic worlds, then Hollow Knight awaits!",
+        "achievements": "",
+        "links": [
+            "Workshop",
+            "Discussions",
+            "News",
+            "Updates",
+            "Community Groups",
+            "Marketplace",
+            "Share",
+            "Embed",
+            "Report"
+        ],
+        "system_requirements": {
+            "minimum": {
+                "os": "Windows 7",
+                "processor": "Intel Core 2 Duo E5200",
+                "memory": "4 GB RAM",
+                "graphics": "GeForce 9800GTX+ (1GB)",
+                "directX": "Version 10",
+                "storage": "9 GB available space",
+                "SoundCard": "Windows Compatible Audio Device"
+            },
+            "recommended": {
+                "os": "Windows 10",
+                "processor": "Intel Core i5",
+                "memory": "8 GB",
+                "graphics": "GeForce GTX 560",
+                "directX": "Version 11",
+                "storage": "9 GB available space",
+                "SoundCard": "Windows Compatible Audio Device"
+            }
+        },
+        "platforms": [
+            { "id": 1, "name": "Windows" },
+            { "id": 2, "name": "Mac" },
+            { "id": 3, "name": "Steam" }
+        ],
+        "overall_rating": "4.5",
+        "images": {
+            "icon": "https://cdn2.steamgriddb.com/icon/33c14ab38a8923e563e17b79e41693ba.ico",
+            "banner": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg?t=1695270428",
+            "main": "https://emanarts318106530.wordpress.com/wp-content/uploads/2020/04/hollow-knight-switch-hero-1.jpg?w=1024",
+            "about": "https://www.pcgamesn.com/wp-content/uploads/2018/12/hollow-knight-enemy.jpg",
+            "achievements": "https://"
+        },
+        "size": "",
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://images.squarespace-cdn.com/content/v1/606d4deb4db8c15ea53b3624/1618887831584-W0SGAS226QK01IMZS57O/2fde2cf45c9efed359c97588c055669a_original.jpg"
+            },
+            {
+                "id": 2,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/367520/ss_a81e4231cc8d55f58b51a4a938898af46503cae5.1920x1080.jpg?t=1695270428"
+            },
+            {
+                "id": 3,
+                "image": "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/916000/ss_078ccb3daa415feae38e6f5873b0c9946f3558e1.1920x1080.jpg?t=1581557931"
+            },
+            {
+                "id": 4,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/367520/ss_2329fe632e788efd9ece9dcfc98c0ea723ac0d04.1920x1080.jpg?t=1695270428"
+            },
+            {
+                "id": 5,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/367520/ss_946e83ea924eff46a93e14e841bdbb1accd1654c.1920x1080.jpg?t=1695270428"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://www.youtube.com/watch?v=UAO2urG23S4&ab_channel=TeamCherry"
+            },
+            {
+                "id": 2,
+                "url": "https://www.youtube.com/watch?v=JuP47fRBsWg&ab_channel=TeamCherry"
+            }
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "streaming": "false"
+
+    },
+
+    {
+        "id": 3,
+        "title": "Lethal Company",
+        "genres": "Horror Games",
+        "description": "A co-op horror about scavenging at abandoned moons to sell scrap to the Company.",
+        "release_date": "2023-10-23",
+        "developer": "Zeekerss",
+        "publisher": [
+            "Zeekerss"
+        ],
+        "tags": [
+            "Online Co-Op",
+            "Horror",
+            "First-Person",
+            "Co-op",
+            "PvE"
+        ],
+        "packages": {
+            "Game": {
+                "Name": "Lethal Company",
+                "Price": "9.99",
+                "Saleprice": "0",
+                "Discount": "0%",
+                "Platform": "Windows"
+            },
+            "DLC": {
+            }
+        },
+        "features": [
+            "Single Player",
+            "Online Co-Op",
+            "Family Sharing",
+            "Xbox ControllerS"
+        ],
+        "Languages": {
+            "English": [
+                "Interface",
+                "Full Audio"
+            ]
+        },
+        "About": "You are a contracted worker for the Company. Your job is to collect scrap from abandoned, industrialized moons to meet the Company's profit quota. You can use the cash you earn to travel to new moons with higher risks and rewards--or you can buy fancy suits and decorations for your ship.\n\nExperience nature, scanning any creature you find to add them to your bestiary. Explore the wondrous outdoors and rummage through their derelict, steel and concrete underbellies. Just never miss the quota.\n\nThese dangers prey upon the vulnerable and lonesome, and the protection of your crew may be your only hope. You can guide your crewmates from your ship, using the radar to call out traps and using the ship's terminal to access remotely locked doors--or you can all go in together.\n\nThe Company store has many useful tools for the job, including:\n- Lights\n- Shovels\n- Walkie-talkies\n- Stun grenades\n- Boomboxes\n\nThings get dangerous at night. Communicate with your crewmates to carry all valuables to the ship before things get too dangerous, and try not to leave anyone behind.\n\n**MATURE CONTENT DESCRIPTION**\n\nThe developers describe the content like this:\n- The game has a realistic atmosphere.\n- Player characters can die through various means, some involving dismemberment or decapitation.\n- Player characters can use fictional medical drugs recklessly.",
+        "achievements": "",
+        "links": [
+            "Workshop",
+            "Discussions",
+            "News",
+            "Updates",
+            "Community Groups",
+            "Marketplace",
+            "Share",
+            "Embed",
+            "Report"
+        ],
+        "system_requirements": {
+            "minimum": {
+                "os": "Windows 10",
+                "processor": "Intel Core i5-7400 CPU @ 3.00GHz",
+                "graphics": "NVIDIA GForce GTX 1050",
+                "directX": "Version 11",
+                "storage": "2 GB available space",
+                "SoundCard": "Windows Compatible Audio Device"
+            },
+            "recommended": {
+                "os": "Windows 10",
+                "processor": "Intel Core i5-7400 CPU @ 3.00GHz",
+                "graphics": "NVIDIA GForce GTX 1050",
+                "directX": "Version 11",
+                "storage": "2 GB available space",
+                "SoundCard": "Windows Compatible Audio Device"
+            }
+        },
+        "platforms": [
+            { "id": 1, "name": "Windows" }
+        ],
+        "overall_rating": "4.5",
+        "images": {
+            "icon": "https://cdn2.steamgriddb.com/icon/dead87a4c00de43486ca1c34d9b33c3c/32/512x512.png",
+            "banner": "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1966720/header.jpg?t=1723894859",
+            "main": "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1966720/ss_78075e9a94675823024f12fce9d69b243cca94f8.1920x1080.jpg?t=1723894859",
+            "about": "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1966720/capsule_616x353.jpg?t=1723894859",
+            "achievements": "https://"
+        },
+        "size": "",
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1966720/ss_d0bb214b1bf73ddc8315b96da6f32917043b13bc.1920x1080.jpg?t=1723894859"
+            },
+            {
+                "id": 2,
+                "image": "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1966720/ss_27eb66c9d0e327f90915cef23b1377e9b10bc27b.1920x1080.jpg?t=1723894859"
+            },
+            {
+                "id": 3,
+                "image": "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1966720/ss_08fa3ef83b6eb70313119096f82285fa411f02e5.1920x1080.jpg?t=1723894859"
+            },
+            {
+                "id": 4,
+                "image": "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1966720/ss_0499d96a2b9ca0fc8966d77e6d5c95ae94c38492.1920x1080.jpg?t=1723894859"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://www.youtube.com/watch?v=m5RB0Ej1mFg&ab_channel=Zeekerss"
+            }
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "streaming": "false"
+
+    }
+]
