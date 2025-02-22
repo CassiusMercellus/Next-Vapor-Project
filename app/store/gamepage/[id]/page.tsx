@@ -34,22 +34,24 @@ type Game = {
         Discount: string;
         Platform: string | string[];
       };
-      DLC1?: {
-        Name: string;
-        Price: string;
-        Saleprice: string;
-        Discount: string;
-        Platform: string | string[];
-        Image?: string;
-      };
-      DLC2?: {
-        Name: string;
-        Price: string;
-        Saleprice: string;
-        Discount: string;
-        Platform: string | string[];
-        Image?: string;
-      };
+      DLC?: {
+        DLC1?: {
+            Name: string;
+            Price: string;
+            Saleprice: string;
+            Discount: string;
+            Platform: string | string[];
+            Image?: string;
+          };
+          DLC2?: {
+            Name: string;
+            Price: string;
+            Saleprice: string;
+            Discount: string;
+            Platform: string | string[];
+            Image?: string;
+          };
+      }
     };
     features?: string[];
     Languages: {

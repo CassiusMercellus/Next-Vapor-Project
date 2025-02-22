@@ -4,7 +4,7 @@
         "title": "Elden Ring",
         "genres": "Action Games",
         "description": "THE CRITICALLY ACCLAIMED FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
-        "release_date": "2022-02-24",
+        "release_date": "Fed 24 2022",
         "developer": "FromSoftware, Inc.",
         "publisher": [
             "FromSoftware, Inc.",
@@ -179,7 +179,7 @@
         "title": "Hollow Knight",
         "genres": "Action Games",
         "description": "Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs, all in a classic, hand-drawn 2D style.",
-        "release_date": "2017-02-24",
+        "release_date": "Feb 24 2017",
         "developer": "Team Cherry",
         "publisher": [
             "Team Cherry"
@@ -366,7 +366,7 @@
         "title": "Lethal Company",
         "genres": "Horror Games",
         "description": "A co-op horror about scavenging at abandoned moons to sell scrap to the Company.",
-        "release_date": "2023-10-23",
+        "release_date": "Oct 23 2023",
         "developer": "Zeekerss",
         "publisher": [
             "Zeekerss"
@@ -466,6 +466,2338 @@
             {
                 "id": 1,
                 "url": "https://www.youtube.com/watch?v=m5RB0Ej1mFg&ab_channel=Zeekerss"
+            }
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "streaming": "false"
+
+    },
+
+
+    {
+        "id": 5,
+        "title": "Counter-Strike 2",
+        "genres": "Action Games",
+        "description": "For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is Counter-Strike 2.",
+        "release_date": "Aug 21 2012",
+        "developer": "Valve",
+        "publisher": [
+            "Valve"
+        ],
+        "tags": [
+            "FPS",
+            "Shooter",
+            "Multiplayer",
+            "Competitive",
+            "Action"
+        ],
+        "packages": {
+            "Game": {
+                "Name": "Counter-Strike 2",
+                "Price": "0",
+                "Saleprice": "0",
+                "Discount": "0%",
+                "Platform": [
+                    "Windows",
+                    "Steam"
+                ]
+            },
+            "DLC": {
+                "DLC1": {
+                    "Name": "Prime Status Upgrade",
+                    "Price": "14.99",
+                    "Saleprice": "14.99",
+                    "Discount": "0",
+                    "Platform": [
+                    "Windows",
+                    "Steam"
+                ],
+                    "Image": ""
+                }
+            }
+        },
+        "features": [
+            "Cross-Platform Multiplayer",
+            "Steam Trading Cards",
+            "Steam Workshop",
+            "In-App Purchases",
+            "Stats",
+            "Remote Play on Phone",
+            "Remote Play on Tablet",
+            "Remote Play on TV",
+            "Steam Timeline"
+        ],
+        "Languages": {
+            "English": [
+                "Interface",
+                "Full Audio"
+            ],
+            "Simplified Chinese": [
+                "Interface"
+            ],
+            "Czech": [
+                "Interface"
+            ],
+            "Danish": [
+                "Interface"
+            ],
+            "Dutch": [
+                "Interface"
+            ]
+        },
+        "About": "For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is Counter-Strike 2.\n\nA free upgrade to CS:GO, Counter-Strike 2 marks the largest technical leap in Counter-Strike’s history. Built on the Source 2 engine, Counter-Strike 2 is modernized with realistic physically-based rendering, state-of-the-art networking, and upgraded Community Workshop tools.\n\nIn addition to the classic objective-focused gameplay that Counter-Strike pioneered in 1999, Counter-Strike 2 features:\n\n- All-new CS Ratings with the updated Premier mode\n- Global and Regional leaderboards\n- Upgraded and overhauled maps\n- Game-changing dynamic smoke grenades\n- Tick-rate-independent gameplay\n- Redesigned visual effects and audio\n- All items from CS:GO moving forward to CS2",
+        "achievements": "",
+        "links": [
+            "Workshop",
+            "Discussions",
+            "News",
+            "Updates",
+            "Community Groups",
+            "Marketplace",
+            "Share",
+            "Embed",
+            "Report"
+        ],
+        "system_requirements": {
+            "minimum": {
+                "os": "Windows 10",
+                "processor": "4 hardware CPU threads - Intel® Core™ i5 750 or higher",
+                "memory": "8 GB",
+                "graphics": "Video card must be 1 GB or more and should be a DirectX 11-compatible with support for Shader Model 5.0",
+                "directX": "Version 11",
+                "storage": "85 GB available space"
+            },
+            "recommended": {
+                "os": "Windows 10",
+                "processor": "4 hardware CPU threads - Intel® Core™ i5 750 or higher",
+                "memory": "8 GB",
+                "graphics": "Video card must be 1 GB or more and should be a DirectX 11-compatible with support for Shader Model 5.0",
+                "directX": "Version 11",
+                "storage": "85 GB available space"
+            }
+        },
+        "platforms": [
+            { "id": 1, "name": "Windows" }
+        ],
+        "overall_rating": "4.5",
+        "images": {
+            "icon": "https://cdn2.steamgriddb.com/icon/fe772ff1261b820e437821342b445539/32/256x256.png",
+            "banner": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/730/header.jpg?t=1729703045",
+            "main": "https:",
+            "about": "https://cdn.wccftech.com/wp-content/uploads/2023/03/WCCFcounterstrike21-728x410.jpg",
+            "achievements": "https://"
+        },
+        "size": "",
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/730/ss_18e9ea2715f0407ee05e206073927a648db60d73.1920x1080.jpg?t=1729703045"
+            },
+            {
+                "id": 2,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/730/ss_13bb35638c0267759276f511ee97064773b37a51.1920x1080.jpg?t=1729703045"
+            },
+            {
+                "id": 3,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/730/ss_2514675f364079b754b820cbc8b2e7c331d56a26.1920x1080.jpg?t=1729703045"
+            },
+            {
+                "id": 4,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/730/ss_808cdd373d78c3cf3a78e7026ebb1a15895e0670.1920x1080.jpg?t=1729703045"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://www.youtube.com/watch?v=c80dVYcL69E&ab_channel=GameSpot"
+            }
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "streaming": "false"
+
+    },
+
+    
+    {
+        "id": 6,
+        "title": "Sea of Thieves",
+        "genres": "Action Games",
+        "description": "Sea of Thieves is a smash-hit pirate adventure game, offering the quintessential pirate experience of plundering lost treasures, intense battles, vanquishing sea monsters and more. Dive in with this revised edition of the game, which includes access to digital bonus media.",
+        "release_date": "Jun 3 2020",
+        "developer": "Rare Ltd",
+        "publisher": [
+            "Xbox Game Studios"
+        ],
+        "tags": [
+            "Multiplayer",
+            "Open World",
+            "Adventure",
+            "Pirates"
+        ],
+        "packages": {
+            "Game": {
+                "Name": "Sea of Thieves 2024 Editions",
+                "Price": "39.99",
+                "Saleprice": "13.99",
+                "Discount": "65%",
+                "Platform": "Windows"
+            },
+            "DLC": {
+                "DLC1": {
+                    "Name": "Sea of Thieves 2024 Deluxe Edition",
+                    "Price": "49.99",
+                    "Saleprice": "17.49",
+                    "Discount": "-65%",
+                    "Platform": [
+                    "Windows",
+                    "Music"
+                ],
+                    "Image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2838650/ss_1b2b4671c40625382dc03623965e9453021d7257.1920x1080.jpg?t=1732203335"
+                },
+                "DLC2": {
+                    "Name": "Sea of Thieves 2024 Premium Edition",
+                    "Price": "59.99",
+                    "Saleprice": "20.99",
+                    "Discount": "65%",
+                    "Platform": [
+                    "Windows",
+                    "Music"
+                ],
+                    "Image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/subs/983047/header.jpg?t=1711672609"
+                }
+            }
+        },
+        "features": [
+            "Online PvP",
+            "Online Co-op",
+            "Cross-Platform Multiplayer",
+            "Steam Achievements",
+            "Steam Trading Cards",
+            "In-App Purchases",
+            "Remote Play on Phone",
+            "Remote Play on Tablet",
+            "Family Sharing",
+            "Xbox ControllerS"
+        ],
+        "Languages": {
+            "English": [
+                "Interface",
+                "Full Audio"
+            ],
+            "Simplified Chinese": [
+                "Interface",
+                "Subtitles"
+            ],
+            "French": [
+                "Interface",
+                "Subtitles"
+            ],
+            "Italian": [
+                "Interface",
+                "Subtitles"
+            ],
+            "German": [
+                "Interface",
+                "Subtitles"
+            ]
+        },
+        "About": "Sea of Thieves offers the essential pirate experience, from sailing and fighting to exploring and looting – everything you need to live the pirate life and become a legend in your own right. With no set roles, you have complete freedom to approach the world, and other players, however you choose.\n\nWhether you’re voyaging as a group or sailing solo, you’re bound to encounter other crews in this shared world adventure – but will they be friends or foes, and how will you respond?\n\nA Vast Open World\n\nExplore a vast open world filled with unspoiled islands and underwater kingdoms. Take on quests to hunt for lost loot, forge a reputation with the Trading Companies and battle foes from Phantoms and Ocean Crawlers to Megalodons and the mighty Kraken. Try your hand at fishing, make maps to your own buried treasure or choose from hundreds of other optional goals and side-quests!\n\nA Game That’s Always Growing\n\nWith each Season bringing in new game features every three months alongside regular in-game Events, Sea of Thieves is a service-based game that’s still growing and evolving. Check back regularly to see what free content has been newly added, and see how far you can climb through each Season’s 100 levels of Renown to earn special rewards.\n\nBecome Legend\n\nOn your journey to become a Pirate Legend you’ll amass loot, build a reputation and define a unique personal style with your hard-earned rewards. Adventurer. Explorer. Conqueror. What will your legend be?\n\nThe Sea of Thieves: 2024 Premium Edition\n\nThe Sea of Thieves: 2024 Premium Edition contains the full game, the Dark Warsmith Ship Set (with Collector's Figurehead and Sails), Dark Warsmith Costume, Diabolical Dog, Ocean Crawler cosmetics, Collector's Thunderous Fury Figurehead and Sails, the Shrouded Ghost Hunter Blunderbuss, 10,000 Gold and access to digital bonus content.\n\nThe Sea of Thieves: 2024 Deluxe Edition\n\nThe Sea of Thieves: 2024 Deluxe Edition contains the full game, Ocean Crawler cosmetics, Collector's Thunderous Fury Figurehead and Sails, the Shrouded Ghost Hunter Blunderbuss, 10,000 Gold and access to digital bonus content.\n\nDigital Bonuses\n\nAdditional digital bonuses* include access to the Sea of Thieves Original Soundtrack – 2024 Edition, the Sea of Thieves: Athena's Fortune audiobook and The Rough Guide to Sea of Thieves eBook.\n\n* Available to download from /bonuses (website login required) or via Steam.",
+        "achievements": "",
+        "links": [
+            "Workshop",
+            "Discussions",
+            "News",
+            "Updates",
+            "Community Groups",
+            "Marketplace",
+            "Share",
+            "Embed",
+            "Report"
+        ],
+        "system_requirements": {
+            "minimum": {
+                "os": "Windows 10",
+                "processor": "Intel Q9450 @ 2.6GHz - AMD Phenom II X6 @ 3.3 GHz",
+                "memory": "4 GB RAM",
+                "graphics": "Nvidia GeForce GTX 650 - AMD Radeon 7750 - Intel A310",
+                "directX": "Version 11",
+                "storage": "100 GB available space"
+            },
+            "recommended": {
+                "os": "Windows 10",
+                "processor": "Intel i7 4790 @4Ghz - AMD Ryzen 5 1600 @3.6Ghz",
+                "memory": "16 GB RAM",
+                "graphics": "Nvidia Geforce GTX 1080ti - AMD Radeon Rx Vega 64 - Intel A750",
+                "directX": "Version 12",
+                "storage": "100 GB available space"
+            }
+        },
+        "platforms": [
+            { "id": 1, "name": "Windows" }
+        ],
+        "overall_rating": "4.5",
+        "images": {
+            "icon": "https://cdn2.steamgriddb.com/grid/272f7c45ef92de836182ac23edca5ef3.png",
+            "banner": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172620/header.jpg?t=1740060616",
+            "main": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172620/ss_748007668988e219ec69845a470d5e701a87e0d2.600x338.jpg?t=1740060616",
+            "about": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172620/header.jpg?t=1740060616",
+            "achievements": "https://"
+        },
+        "size": "",
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172620/extras/april_24_steam_2.png?t=1740060616"
+            },
+            {
+                "id": 2,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172620/ss_4fb90cbac34d2cbe74b86383bda660cd0316b907.1920x1080.jpg?t=1740060616"
+            },
+            {
+                "id": 3,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172620/extras/s15_01.jpg?t=1740060616"
+            },
+            {
+                "id": 4,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172620/extras/s15_02.jpg?t=1740060616"
+            },
+            {
+                "id": 5,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172620/extras/s15_03.jpg?t=1740060616"
+            },
+            {
+                "id": 6,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172620/extras/s15_04.jpg?t=1740060616"
+            },
+            {
+                "id": 7,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172620/extras/s15_05.jpg?t=1740060616"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://www.youtube.com/watch?v=r5JIBaasuE8&ab_channel=SeaofThieves"
+            },
+            {
+                "id": 2,
+                "url": "https://www.youtube.com/watch?v=VJJ6_EMiebg&ab_channel=SeaofThieves"
+            }
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "streaming": "false"
+
+    },
+
+    
+    {
+        "id": 7,
+        "title": "War Thunder",
+        "genres": "Action Games",
+        "description": "War Thunder is the most comprehensive free-to-play, cross-platform, MMO military game dedicated to aviation, armoured vehicles, and naval craft, from the early 20th century to the most advanced modern combat units. Join now and take part in major battles on land, in the air, and at sea.",
+        "release_date": "Aug 15 2013",
+        "developer": "Gaijin Entertainment",
+        "publisher": [
+            "Gaijin Network Ltd"
+        ],
+        "tags": [
+            "Free to Play",
+            "Simulation",
+            "Vehicular Combat",
+            "VR"
+        ],
+        "packages": {
+            "Game": {
+                "Name": "War Thunder",
+                "Price": "0",
+                "Saleprice": "0",
+                "Discount": "0%",
+                "Platform": "Windows"
+            },
+            "DLC": {
+            }
+        },
+        "features": [
+            "Single Player",
+            "MMO",
+            "Online PvP",
+            "Online Co-op",
+            "Cross-Platform Multiplayer",
+            "Steam Achievements",
+            "VR Supported",
+            "In-App Purchases",
+            "Remote Play on Phone",
+            "Remote Play on Tablet",
+            "Full Controller Support"
+        ],
+        "Languages": {
+            "English": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "German": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "French": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Italian": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Spanish - Spain": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ]
+        },
+        "About": "War Thunder is the most comprehensive free-to-play, cross-platform, MMO military game dedicated to aviation, armoured vehicles, from the early 20th century to the most advanced modern combat units. Join now and take part in major battles on land, in the air, and at sea, fighting with millions of players from all over the world in an ever-evolving environment.\n\nIn War Thunder, aircraft, attack helicopters, ground forces, and naval ships collaborate in realistic competitive battles. You can choose from over 2,500 vehicles and an extensive variety of combat situations, many of which are exclusive. You can find yourself blasting your pursuers from a bomber turret, defending your teammates on the ground from an air raid with anti-aircraft guns, shooting down enemy planes with a firestorm from multiple rocket launchers, or trying to sink an enemy warship with a torpedo from a fast attack boat.\n\nFeatures include:\n\n- Seamless cross-platform gameplay between Windows PC, Linux, Mac, PlayStation®4, PlayStation®5, Xbox One with Xbox Series X|S – everyone on the same server.\n- Over 2,500 highly detailed aircraft, helicopters, tanks, warships, and other combat vehicles crafted carefully from historical documents and surviving sources.\n- 100 maps representing the main historical battle theaters.\n- Intense PvP experiences in full-scale combat missions at various difficulty settings for all play styles and degrees of experience.\n- Rich PvE content including dynamic historical campaigns and solo missions.\n- Regular content updates including new vehicles, maps, missions, and nations.\n- Astonishing graphics, authentic sound effects, and beautiful music creating an atmosphere to fully immerse yourself in.\n- Create custom content for War Thunder and share it on War Thunder Live, with the prospect of earning real money through the Revenue Share Partner System!",
+        "achievements": "",
+        "links": [
+            "Workshop",
+            "Discussions",
+            "News",
+            "Updates",
+            "Community Groups",
+            "Marketplace",
+            "Share",
+            "Embed",
+            "Report"
+        ],
+        "system_requirements": {
+            "minimum": {
+                "os": "Windows 10",
+                "processor": "Dual-Core 2.2 GHz",
+                "memory": "4 GB RAM",
+                "graphics": "DirectX 10.1 level video card: AMD Radeon 77XX / NVIDIA GeForce GTX 660. The minimum supported resolution for the game is 720p.",
+                "directX": "Version 11",
+                "Network": "Broadband Internet Connection",
+                "storage": "40 GB available space",
+                "VR Support": "SteamVR. Keyboard or gamepad required"
+            },
+            "recommended": {
+                "os": "Windows 10/11",
+                "processor": "Intel Core i5 or Ryzen 5 3600 or better",
+                "memory": "16 GB RAM",
+                "graphics": "DirectX 11 level video card or higher and drivers: Nvidia GeForce 1060 and higher, Radeon RX 570 and higher",
+                "directX": "Version 12",
+                "Network": "Broadband Internet Connection",
+                "storage": "95 GB available space"
+            }
+        },
+        "platforms": [
+            { "id": 1, "name": "Windows" },
+            { "id": 2, "name": "Mac" },
+            { "id": 3, "name": "Steam" }
+        ],
+        "overall_rating": "4.5",
+        "images": {
+            "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa86N1qHTbQoQcC1UaKb-Q3kJESGlBJc94hg&s",
+            "banner": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/236390/header.jpg?t=1739438209",
+            "main": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/236390/extras/WT_giff_logo.gif?t=1739438209",
+            "about": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/236390/header.jpg?t=1739438209",
+            "achievements": "https://"
+        },
+        "size": "",
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/236390/ss_68bc95495ba9752b44d6655f07cf41a5c26306f6.600x338.jpg?t=1739438209"
+            },
+            {
+                "id": 2,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/236390/ss_5190ebc65d0fd3628d8f804af52c8b9d0786d183.600x338.jpg?t=1739438209"
+            },
+            {
+                "id": 3,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/236390/ss_fee9c41789ba7227b3cc66db04d8d8f72b3c15cb.600x338.jpg?t=1739438209"
+            },
+            {
+                "id": 4,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/236390/ss_a5812428a7709edd1e53310bc9357f418ea2032d.600x338.jpg?t=1739438209"
+            },
+            {
+                "id": 5,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/236390/ss_fc8ee5cc6816996943aa1d7487113d15b8f84c44.600x338.jpg?t=1739438209"
+            },
+            {
+                "id": 6,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/236390/ss_a5812428a7709edd1e53310bc9357f418ea2032d.600x338.jpg?t=1739438209"
+            },
+            {
+                "id": 7,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/236390/ss_1652095848f0a75b251fc53a236f34380922a972.600x338.jpg?t=1739438209"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://www.youtube.com/watch?v=miVz9nsMYEw&ab_channel=WarThunder.Officialchannel."
+            }
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "streaming": ""
+
+    },
+
+    
+    {
+        "id": 8,
+        "title": "Call of Duty®: Black Ops 6",
+        "genres": "Action",
+        "description": "Call of Duty®: Black Ops 6 is signature Black Ops across a cinematic single-player Campaign, a best-in-class Multiplayer experience and with the epic return of Round-Based Zombies.",
+        "release_date": "Oct 24 2024",
+        "developer": "Treyarch, Raven Software, Beenox, High Moon Studios, Activision Shanghai, Sledgehammer Games, Infinity Ward, Demonware",
+        "publisher": [
+            "Activision"
+        ],
+        "tags": [
+            "Action",
+            "Multiplayer",
+            "Shooter",
+            "FPS",
+            "Singleplayer"
+        ],
+        "packages": {
+            "Game": {
+                "Name": "Call of Duty®: Black Ops 6",
+                "Price": "69.99",
+                "Saleprice": "0",
+                "Discount": "0%",
+                "Platform": "Windows"
+            },
+            "DLC": {
+                "DLC1": {
+                    "Name": "Call of Duty®: Black Ops 6 - Vault Edition",
+                    "Price": "99.99",
+                    "Saleprice": "0",
+                    "Discount": "0%",
+                    "Platform": "Windows"
+                }
+            }
+        },
+        "features": [
+            "Single Player",
+            "Online PvP",
+            "Online Co-Op",
+            "Cross-Platform Multiplayer",
+            "Steam Achievements",
+            "Captions available",
+            "In-App Purchases",
+            "Full Controller Support"
+        ],
+        "Languages": {
+            "English": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "French": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Italian": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "German": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Spanish - Spain": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ]
+        },
+        "About": "Forced to go rogue. Hunted from within. This is Call of Duty®: Black Ops 6.\n\nDeveloped by Treyarch and Raven, Black Ops 6 is a spy action thriller set in the early 90s, a period of transition and upheaval in global politics, characterized by the end of the Cold War and the rise of the United States as a single superpower. With a mind-bending narrative, and unbound by the rules of engagement, this is signature Black Ops.\n\nThe Black Ops 6 Campaign provides dynamic moment-to-moment gameplay that includes a variety of play spaces with blockbuster set pieces and action-packed moments, high-stakes heists, and cloak-and-dagger spy activity.\n\nIn a best-in-class Multiplayer experience, players will test their skills across 16 new maps, including 12 core 6v6 maps and 4 Strike maps that can be played 2v2 or 6v6.\n\nBlack Ops 6 also marks the epic return of Round-Based Zombies, the fan-favorite mode where players will take down hordes of the undead in two brand-new maps. With additional content still to come, players can look forward to even more exciting maps and groundbreaking experiences dropping into both Multiplayer and Zombies.\n\nAI Generated Content Disclosure\nThe developers describe how their game uses AI Generated Content like this:\n\nOur team uses generative AI tools to help develop some in-game assets.\n\nMature Content Description\nThe developers describe the content like this:\n\nThis Game may contain content not appropriate for all ages, or may not be appropriate for viewing at work: Frequent Violence or Gore, General Mature Content.",
+        "achievements": "",
+        "links": [
+            "Workshop",
+            "Discussions",
+            "News",
+            "Updates",
+            "Community Groups",
+            "Marketplace",
+            "Share",
+            "Embed",
+            "Report"
+        ],
+        "system_requirements": {
+            "minimum": {
+                "os": "Windows 10",
+                "processor": "AMD Ryzen™ 5 1400 or Intel® Core™ i5-6600",
+                "memory": "8 GB RAM",
+                "graphics": "AMD Radeon™ RX 470, NVIDIA® GeForce® GTX 960 or Intel® Arc™ A580",
+                "directX": "Version 12",
+                "Network": "Broadband Internet Connection",
+                "storage": "128 GB available space"
+            },
+            "recommended": {
+                "os": "Windows 10",
+                "processor": "AMD Ryzen™ 5 1600X or Intel® Core™ i7-6700K",
+                "memory": "12 GB RAM",
+                "graphics": "AMD Radeon RX 6600XT or NVIDIA GeForce GTX 1080Ti / RTX 3060",
+                "directX": "Version 12",
+                "Network": "Broadband Internet Connection",
+                "storage": "128 GB available space"
+            }
+        },
+        "platforms": [
+            { "id": 1, "name": "Windows" }
+        ],
+        "overall_rating": "4.5",
+        "images": {
+            "icon": "https://cdn.oneesports.gg/cdn-data/2024/09/BlackOps6_HowToAppearOffline.jpg",
+            "banner": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2933620/header.jpg?t=1738088305",
+            "main": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2933620/header.jpg?t=1738088305",
+            "about": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2933620/header.jpg?t=1738088305",
+            "achievements": "https://"
+        },
+        "size": "",
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2933620/ss_40dec17d2c10a14e87046b7e65a2da3309a9d525.600x338.jpg?t=1738088305"
+            },
+            {
+                "id": 2,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2933620/ss_bf4e9aa33ea2cf6846e26ffdec5f1cdecbc39e61.600x338.jpg?t=1738088305"
+            },
+            {
+                "id": 3,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2933620/ss_e12ac8064bb6aa0af80aa9c713c1bbd9cbc6a254.600x338.jpg?t=1738088305"
+            },
+            {
+                "id": 4,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2933620/ss_b2b7f9de3c97c0a57cd545cc48cd77e964c9ce4b.600x338.jpg?t=1738088305"
+            }
+            ,
+            {
+                "id": 5,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2933620/ss_614d872d952ebded6e6559b6e99e0ba6aeb3bd23.600x338.jpg?t=1738088305"
+            }
+            ,
+            {
+                "id": 6,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2933620/ss_69a852899c6ffdbb8f2f179ab6660f42e2e1c123.600x338.jpg?t=1738088305"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://www.youtube.com/watch?v=oyZY_BiTmd8&ab_channel=CallofDuty"
+            },
+            {
+                "id": 2,
+                "url": "https://www.youtube.com/watch?v=GYG_h-L-K2E&ab_channel=CallofDuty"
+            },
+            {
+                "id": 3,
+                "url": "https://www.youtube.com/watch?v=GYG_h-L-K2E&ab_channel=CallofDuty"
+            }
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "streaming": "false"
+
+    },
+
+    
+    {
+        "id": 9,
+        "title": "Marvel's Spider-Man 2",
+        "genres": "Action Games",
+        "description": "Be Greater. Together. The incredible power of the symbiote forces Peter Parker and Miles Morales into a desperate fight as they balance their lives, friendships, and their duty to protect in an exciting chapter of the critically acclaimed Spider-Man franchise on PC.",
+        "release_date": "Jan 30 2025",
+        "developer": "Insomniac Games, Nixxes Software",
+        "publisher": [
+            "PlayStation Publishing LLC"
+        ],
+        "tags": [
+            "Action",
+            "Superhero",
+            "Open World",
+            "Singleplayer"
+        ],
+        "packages": {
+            "Game": {
+                "Name": "Marvel's Spider-Man 2",
+                "Price": "59.99",
+                "Saleprice": "0",
+                "Discount": "0%",
+                "Platform": "Windows"
+            },
+            "DLC": {
+                "DLC1": {
+                    "Name": "Marvel's Spider-Man 2 Digital Deluxe Edition",
+                    "Price": "69.99",
+                    "Saleprice": "0",
+                    "Discount": "0%",
+                    "Platform": "Windows",
+                    "Image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3172660/0150c55dc2b66be260efaa0da0c8cf8a229b3c5b/capsule_sm_120.jpg?t=1738262088"
+                }
+            }
+        },
+        "features": [
+            "Single Player",
+            "Steam Achievements",
+            "Steam Cloud",
+            "HDR available",
+            "Family Sharing",
+            "Full Controller Support"
+        ],
+        "Languages": {
+            "English": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "French": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Italian": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "German": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Spanish - Spain": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ]
+        },
+        "About": "Edition includes:\n\nMarvel’s Spider-Man 2\n\nSpider-Sense tingling…\nMask-up for more thrilling web-slinging heroics as Marvel’s Spider-Man 2 swings onto PC.\n\nDeveloped by Insomniac Games in collaboration with Marvel, and optimized for PC by Nixxes Software.\n\nA city under siege!\n\nSpider-Men Peter Parker and Miles Morales face the ultimate test of strength inside and outside the mask as they fight to save the city, each other, and the ones they love, from the monstrous Venom and the dangerous new symbiote threat.\n\nTraverse an expanded Marvel’s New York\n\nExplore a larger Marvel’s New York than ever before, featuring two new boroughs – Brooklyn and Queens – as well as locations like Coney Island, and more.\n\nSwing, jump, and utilize the new Web Wings to travel across the city, switching between Peter Parker and Miles Morales in open-world exploration to experience different stories and epic new powers.\n\nExperience two playable Spider-Men\n\nWield Peter’s new symbiote abilities and Miles’ explosive bio-electric venom powers, and discover upgradeable, high-tech equipment that enhances the combat experience for extensive gameplay depth and variety.\n\nBattle iconic Marvel Super Villains\n\nFight against a variety of new and iconic villains, including an original take on the monstrous Venom, the ruthless Kraven the Hunter, the volatile Lizard, and many more!\n\nA more accessible Spider-Man experience\n\nSupport for a range of accessibility features strives to create a Marvel’s Spider-Man experience without barriers, that can be enjoyed by more players of different abilities.\n\nPC features\n\nPC optimized graphics\n\nSave the day in style with your choice of graphical quality options, as well as unlocked framerates for smooth Super-Hero antics. Enjoy support for performance-enhancing technologies including NVIDIA DLSS 3 and AMD FSR 3.1 upscaling and frame generation¹. Intel XeSS upscaling is also supported.¹\n\nImproved ray-tracing¹\n\nRay-traced reflections, ray-traced shadows, and ray-traced ambient occlusion bring the sights of Marvel’s New York to life all around you. Choose from a selection of quality modes and take in the breathtaking views from up high. For NVIDIA GeForce RTX GPU users, DLSS Ray Reconstruction is available. This technique uses an NVIDIA supercomputer-trained AI network that generates higher-quality pixels in between sampled rays, resulting in sharper and more accurate ray-traced images.\n\nUltra-wide monitor support²\n\nDiscover great image clarity through support for a range of screen setups, including 16:9, 16:10, 21:9, 32:9, and 48:9 resolutions with triple monitor setups using NVIDIA Surround or AMD Eyefinity.\n\nPlayStation® overlay and trophies\n\nThe PlayStation overlay is available for Windows PC players with an account for PlayStation Network to earn PlayStation Trophies and access Friends lists, settings, and player profile.\n\nPress the Shift key and F1 key shortcut or follow the in-game menu to open the overlay.\n\nControls and customization\n\nFeel the true power of Spider-Man with the PlayStation DualSense® controller on a wired USB connection, or full mouse and keyboard support.\n\nDualSense haptic feedback³\n\nThe responsive vibrations of the DualSense controller bring Peter Parker’s symbiote abilities and Miles Morales’ bio-electric skills to your fingertips.\n\nDualSense adaptive triggers³\n\nMaster acrobatic moves, execute thrilling combos, and experience the breathtaking excitement of web-swinging traversal through the DualSense controller’s adaptive triggers.\n\n¹ Compatible PC required.\n\n² Compatible PC and display device required.\n\n³ Wired connection required to experience the full range of in-game controller features.",
+        "achievements": "",
+        "links": [
+            "Workshop",
+            "Discussions",
+            "News",
+            "Updates",
+            "Community Groups",
+            "Marketplace",
+            "Share",
+            "Embed",
+            "Report"
+        ],
+        "system_requirements": {
+            "minimum": {
+                "os": "Windows 10/11",
+                "processor": "Intel Core i3-8100 or AMD Ryzen 3 3100",
+                "memory": "16 GB RAM",
+                "graphics": "NVIDIA GeForce GTX 1650 or AMD Radeon RX 5500 XT",
+                "storage": "140 GB available space"
+            },
+            "recommended": {
+                "os": "Windows 10",
+                "processor": "Intel Core i5-8400 or AMD Ryzen 5 3600",
+                "memory": "16 GB RAM",
+                "graphics": "NVIDIA GeForce RTX 3060 or AMD Radeon RX 5700",
+                "storage": "140 GB available space"
+            }
+        },
+        "platforms": [
+            { "id": 1, "name": "Windows" }
+        ],
+        "overall_rating": "4.5",
+        "images": {
+            "icon": "https://cdn2.steamgriddb.com/icon/e1523f05b5135f8c5b464a15c9d3567d.ico",
+            "banner": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/header.jpg?t=1738343995",
+            "main": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/header.jpg?t=1738343995",
+            "about": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/header.jpg?t=1738343995",
+            "achievements": "https://"
+        },
+        "size": "",
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/ss_e4b67059ddedaeebd91fce113745f3eb99736f56.600x338.jpg?t=1738343995"
+            },
+            {
+                "id": 2,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/ss_b4be948946130b7e140be82f24f1f9ccefae9117.600x338.jpg?t=1738343995"
+            },
+            {
+                "id": 3,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/ss_f4140ba12158b812d9c1adc86c484d8e84b92e92.600x338.jpg?t=1738343995"
+            },
+            {
+                "id": 4,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/ss_aa8346cf207a1e114c5f9e7f6c3086c5dc9c3050.600x338.jpg?t=1738343995"
+            },
+            {
+                "id": 5,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/ss_b34716a6d4505bfe32f83530e46aac5a5728f441.600x338.jpg?t=1738343995"
+            },
+            {
+                "id": 6,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/ss_0fda7c96ee3f16038559fffa8c2cd7b3ac433c2b.600x338.jpg?t=1738343995"
+            },
+            {
+                "id": 7,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/ss_2fb76f7e76dbddf87715d18ae1bcb5cd1dda5747.600x338.jpg?t=1738343995"
+            },
+            {
+                "id": 8,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/ss_74e612eb0ae275bd6e7f69d407dda8b03d83629f.600x338.jpg?t=1738343995"
+            },
+            {
+                "id": 9,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/ss_cde4862328227ea8cfb2981c92b6411b705ed0f4.600x338.jpg?t=1738343995"
+            },
+            {
+                "id": 10,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/ss_c6a0adf568d91d49a5c0f7f5e4df7e1cef71ee28.600x338.jpg?t=1738343995"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://www.youtube.com/watch?v=9fVYKsEmuRo&ab_channel=PlayStation"
+            },
+            {
+                "id": 2,
+                "url": "https://www.youtube.com/watch?v=nq1M_Wc4FIc&ab_channel=PlayStation"
+            },
+            {
+                "id": 3,
+                "url": "https://www.youtube.com/watch?v=bgqGdIoa52s&ab_channel=PlayStation"
+            }
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "streaming": "false"
+
+    },
+
+    
+    {
+        "id": 10,
+        "title": "HELLDIVERS™ 2",
+        "genres": "Action Games",
+        "description": "The Galaxy’s Last Line of Offence. Enlist in the Helldivers and join the fight for freedom across a hostile galaxy in a fast, frantic, and ferocious third-person shooter.",
+        "release_date": "Feb 8 2024",
+        "developer": "Arrowhead Game Studios",
+        "publisher": [
+            "PlayStation Publishing LLC"
+        ],
+        "tags": [
+            "Online Co-Op",
+            "PvE",
+            "Third-Person Shooter",
+            "Action"
+        ],
+        "packages": {
+            "Game": {
+                "Name": "HELLDIVERS™ 2",
+                "Price": "39.99",
+                "Saleprice": "0",
+                "Discount": "0%",
+                "Platform": "Windows"
+            },
+            "DLC": {
+                "DLC1":{
+                    "Name": "HELLDIVERS™ 2 Super Citizen Edition Bundle",
+                    "Price": "59.99",
+                    "Saleprice": "0",
+                    "Discount": "0%",
+                    "Platform": "Windows",
+                    "Image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2514130/capsule_sm_120.jpg?t=1737496064"
+                }
+            }
+        },
+        "features": [
+            "Online Co-Op",
+            "Steam Achievements",
+            "In-App Purchases",
+            "Family Sharing",
+            "Xbox ControllerS"
+        ],
+        "Languages": {
+            "English": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "French": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Italian": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "German": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Spanish - Spain": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ]
+        },
+        "About": "The Galaxy’s Last Line of Offense.\n\nEnlist in the Helldivers and join the fight for freedom across a hostile galaxy in a fast, frantic, and ferocious third-person shooter.\n\nURGENT BROADCAST – SUPER EARTH ARMED FORCES\n\nFreedom. Peace. Democracy.\nYour Super Earth-born rights. The key pillars of our civilization.\nOf our very existence.\nBut the war rages on. And everything is once again under threat.\nJoin the greatest military force the galaxy has ever seen and make this a safe and free place to live.\n\nBECOME A LEGEND\n\nYou will be assembled into squads of up to four Helldivers and assigned strategic missions.\nWatch each other’s back – friendly fire is an unfortunate certainty of war, but victory without teamwork is impossible.\n\nLOADOUTS\n\nRain down freedom from above, sneak through enemy territory, or grit your teeth and charge head-first into the jaws of combat.\nHow you deliver liberty is your choice; you’ll have access to a wide array of explosive firepower, life-saving armor, and battle-changing stratagems… the jewel in every Helldiver’s arsenal.\n\nREQUISITION\n\nSuper Earth recognizes your hard work with valuable Requisition. Use it to access different rewards that benefit you, your squad, your destroyer ship, and our overall war effort.\n\nTHREATS\n\nEverything on every planet wants you dead. That’s what we’re dealing with.\nEach enemy has distinct and unpredictable characteristics, tactics, and behavior – but they all fight ferociously and without fear or morality.\n\nTHE GALACTIC WAR\n\nCapturing enemy planets, defending against invasions, and completing missions will contribute to our overall effort.\n\nThis war will be won or lost depending on the actions of everyone involved.\n\nWe stand together, or we fall apart.",
+        "achievements": "",
+        "links": [
+            "Workshop",
+            "Discussions",
+            "News",
+            "Updates",
+            "Community Groups",
+            "Marketplace",
+            "Share",
+            "Embed",
+            "Report"
+        ],
+        "system_requirements": {
+            "minimum": {
+                "os": "Windows 10",
+                "processor": "Intel Core i7-4790K or AMD Ryzen 5 1500X",
+                "memory": "8 GB RAM",
+                "graphics": "NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 470",
+                "storage": "100 GB available space"
+            },
+            "recommended": {
+                "os": "Windows 10",
+                "processor": "Intel Core i7-9700K or AMD Ryzen 7 3700X",
+                "memory": "16 GB RAM",
+                "graphics": "NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600XT",
+                "storage": "100 GB available space"
+            }
+        },
+        "platforms": [
+            { "id": 1, "name": "Windows" }
+        ],
+        "overall_rating": "4.5",
+        "images": {
+            "icon": "https://cdn2.steamgriddb.com/icon/d1b8053e972c0a7c4d0d9fe847598725.png",
+            "banner": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/553850/header.jpg?t=1737495569",
+            "main": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/553850/header.jpg?t=1737495569",
+            "about": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/553850/header.jpg?t=1737495569",
+            "achievements": "https://"
+        },
+        "size": "",
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/553850/ss_0c79f56fc7be1bd0102f2ca1c92c8f0900daf4fb.600x338.jpg?t=1737495569"
+            },
+            {
+                "id": 2,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/553850/ss_8949ed7dd24a02d5ea13b08fc5c04fab400dc4bd.600x338.jpg?t=1737495569"
+            },
+            {
+                "id": 3,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/553850/ss_8949ed7dd24a02d5ea13b08fc5c04fab400dc4bd.600x338.jpg?t=1737495569"
+            },
+            {
+                "id": 4,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/553850/ss_50afbbc4d811c38fe9f64c1fc8d7eb9d9da6d24c.600x338.jpg?t=1737495569"
+            },
+            {
+                "id": 5,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/553850/ss_d0ac3830833a68d19d4a97c70aef0fba20bf0761.600x338.jpg?t=1737495569"
+            },
+            {
+                "id": 6,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/553850/ss_3b08a991443164a65f84f1bd9f1363e6c2ec4581.600x338.jpg?t=1737495569"
+            },
+            {
+                "id": 7,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/553850/ss_8f4af550ecbee08abb616b12cbb3896174dce153.600x338.jpg?t=1737495569"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://www.youtube.com/watch?v=pctqmGEB2F8&ab_channel=IGN"
+            },
+            {
+                "id": 2,
+                "url": "https://www.youtube.com/watch?v=UC5EpJR0GBQ&ab_channel=IGN"
+            }
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "streaming": "false"
+    },
+
+    
+    {
+        "id": 11,
+        "title": "Baldur's Gate 3",
+        "genres": "RPG",
+        "description": "Baldur’s Gate 3 is a story-rich, party-based RPG set in the universe of Dungeons & Dragons, where your choices shape a tale of fellowship and betrayal, survival and sacrifice, and the lure of absolute power.",
+        "release_date": "Aug 3 2023",
+        "developer": "Larian Studios",
+        "publisher": [
+            "Larian Studios"
+        ],
+        "tags": [
+            "RPG",
+            "Character Customization",
+            "Choices Matter"
+            
+        ],
+        "packages": {
+            "Game": {
+                "Name": "Baldur's Gate 3",
+                "Price": "59.99",
+                "Saleprice": "0",
+                "Discount": "0%",
+                "Platform": "Windows"
+            },
+            "DLC": {
+            }
+        },
+        "features": [
+            "Single Player",
+            "Online Co-Op",
+            "LAN Co-op",
+            "Steam Achievements",
+            "Steam Cloud",
+            "Remote Play on TV",
+            "Remote Play Together",
+            "Family Sharing",
+            "Full Controller Support"
+        ],
+        "Languages": {
+            "English": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "French": [
+                "Interface",
+                "Subtitles"
+            ],
+            "German": [
+                "Interface",
+                "Subtitles"
+            ],
+            "Spanish - Spain": [
+                "Interface",
+                "Subtitles"
+            ],
+            "Polish": [
+                "Interface",
+                "Subtitles"
+            ]
+        },
+        "About": "Gather your party and return to the Forgotten Realms in a tale of fellowship and betrayal, sacrifice and survival, and the lure of absolute power.\n\nMysterious abilities are awakening inside you, drawn from a mind flayer parasite planted in your brain. Resist, and turn darkness against itself. Or embrace corruption, and become ultimate evil.\n\nFrom the creators of Divinity: Original Sin 2 comes a next-generation RPG, set in the world of Dungeons & Dragons.\n\nChoose from 12 classes and 11 races from the D&D Player's Handbook and create your own identity, or play as an Origin hero with a hand-crafted background. Or tangle with your inner corruption as the Dark Urge, a fully customizable Origin hero with its own unique mechanics and story. Whoever you choose to be, adventure, loot, battle and romance your way across the Forgotten Realms and beyond. Gather your party. Take the adventure online as a party of up to four.\n\nAbducted, infected, lost. You are turning into a monster, but as the corruption inside you grows, so does your power. That power may help you to survive, but there will be a price to pay, and more than any ability, the bonds of trust that you build within your party could be your greatest strength. Caught in a conflict between devils, deities, and sinister otherworldly forces, you will determine the fate of the Forgotten Realms together.\n\nForged with the new Divinity 4.0 engine, Baldur’s Gate 3 gives you unprecedented freedom to explore, experiment, and interact with a thriving world filled with characters, dangers, and deceit. A grand, cinematic narrative brings you closer to your characters than ever before. From shadow-cursed forests, to the magical caverns of the Underdark, to the sprawling city of Baldur’s Gate itself, your actions define the adventure, but your choices define your legacy. You will be remembered.\n\nThe Forgotten Realms are a vast, detailed, and diverse world, and there are secrets to be discovered all around you – verticality is a vital part of exploration. Sneak, dip, shove, climb, and jump as you journey from the depths of the Underdark to the glittering rooftops of Baldur’s Gate. Every choice you make drives your story forward, each decision leaving your mark on the world. Define your legacy, nurture relationships and create enemies, and solve problems your way. No two playthroughs will ever be the same.\n\nCombat allows you to combine your forces in battle and simultaneously attack enemies, or split your party to each follow your own quests and agendas. Concoct the perfect plan together… or introduce an element of chaos when your friends least expect it. Relationships are complicated. Especially when you’ve got a parasite in your brain.\n\nSeven unique Origin heroes offer a hand-crafted experience, each with their own unique traits, agenda, and outlook on the world. Their stories intersect with the overarching narrative, and your choices will determine whether those stories end in redemption, salvation, domination, or one of many other outcomes. Play as an Origin and enjoy their stories, or recruit them to fight alongside you.\n\nBaldur’s Gate 3 is based on the D&D 5e ruleset. Team-based initiative, advantage and disadvantage, and roll modifiers join an advanced AI, expanded environmental interactions, and a new fluidity in combat that rewards strategy and foresight. Three difficulty settings allow you to customize the challenge of combat. Enable weighted dice to help sway the battle, or play on Tactician mode for a hardcore experience.\n\nThe game features 31 subraces on top of the 11 main races (Human, Githyanki, Half-Orc, Dwarf, Elf, Drow, Tiefling, Halfling, Half-Elf, Gnome, Dragonborn), with 46 subclasses branching out of the 12 classes. Over 600 spells and actions offer near-limitless freedom of interactivity in a hand-crafted world where exploration is rewarded, and player agency defines the journey. The unique Character Creator features unprecedented depth, ensuring that whomever you are, you will leave a unique legacy behind you, all the way up to Level 12. Over 174 hours of cinematics ensure that no matter the choices you make, the cinematic experience follows your journey – every playthrough, a new cinematic adventure.\n\nWith the looming threat of war heading to Baldur’s Gate, and a mind flayer invasion on the horizon, friendships – though not necessary – are bound to be forged on your journey. What becomes of them is up to you, as you enter real, vibrant relationships with those you meet along the way. Each companion has their own moral compass and will react to the choices you make throughout your journey. At what cost will you stick to your ideals? Will you allow love to shape your actions? The relationships made on the road to Baldur’s Gate act as moments of respite at camp as much as they add weight to the many decisions you make on your adventure.\n\nBaldur’s Gate 3 provides three different levels of streamer-friendly customization. You can disable nudity and explicit content separately (or together), and you can enable Twitch integration to interact directly with your audience. You’ll be able to stream Baldur’s Gate 3 without any problems, regardless of how you play, thanks to these options.",
+        "achievements": "",
+        "links": [
+            "Workshop",
+            "Discussions",
+            "News",
+            "Updates",
+            "Community Groups",
+            "Marketplace",
+            "Share",
+            "Embed",
+            "Report"
+        ],
+        "system_requirements": {
+            "minimum": {
+                "os": "Windows 10",
+                "processor": "Intel I5 4690 / AMD FX 8350",
+                "memory": "8 GB RAM",
+                "graphics": "Nvidia GTX 970 / RX 480 (4GB+ of VRAM)",
+                "directX": "Version 11",
+                "storage": "150 GB available space"
+            },
+            "recommended": {
+                "os": "Windows 10",
+                "processor": "Intel i7 8700K / AMD r5 3600",
+                "memory": "16 GB RAM",
+                "graphics": "Nvidia 2060 Super / RX 5700 XT (8GB+ of VRAM)",
+                "directX": "Version 11",
+                "storage": "150 GB available space"
+            }
+        },
+        "platforms": [
+            { "id": 1, "name": "Windows" }
+        ],
+        "overall_rating": "4.5",
+        "images": {
+            "icon": "https://cdn2.steamgriddb.com/icon/47349ceba889b6f2a39cc1c3566cea17.png",
+            "banner": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/header.jpg?t=1737046196",
+            "main": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/header.jpg?t=1737046196",
+            "about": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/header.jpg?t=1737046196",
+            "achievements": "https://"
+        },
+        "size": "",
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/ss_c73bc54415178c07fef85f54ee26621728c77504.600x338.jpg?t=1737046196"
+            },
+            {
+                "id": 2,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/ss_73d93bea842b93914d966622104dcb8c0f42972b.600x338.jpg?t=1737046196"
+            },
+            {
+                "id": 3,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/ss_cf936d31061b58e98e0c646aee00e6030c410cda.600x338.jpg?t=1737046196"
+            },
+            {
+                "id": 4,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/ss_b6a6ee6e046426d08ceea7a4506a1b5f44181543.600x338.jpg?t=1737046196"
+            },
+            {
+                "id": 5,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/ss_8fc5eba770b4a1639b31666908bdd2bbc1aa2ae4.600x338.jpg?t=1737046196"
+            },
+            {
+                "id": 6,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/ss_31c13d137706fb4d9a4210513274a3ed9c3c7c96.600x338.jpg?t=1737046196"
+            },
+            {
+                "id": 7,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/ss_0efa1a469a37beeb4fd0cb8e16dc99bd36357dc4.600x338.jpg?t=1737046196"
+            },
+            {
+                "id": 8,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/ss_332cd26db210d4b10df744485ecf0a9b3f2e9024.600x338.jpg?t=1737046196"
+            },
+            {
+                "id": 9,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/ss_f8c7fcdeccbfe77e3fad33330a464fed30f781f0.600x338.jpg?t=1737046196"
+            },
+            {
+                "id": 10,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/ss_332cd26db210d4b10df744485ecf0a9b3f2e9024.600x338.jpg?t=1737046196"
+            }
+            
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://www.youtube.com/watch?v=1T22wNvoNiU&ab_channel=GameSpot"
+            },
+            {
+                "id": 2,
+                "url": "https://www.youtube.com/watch?v=okFSR8CCOPY&ab_channel=IGN"
+            },
+            {
+                "id": 3,
+                "url": "https://www.youtube.com/watch?v=tavPnYeFrV4&ab_channel=GameSpot"
+            }
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "streaming": "false"
+
+    },
+
+    
+    {
+        "id": 12,
+        "title": "Team Fortress 2",
+        "genres": "Free to Play",
+        "description": "Nine distinct classes provide a broad range of tactical abilities and personalities. Constantly updated with new game modes, maps, equipment and, most importantly, hats!",
+        "release_date": "Oct 10 2007",
+        "developer": "Valve",
+        "publisher": [
+            "Valve"
+        ],
+        "tags": [
+            "Free to Play",
+            "Hero Shooter",
+            "Multiplayer",
+            "FPS"
+        ],
+        "packages": {
+            "Game": {
+                "Name": "Team Fortress 2",
+                "Price": "0",
+                "Saleprice": "0",
+                "Discount": "0%",
+                "Platform": "Windows"
+            },
+            "DLC": {
+                "DLC1": {
+                    "Name": "Team Fortress 2",
+                    "Price": "19.99",
+                    "Saleprice": "0",
+                    "Discount": "0%",
+                    "Platform": "Windows"
+                }
+            }
+        },
+        "features": [
+            "Single Player",
+            "Online Co-Op",
+            "Family Sharing",
+            "Xbox ControllerS"
+        ],
+        "Languages": {
+            "English": [
+                "Interface",
+                "Full Audio"
+            ]
+        },
+        "About": "The most fun you can have online - PC Gamer\nIs now FREE!\n\nThere’s no catch! Play as much as you want, as long as you like!\nThe most highly-rated free game of all time!\n\nOne of the most popular online action games of all time, Team Fortress 2 delivers constant free updates—new game modes, maps, equipment and, most importantly, hats. Nine distinct classes provide a broad range of tactical abilities and personalities, and lend themselves to a variety of player skills.\n\nNew to TF? Don’t sweat it!\n\nNo matter what your style and experience, we’ve got a character for you. Detailed training and offline practice modes will help you hone your skills before jumping into one of TF2’s many game modes, including Capture the Flag, Control Point, Payload, Arena, King of the Hill and more.\nMake a character your own!\n\nThere are hundreds of weapons, hats and more to collect, craft, buy and trade. Tweak your favorite class to suit your gameplay style and personal taste. You don’t need to pay to win—virtually all of the items in the Mann Co. Store can also be found in-game.",
+        "achievements": "",
+        "links": [
+            "Workshop",
+            "Discussions",
+            "News",
+            "Updates",
+            "Community Groups",
+            "Marketplace",
+            "Share",
+            "Embed",
+            "Report"
+        ],
+        "system_requirements": {
+            "minimum": {
+                "os": "Windows® 7 (32/64-bit)/Vista/XP",
+                "processor": "1.7 GHz Processor or better",
+                "memory": "512 MB RAM",
+                "directX": "Version 8.1",
+                "Network":"Broadband Internet Connection",
+                "storage": "15 GB available space"
+            },
+            "recommended": {
+                "os": "Windows® 7 (32/64-bit)",
+                "processor": "Pentium 4 processor (3.0GHz, or better)",
+                "memory": "1 GB RAM",
+                "directX": "Version 9.0c",
+                "Network":"Broadband Internet Connection",
+                "storage": "15 GB available space"
+            }
+        },
+        "platforms": [
+            { "id": 1, "name": "Windows" }
+        ],
+        "overall_rating": "4.5",
+        "images": {
+            "icon": "https://steamuserimages-a.akamaihd.net/ugc/958598563486533178/A622F3B50F9E62A62647FA2B5D2E48A0C2F6F869/?imw=512&imh=512&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+            "banner": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/440/header.jpg?t=1739985926",
+            "main": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/440/header.jpg?t=1739985926",
+            "about": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/440/header.jpg?t=1739985926",
+            "achievements": "https://"
+        },
+        "size": "",
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/440/0000002574.600x338.jpg?t=1739985926"
+            },
+            {
+                "id": 2,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/440/ss_e3aedb2ab36bba8cfe611b1e0eaa807e4bb2d742.600x338.jpg?t=1739985926"
+            },
+            {
+                "id": 3,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/440/ss_ee24a769dc1d81dcbd7b250d16530394adee4264.600x338.jpg?t=1739985926"
+            },
+            {
+                "id": 4,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/440/ss_9faaa506d91bf19dbb398e0c06a684b337f85f91.600x338.jpg?t=1739985926"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://www.youtube.com/watch?v=N7ZafWA2jd8&ab_channel=teamfortress"
+            }
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "streaming": "false"
+
+    },
+
+    
+    {
+        "id": 13,
+        "title": "Destiny 2",
+        "genres": "Free to Play",
+        "description": "Destiny 2 is an action MMO with a single evolving world that you and your friends can join anytime, anywhere, absolutely free.",
+        "release_date": "Oct 1 2019",
+        "developer": "Bungie",
+        "publisher": [
+            "Bungie"
+        ],
+        "tags": [
+            "Free to Play",
+            "Open World",
+            "Looter Shooter",
+            "FPS"
+        ],
+        "packages": {
+            "Game": {
+                "Name": "Destiny 2",
+                "Price": "0",
+                "Saleprice": "0",
+                "Discount": "0%",
+                "Platform": "Windows"
+            },
+            "DLC": {
+                "DLC1": {
+                    "Name": "Destiny 2: The Final Shape",
+                    "Price": "49.99",
+                    "Saleprice": "0",
+                    "Discount": "0%",
+                    "Platform": "Windows",
+                    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2336880/capsule_sm_120.jpg?t=1738709405"
+                },
+                "DLC2": {
+                    "Name": "Destiny 2: Witch Queen",
+                    "Price": "19.99",
+                    "Saleprice": "0",
+                    "Discount": "0%",
+                    "Platform": "Windows",
+                    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1656330/capsule_sm_120.jpg?t=1729011772"
+                }
+            }
+        },
+        "features": [
+            "Single Player",
+            "Online PvP",
+            "Online Co-Op",
+            "Steam Achievements",
+            "In-App Purchases",
+            "Partial Controller Support"
+        ],
+        "Languages": {
+            "English": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "German": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "French": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Italian": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Spanish - Spain": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ]
+        },
+        "About": "Dive into the world of Destiny 2 to explore the mysteries of the solar system and experience responsive first-person shooter combat. Unlock powerful elemental abilities and collect unique gear to customize your Guardian's look and playstyle. Enjoy Destiny 2’s cinematic story, challenging co-op missions, and a variety of PvP modes alone or with friends. Download for free today and write your legend in the stars.\n\nAn Immersive Story\nYou are a Guardian, defender of the Last City of humanity in a solar system under siege by infamous villains. Look to the stars and stand against the darkness. Your legend begins now.\n\nGuardian Classes\nChoose from the armored Titan, mystic Warlock, or swift Hunter.\n\nTitan\nDisciplined and proud, Titans are capable of both aggressive assaults and stalwart defenses. Set your hammer ablaze, crack the sky with lightning, and go toe-to-toe with any opponent. Your team will stand tall behind the strength of your shield.\n\nWarlock\nWarlocks weaponize the mysteries of the universe to sustain themselves and destroy their foes. Rain devastation on the battlefield and clear hordes of enemies in the blink of an eye. Those who stand with you will know the true power of the Light.\n\nHunter\nAgile and daring, Hunters are quick on their feet and quicker on the draw. Fan the hammer of your golden gun, flow through enemies like the wind, or strike from the darkness. Find the enemy, take aim, and end the fight before it starts.\n\nCooperative and Competitive Multiplayer\nPlay with or against your friends and other Guardians in various PvE and PvP game modes.\n\nCooperative Multiplayer\nExciting co-op adventures teeming await with rare and powerful rewards. Dive into the story with missions, quests, and patrols. Put together a small fireteam and secure the chest at the end of a quick Strike. Or test your team's skill with countless hours of raid progression – the ultimate challenge for any fireteam. You decide where your legend begins.\n\nCompetitive Multiplayer\nFace off against other players in fast-paced free-for-all skirmishes, team arenas, and PvE/PvP hybrid competitions. Mark special competitions like Iron Banner on your calendar and collect limited-time rewards before they're gone.\n\nExotic Weapons and Armor\nThousands of weapons, millions of options. Discover new gear combinations and define your own personal style. The hunt for the perfect arsenal begins.",
+        "achievements": "",
+        "links": [
+            "Workshop",
+            "Discussions",
+            "News",
+            "Updates",
+            "Community Groups",
+            "Marketplace",
+            "Share",
+            "Embed",
+            "Report"
+        ],
+        "system_requirements": {
+            "minimum": {
+                "os": "Windows 10",
+                "processor": "Intel® Core™ i3 3250 3.5 GHz or Intel Pentium G4560 3.5 GHz / AMD FX-4350 4.2 GHz",
+                "memory": "6 GB RAM",
+                "graphics": "NVIDIA® GeForce® GTX 660 2GB or GTX 1050 2GB / AMD Radeon HD 7850 2GB",
+                "Network": "Broadband Internet Connection",
+                "storage": "105 GB available space"
+            },
+            "recommended": {
+                "os": "Windows 10",
+                "processor": "Processor Intel® Core™ i5 2400 3.4 GHz or i5 7400 3.5 GHz / AMD Ryzen R5 1600X 3.6 GHz",
+                "memory": "8 GB RAM",
+                "graphics": "NVIDIA® GeForce® GTX 970 4GB or GTX 1060 6GB / AMD R9 390 8GB Memory 8 GB RAM",
+                "Network": "Broadband Internet Connection",
+                "storage": "105 GB available space"
+            }
+        },
+        "platforms": [
+            { "id": 1, "name": "Windows" }
+        ],
+        "overall_rating": "4.5",
+        "images": {
+            "icon": "https://cdn2.steamgriddb.com/icon/9908279ebbf1f9b250ba689db6a0222b.ico",
+            "banner": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1085660/header.jpg?t=1738688481",
+            "main": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1085660/header.jpg?t=1738688481",
+            "about": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1085660/header.jpg?t=1738688481",
+            "achievements": "https://"
+        },
+        "size": "",
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1085660/ss_74e30840772ce482f971e325a58130e2ba966976.600x338.jpg?t=1738688481"
+            },
+            {
+                "id": 2,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1085660/ss_7fcc82f468fcf8278c7ffa95cebf949bfc6845fc.600x338.jpg?t=1738688481"
+            },
+            {
+                "id": 3,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1085660/ss_c142f5078ace9f5e2eb2c80aa3bf768e156b4ee9.600x338.jpg?t=1738688481"
+            },
+            {
+                "id": 4,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1085660/ss_a9642404e586be28f856e8f02d038828f691a5ba.600x338.jpg?t=1738688481"
+            },
+            {
+                "id": 5,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1085660/ss_01fdd090ed1dd70112ce2c6d6fc208df0a008ac7.600x338.jpg?t=1738688481"
+            },
+            {
+                "id": 6,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1085660/ss_d230d30da82a7b92c842e7447ee5a8458b866251.600x338.jpg?t=1738688481"
+            },
+            {
+                "id": 7,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1085660/ss_5065e2bb5de91535dc5e390e27e391a8b9b367ee.600x338.jpg?t=1738688481"
+            },
+            {
+                "id": 8,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1085660/ss_afc1f202f7ab71adca7d1e503138d89c5689e716.600x338.jpg?t=1738688481"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://www.youtube.com/watch?v=dZrxWFrd1zQ&ab_channel=Destiny2"
+            },
+            {
+                "id": 2,
+                "url": "https://www.youtube.com/watch?v=ZJLAJVmggt0&ab_channel=Destiny2"
+            },
+            {
+                "id": 3,
+                "url": "https://www.youtube.com/watch?v=ovo-J5F2rRI&ab_channel=Destiny2"
+            },
+            {
+                "id": 4,
+                "url": "https://www.youtube.com/watch?v=Qy1KWyDDM2U&ab_channel=Destiny2"
+            }
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "streaming": "false "
+
+    },
+
+    
+    {
+        "id": 14,
+        "title": "Marvel Rivals",
+        "genres": "Free to Play",
+        "description": "Marvel Rivals is a Super Hero Team-Based PVP Shooter! Assemble an all-star Marvel squad, devise countless strategies by combining powers to form unique Team-Up skills and fight in destructible, ever-changing battlefields across the continually evolving Marvel universe!",
+        "release_date": "Dec 5 2024",
+        "developer": "NetEase Games",
+        "publisher": [
+            "NetEase Games"
+        ],
+        "tags": [
+            "Free to Play",
+            "Multiplayer",
+            "Hero Shooter",
+            "Superhero"
+        ],
+        "packages": {
+            "Game": {
+                "Name": "Marvel Rivals",
+                "Price": "0",
+                "Saleprice": "0",
+                "Discount": "0%",
+                "Platform": "Windows"
+            },
+            "DLC": {
+            }
+        },
+        "features": [
+            "Online PvP",
+            "Online Co-Op",
+            "Cross-Platform Multiplayer",
+            "Steam Achievements",
+            "In-App Purchases",
+            "Xbox ControllerS"
+        ],
+        "Languages": {
+            "English": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "French": [
+                "Interface",
+                "Subtitles"
+            ],
+            "Italian": [
+                "Interface",
+                "Subtitles"
+            ],
+            "German": [
+                "Interface",
+                "Subtitles"
+            ],
+            "Spanish - Spain": [
+                "Interface",
+                "Subtitles"
+            ]
+        },
+        "About": "Marvel Rivals is a Super Hero Team-Based PVP Shooter! Assemble an all-star Marvel squad, devise countless strategies by combining powers to form unique Team-Up skills and fight in destructible, ever-changing battlefields across the continually evolving Marvel universe!\n\nA Deep and Varied Marvel Roster\nChoose from a vast array of fan-favorite and cult-classic Marvel Super Heroes and Super Villains from across the Avengers, Guardians of the Galaxy, X-Men, and many more from across the Marvel Multiverse.\n\nFast and Fun 6v6 Action with Ever-Changing Game Dynamics\nWith intricate environments, fast-paced gameplay, and ever-changing battlefields, there's never a dull moment in Marvel Rivals! Battle as Super Heroes and Super Villains with incredible abilities and combine your powers to bring unexpected fun to the battlefield in a matter of seconds.\n\nDynamic Hero Synergy\nCoordinate unique combinations between characters to ignite surprising Team-Up Skills! Unleash the synergy of combined superpowers and invent new tactics that can turn the tide of combat. Ride on Groot's back as Rocket Raccoon to take on your enemies as a dangerous duo, unleash Gamma energy as Hulk to charge Iron Man's armor for massive damage, and so much more!\n\nCreative Environment Destruction\nTear your way through iconic Marvel worlds across destructible environments! From Asgard to the Tokyo of 2099, use superpowers to alter these environments, reshape the terrain, and craft a strategic advantage on the battlefield! Take cover to dodge attacks or use makeshift weapons to strike down enemies. Players will find countless ways to utilize the environment to claim victory!\n\nContinually Evolving Universe and Robust Post-Launch Updates\nThe Marvel Multiverse brings infinite possibilities! Each seasonal drop will introduce new Super Heroes to the battlefield along with challenging and diverse maps! Unlock new content to implement across various gameplay strategies while experiencing thrilling action and endless possibilities in these adventurous team battles!",
+        "achievements": "",
+        "links": [
+            "Workshop",
+            "Discussions",
+            "News",
+            "Updates",
+            "Community Groups",
+            "Marketplace",
+            "Share",
+            "Embed",
+            "Report"
+        ],
+        "system_requirements": {
+            "minimum": {
+                "os": "Windows 10",
+                "processor": "Intel Core i5-6600K or AMD Ryzen 5 1600X",
+                "memory": "16 GB RAM",
+                "graphics": "NVIDIA GeForce GTX 1060 / AMD RX 580 / Intel Arc A380",
+                "directX": "Version 12",
+                "Network":"Broadband Internet Connection",
+                "storage": "70 GB available space"
+            },
+            "recommended": {
+                "os": "Windows 10",
+                "processor": "Intel Core i5-10400 or AMD Ryzen 5 5600X",
+                "memory": "16 GB RAM",
+                "graphics": "NVIDIA GeForce RTX 2060 (Super) / AMD RX 5700-XT / Intel Arc A750",
+                "directX": "Version 12",
+                "Network":"Broadband Internet Connection",
+                "storage": "70 GB available space"
+            }
+        },
+        "platforms": [
+            { "id": 1, "name": "Windows" }
+        ],
+        "overall_rating": "4.5",
+        "images": {
+            "icon": "https://cdn2.steamgriddb.com/icon/916030603cc86a9b3d29f4d64f1bc415.ico",
+            "banner": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/header.jpg?t=1740137117",
+            "main": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/header.jpg?t=1740137117",
+            "about": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/header.jpg?t=1740137117",
+            "achievements": "https://"
+        },
+        "size": "",
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/ss_87923a8e7d294db69069e3451664115bb373013d.600x338.jpg?t=1740137117"
+            },
+            {
+                "id": 2,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/ss_51dfe5152a8dcaf375a71d0d07433af334bf7a84.600x338.jpg?t=1740137117"
+            },
+            {
+                "id": 3,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/ss_719f339a932cb46a9e3e780f27b588ad2e3c4885.600x338.jpg?t=1740137117"
+            },
+            {
+                "id": 4,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/ss_88342e4a52d65847075da15708fe1f2eed120aff.600x338.jpg?t=1740137117"
+            }
+            ,
+            {
+                "id": 5,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/ss_aeff28ffd8287327320450ae6767ba9d426799f5.600x338.jpg?t=1740137117"
+            }
+            ,
+            {
+                "id": 6,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/ss_6ec512a7297d364e312b5469967c8fd8ac537156.600x338.jpg?t=1740137117"
+            }
+            ,
+            {
+                "id": 7,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/ss_0d4e50195c83a34e794c87f98ba9bc2c9df9567a.600x338.jpg?t=1740137117"
+            }
+            ,
+            {
+                "id": 8,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/ss_1302f14dad5ecce2f2f680a2d916ec8a6ddafbe3.600x338.jpg?t=1740137117"
+            }
+            ,
+            {
+                "id": 9,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2767030/ss_eb0cc420ce9c5bc931443864c9691972d1cfbca8.600x338.jpg?t=1740137117"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://www.youtube.com/watch?v=-b0veB7q9P4&ab_channel=MarvelEntertainment"
+            },
+            {
+                "id": 2,
+                "url": "https://www.youtube.com/watch?v=6ORBFXYlQ3U&ab_channel=MarvelRivals"
+            },
+            {
+                "id": 3,
+                "url": "https://www.youtube.com/watch?v=FFWzIbkXxBU&ab_channel=MarvelEntertainment"
+            }
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "streaming": "false"
+
+    },
+
+    
+    {
+        "id": 15,
+        "title": "Red Dead Redemption 2",
+        "genres": "Adventure",
+        "description": "Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, RDR2 is the epic tale of outlaw Arthur Morgan and the infamous Van der Linde gang, on the run across America at the dawn of the modern age. Also includes access to the shared living world of Red Dead Online.",
+        "release_date": "Dec 5 2019",
+        "developer": "Rockstar Games",
+        "publisher": [
+            "Rockstar Games"
+        ],
+        "tags": [
+            "Open World",
+            "Story Rich",
+            "Western",
+            "Adventure"
+        ],
+        "packages": {
+            "Game": {
+                "Name": "Buy Red Dead Redemption 2",
+                "Price": "59.99",
+                "Saleprice": "0",
+                "Discount": "0%",
+                "Platform": "Windows"
+            },
+            "DLC": {
+                "DLC1": {
+                    "Name": "Buy Red Dead Redemption 2: Ultimate Edition",
+                    "Price": "99.99",
+                    "Saleprice": "0",
+                    "Discount": "0%",
+                    "Platform": "Windows"
+                }
+            }
+        },
+        "features": [
+            "Single Player",
+            "Online PvP",
+            "Online Co-Op",
+            "Steam Achievements",
+            "In-App Purchases",
+            "Remote Play on Phone",
+            "Remote Play on Tablet",
+            "Partial Controller Support"
+        ],
+        "Languages": {
+            "English": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "French": [
+                "Interface",
+                "Subtitles"
+            ],
+            "Italian": [
+                "Interface",
+                "Subtitles"
+            ],
+            "German": [
+                "Interface",
+                "Subtitles"
+            ],
+            "Spanish - Spain": [
+                "Interface",
+                "Subtitles"
+            ]
+        },
+        "About": "America, 1899.\n\nArthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive. As deepening internal divisions threaten to tear the gang apart, Arthur must make a choice between his own ideals and loyalty to the gang who raised him.\n\nNow featuring additional Story Mode content and a fully-featured Photo Mode, Red Dead Redemption 2 also includes free access to the shared living world of Red Dead Online, where players take on an array of roles to carve their own unique path on the frontier as they track wanted criminals as a Bounty Hunter, create a business as a Trader, unearth exotic treasures as a Collector or run an underground distillery as a Moonshiner and much more.\n\nWith all new graphical and technical enhancements for deeper immersion, Red Dead Redemption 2 for PC takes full advantage of the power of the PC to bring every corner of this massive, rich and detailed world to life including increased draw distances; higher quality global illumination and ambient occlusion for improved day and night lighting; improved reflections and deeper, higher resolution shadows at all distances; tessellated tree textures and improved grass and fur textures for added realism in every plant and animal.\n\nRed Dead Redemption 2 for PC also offers HDR support, the ability to run high-end display setups with 4K resolution and beyond, multi-monitor configurations, widescreen configurations, faster frame rates and more.",
+        "achievements": "",
+        "links": [
+            "Workshop",
+            "Discussions",
+            "News",
+            "Updates",
+            "Community Groups",
+            "Marketplace",
+            "Share",
+            "Embed",
+            "Report"
+        ],
+        "system_requirements": {
+            "minimum": {
+                "os": "Windows 10",
+                "processor": "Intel® Core™ i5-2500K / AMD FX-6300",
+                "memory": "8 GB RAM",
+                "graphics": "Nvidia GeForce GTX 770 2GB / AMD Radeon R9 280 3GB",
+                "Network": "Broadband Internet Connection",
+                "storage": "150 GB available space",
+                "SoundCard": "Direct X Compatible"
+            },
+            "recommended": {
+                "os": "Windows 10",
+                "processor": "Intel® Core™ i7-4770K / AMD Ryzen 5 1500X",
+                "memory": "12 GB RAM",
+                "graphics": "Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB",
+                "Network": "Broadband Internet Connection",
+                "storage": "150 GB available space",
+                "SoundCard": "Direct X Compatible"
+            }
+        },
+        "platforms": [
+            { "id": 1, "name": "Windows" }
+        ],
+        "overall_rating": "4.5",
+        "images": {
+            "icon": "https://cdn2.steamgriddb.com/icon_thumb/2e65f2f2fdaf6c699b223c61b1b5ab89.png",
+            "banner": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg?t=1720558643",
+            "main": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg?t=1720558643",
+            "about": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg?t=1720558643",
+            "achievements": "https://"
+        },
+        "size": "",
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/ss_66b553f4c209476d3e4ce25fa4714002cc914c4f.600x338.jpg?t=1720558643"
+            },
+            {
+                "id": 2,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/ss_668dafe477743f8b50b818d5bbfcec669e9ba93e.600x338.jpg?t=1720558643"
+            },
+            {
+                "id": 3,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/ss_4ce07ae360b166f0f650e9a895a3b4b7bf15e34f.600x338.jpg?t=1720558643"
+            },
+            {
+                "id": 4,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/ss_d1a8f5a69155c3186c65d1da90491fcfd43663d9.600x338.jpg?t=1720558643:"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://www.youtube.com/watch?v=gmA6MrX81z4&ab_channel=RockstarGames"
+            },
+            {
+                "id": 2,
+                "url": "https://www.youtube.com/watch?v=HVRzx17WHVk&ab_channel=RockstarGames"
+            }
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "streaming": "false"
+
+    },
+
+    
+    {
+        "id": 16,
+        "title": "Hades",
+        "genres": "Roguelike",
+        "description": "Defy the god of the dead as you hack and slash out of the Underworld in this rogue-like dungeon crawler from the creators of Bastion, Transistor, and Pyre.",
+        "release_date": "Sep 17 2020",
+        "developer": "Supergiant Games",
+        "publisher": [
+            "Supergiant Games"
+        ],
+        "tags": [
+            "Action Roguelike",
+            "Roguelite",
+            "Hack and Slash"
+        ],
+        "packages": {
+            "Game": {
+                "Name": "Hades",
+                "Price": "24.99",
+                "Saleprice": "0",
+                "Discount": "0%",
+                "Platform": "Windows"
+            },
+            "DLC": {
+            }
+        },
+        "features": [
+            "Single Player",
+            "Steam Achievements",
+            "Steam Trading Cards",
+            "Captions available",
+            "Steam Cloud",
+            "Remote Play on Phone",
+            "Remote Play on Tablet",
+            "Remote Play on TV",
+            "Family Sharing",
+            "Full Controller Support"
+        ],
+        "Languages": {
+            "English": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "French": [
+                "Interface",
+                "Subtitles"
+            ],
+            "Italian": [
+                "Interface",
+                "Subtitles"
+            ],
+            "German": [
+                "Interface",
+                "Subtitles"
+            ],
+            "Spanish - Spain": [
+                "Interface",
+                "Subtitles"
+            ]
+        },
+        "About": "Hades is a god-like rogue-like dungeon crawler that combines the best aspects of Supergiant's critically acclaimed titles, including the fast-paced action of Bastion, the rich atmosphere and depth of Transistor, and the character-driven storytelling of Pyre.\n\nBATTLE OUT OF HELL\nAs the immortal Prince of the Underworld, you'll wield the powers and mythic weapons of Olympus to break free from the clutches of the god of the dead himself, while growing stronger and unraveling more of the story with each unique escape attempt.\n\nUNLEASH THE FURY OF OLYMPUS\nThe Olympians have your back! Meet Zeus, Athena, Poseidon, and many more, and choose from their dozens of powerful Boons that enhance your abilities. There are thousands of viable character builds to discover as you go.\n\nBEFRIEND GODS, GHOSTS, AND MONSTERS\nA fully-voiced cast of colorful, larger-than-life characters is waiting to meet you! Grow your relationships with them, and experience thousands of unique story events as you learn about what's really at stake for this big, dysfunctional family.\n\nBUILT FOR REPLAYABILITY\nNew surprises await each time you delve into the ever-shifting Underworld, whose guardian bosses will remember you. Use the powerful Mirror of Night to grow permanently stronger, and give yourself a leg up the next time you run away from home.\n\nNOTHING IS IMPOSSIBLE\nPermanent upgrades mean you don't have to be a god yourself to experience the exciting combat and gripping story. Though, if you happen to be one, crank up the challenge and get ready for some white-knuckle action that will put your well-practiced skills to the test.\n\nSIGNATURE SUPERGIANT STYLE\nThe rich, atmospheric presentation and unique melding of gameplay and narrative that's been core to Supergiant's games is here in full force: spectacular hand-painted environments and a blood-pumping original score bring the Underworld to life.",
+        "achievements": "",
+        "links": [
+            "Workshop",
+            "Discussions",
+            "News",
+            "Updates",
+            "Community Groups",
+            "Marketplace",
+            "Share",
+            "Embed",
+            "Report"
+        ],
+        "system_requirements": {
+            "minimum": {
+                "os": "Windows 7 SP1",
+                "processor": "Dual Core 2.4 GHz",
+                "memory":"4 GB RAM",
+                "graphics": "1GB VRAM / DirectX 10+ support",
+                "storage": "15 GB available space"
+            },
+            "recommended": {
+                "os": "Windows 7 SP1",
+                "processor": "Dual Core 3.0 GHz+",
+                "memory":"8 GB RAM",
+                "graphics": "2GB VRAM / DirectX 10+ support",
+                "storage": "20 GB available space"
+            }
+        },
+        "platforms": [
+            { "id": 1, "name": "Windows" },
+            { "id": 2, "name": "macOS" }
+        ],
+        "overall_rating": "4.5",
+        "images": {
+            "icon": "https://i.redd.it/i-recreated-the-hades-icon-in-blender-v0-k4tsto24magd1.png?width=256&format=png&auto=webp&s=724e6860a421264eca1da9990dfb09b7c0c60f91",
+            "banner": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg?t=1715722799",
+            "main": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg?t=1715722799",
+            "about": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg?t=1715722799",
+            "achievements": "https://"
+        },
+        "size": "",
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145360/ss_c0fed447426b69981cf1721756acf75369801b31.600x338.jpg?t=1715722799"
+            },
+            {
+                "id": 2,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145360/ss_8a9f0953e8a014bd3df2789c2835cb787cd3764d.600x338.jpg?t=1715722799"
+            },
+            {
+                "id": 3,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145360/ss_68300459a8c3daacb2ec687adcdbf4442fcc4f47.600x338.jpg?t=1715722799"
+            },
+            {
+                "id": 4,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145360/ss_bcb499a0dd001f4101823f99ec5094d2872ba6ee.600x338.jpg?t=1715722799"
+            },
+            {
+                "id": 5,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145360/ss_8e07e477fa7ff2f88c8984bc89b9652a655da0e9.600x338.jpg?t=1715722799"
+            },
+            {
+                "id": 6,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145360/ss_34e6660705cfe47d2b2f95189c37f7cb77f75ca6.600x338.jpg?t=1715722799"
+            },
+            {
+                "id": 7,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145360/ss_217b70678a2eea71a974fba1a4cd8baa660581bb.600x338.jpg?t=1715722799"
+            },
+            {
+                "id": 8,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145360/ss_5e52844b891b54608eb51a850d6b53313eeed0f7.600x338.jpg?t=1715722799"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://www.youtube.com/watch?v=RXq0yBmfiC8&ab_channel=PlayStation"
+            },
+            {
+                "id": 2,
+                "url": "https://www.youtube.com/watch?v=91t0ha9x0AE&ab_channel=IGN"
+            }
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "streaming": "false"
+
+    },
+
+    
+    {
+        "id": 17,
+        "title": "Halo: The Master Chief Collection",
+        "genres": "Action",
+        "description": "The Master Chief’s iconic journey includes six games, built for PC and collected in a single integrated experience. Whether you’re a long-time fan or meeting Spartan 117 for the first time, The Master Chief Collection is the definitive Halo gaming experience.",
+        "release_date": "Dec 3 2019",
+        "developer": "343 Industries, Splash Damage",
+        "publisher": [
+            "Xbox Game Studios"
+        ],
+        "tags": [
+            "Great Soundtrack",
+            "FPS",
+            "Classic",
+            "Multiplayer"
+        ],
+        "packages": {
+            "Game": {
+                "Name": "Halo: The Master Chief Collection",
+                "Price": "39.99",
+                "Saleprice": "0",
+                "Discount": "0%",
+                "Platform": "Windows"
+            },
+            "DLC": {
+            }
+        },
+        "features": [
+            "Single Player",
+            "Online PvP",
+            "Lan PvP",
+            "Online Co-Op",
+            "LAN Co-op",
+            "Cross-Platform Multiplayer",
+            "Steam Achievements",
+            "Steam Trading Cards",
+            "Steam Workshop",
+            "Remote Play on Phone",
+            "Remote Play on Tablet",
+            "Remote Play on TV",
+            "Family Sharing",
+            "Full Controller Support"
+        ],
+        "Languages": {
+            "English": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "French": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Italian": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "German": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Spanish - Spain": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ]
+        },
+        "About": "The series that changed console gaming forever is on PC with six blockbuster games in one epic experience.\n\nPC Settings/Optimizations\nHalo: The Master Chief Collection is now optimized for PC and looking better than ever at up to 4k UHD and at 60+ FPS.* Other setting options include customizable mouse and keyboard support, ultrawide support, FOV customization, and more.\n\nCampaign\nFeaturing Halo: Reach, Halo: Combat Evolved Anniversary, Halo 2: Anniversary, Halo 3, Halo 3: ODST Campaign, and Halo 4, The Master Chief Collection offers players their own exciting journey through the epic saga. Starting with the incredible bravery of Noble Six in Halo: Reach and ending with the rise of a new enemy in Halo 4, the Master Chief’s saga totals 67 campaign missions over six critically-acclaimed titles.\n\nMultiplayer\nEach of the six games in The Master Chief Collection brings its own multiplayer maps, modes and game types. With more than 120 multiplayer maps and countless ways to play with community-created Forge content the Collection has the most diverse and expansive Halo multiplayer experience to date.\n\nForge\nHalo’s iconic map editor is improved, refreshed and better than ever. Build new maps with expanded functionality, increased budget, new objects and create new ways to play with custom game modes.**\n\n*Look to system requirements for guidance on hardware minimum specs to achieve performance metrics.\n\n**Forge mode not available in Halo: Combat Evolved Anniversary or Halo 3: ODST.",
+        "achievements": "",
+        "links": [
+            "Workshop",
+            "Discussions",
+            "News",
+            "Updates",
+            "Community Groups",
+            "Marketplace",
+            "Share",
+            "Embed",
+            "Report"
+        ],
+        "system_requirements": {
+            "minimum": {
+                "os": "Windows 7",
+                "processor": "AMD Phenom II X4 960T ; Intel i3550",
+                "graphics": "AMD HD 6850 ; NVIDIA GeForce GTS 450",
+                "directX": "Version 11",
+                "Network": "Broadband Internet Connection",
+                "storage": "43 GB available space"
+            },
+            "recommended": {
+                "os": "Windows 7",
+                "processor": "AMD Phenom II X4 960T ; Intel i3550",
+                "graphics": "AMD HD 6850 ; NVIDIA GeForce GTS 450",
+                "directX": "Version 11",
+                "Network": "Broadband Internet Connection",
+                "storage": "43 GB available space"
+            }
+        },
+        "platforms": [
+            { "id": 1, "name": "Windows" }
+        ],
+        "overall_rating": "4.5",
+        "images": {
+            "icon": "https://cdn2.steamgriddb.com/icon/1160453108d3e537255e9f7b931f4e90.ico",
+            "banner": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/976730/header.jpg?t=1670458602",
+            "main": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/976730/header.jpg?t=1670458602",
+            "about": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/976730/header.jpg?t=1670458602",
+            "achievements": "https://"
+        },
+        "size": "",
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/976730/ss_ce40a85f9f7f3fa0f620a87f8919f3212ab8e46e.600x338.jpg?t=1670458602"
+            },
+            {
+                "id": 2,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/976730/ss_62bbd86f4735893ef6cd53206cf8c93f87eb86ec.600x338.jpg?t=1670458602"
+            },
+            {
+                "id": 3,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/976730/ss_1a2c2cfa8afe61d633cee4939e4d5e15cb8b10cc.600x338.jpg?t=1670458602"
+            },
+            {
+                "id": 4,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/976730/ss_85da13aef2acd210f95f4b43540967f24d7bed6a.600x338.jpg?t=1670458602"
+            },
+            {
+                "id": 5,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/976730/ss_25d03817a7e55b9b1c12b835af457e827ee8a246.600x338.jpg?t=1670458602"
+            },
+            {
+                "id": 6,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/976730/ss_e00d7524d2b4529ef08cd49afde2cf6212ff034e.600x338.jpg?t=1670458602"
+            },
+            {
+                "id": 7,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/976730/ss_24bfdbf8483862d9e6f1d2b114a2412e47a41d68.600x338.jpg?t=1670458602"
+            },
+            {
+                "id": 8,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/976730/ss_474aea5c482e3db77e60f1366f04401aa96627d2.600x338.jpg?t=1670458602"
+            },
+            {
+                "id": 9,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/976730/ss_99af4fb4b95471b3b7df467b3b39705f46a97e8d.600x338.jpg?t=1670458602"
+            },
+            {
+                "id": 10,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/976730/ss_13659e88082ebd640dbdc2f2ff76e1e40182cbf0.600x338.jpg?t=1670458602"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://www.youtube.com/watch?v=QHnljglQ8Ag&ab_channel=Xbox"
+            },
+            {
+                "id": 2,
+                "url": "https://www.youtube.com/watch?v=18-_9E0HNY4&ab_channel=moviemaniacsDE"
+            },
+            {
+                "id": 3,
+                "url": "https://www.youtube.com/watch?v=GKDkKKt9Y7I&ab_channel=HaloBaseLegend"
+            }
+        ],
+        "reviews": [
+            {
+                "id": 1,
+                "title": "Great game!",
+                "rating": 5,
+                "content": "I loved this game! The graphics are amazing and the gameplay is so much fun."
+            }
+        ],
+        "streaming": "false"
+
+    },
+
+    
+    {
+        "id": 18,
+        "title": "Fallout 4",
+        "genres": "RPG",
+        "description": "Bethesda Game Studios, the award-winning creators of Fallout 3 and The Elder Scrolls V: Skyrim, welcome you to the world of Fallout 4 – their most ambitious game ever, and the next generation of open-world gaming.",
+        "release_date": "Nov 9 2015",
+        "developer": "Bethesda Game Studios",
+        "publisher": [
+            "Bethesda Softworks"
+        ],
+        "tags": [
+            "Open World",
+            "Post-Apocalyptic",
+            "Singleplayer",
+            "RPG"
+        ],
+        "packages": {
+            "Game": {
+                "Name": "Fallout 4",
+                "Price": "0",
+                "Saleprice": "0",
+                "Discount": "0%",
+                "Platform": "Windows"
+            },
+            "DLC": {
+            }
+        },
+        "features": [
+            "Single Player",
+            "Steam Achievements",
+            "Steam Cloud",
+            "Remote Play on Phone",
+            "Remote Play on Tablet",
+            "Remote Play on TV",
+            "Family Sharing",
+            "Full Controller Support"
+        ],
+        "Languages": {
+            "English": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "French": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Italian": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "German": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ],
+            "Spanish - Spain": [
+                "Interface",
+                "Full Audio",
+                "Subtitles"
+            ]
+        },
+        "About": "Bethesda Game Studios, the award-winning creators of Fallout 3 and The Elder Scrolls V: Skyrim, welcome you to the world of Fallout 4 – their most ambitious game ever, and the next generation of open-world gaming.\n\nAs the sole survivor of Vault 111, you enter a world destroyed by nuclear war. Every second is a fight for survival, and every choice is yours. Only you can rebuild and determine the fate of the Wasteland. Welcome home.\n\nKey Features:\nFreedom and Liberty!\nDo whatever you want in a massive open world with hundreds of locations, characters, and quests. Join multiple factions vying for power or go it alone, the choices are all yours.\n\nYou’re S.P.E.C.I.A.L!\nBe whoever you want with the S.P.E.C.I.A.L. character system. From a Power Armored soldier to the charismatic smooth talker, you can choose from hundreds of Perks and develop your own playstyle.\n\nSuper Deluxe Pixels!\nAn all-new next generation graphics and lighting engine brings to life the world of Fallout like never before. From the blasted forests of the Commonwealth to the ruins of Boston, every location is packed with dynamic detail.\n\nViolence and V.A.T.S.!\nIntense first or third person combat can also be slowed down with the new dynamic Vault-Tec Assisted Targeting System (V.A.T.S) that lets you choose your attacks and enjoy cinematic carnage.\n\nCollect and Build!\nCollect, upgrade, and build thousands of items in the most advanced crafting system ever. Weapons, armor, chemicals, and food are just the beginning - you can even build and manage entire settlements.",
+        "achievements": "",
+        "links": [
+            "Workshop",
+            "Discussions",
+            "News",
+            "Updates",
+            "Community Groups",
+            "Marketplace",
+            "Share",
+            "Embed",
+            "Report"
+        ],
+        "system_requirements": {
+            "minimum": {
+                "os": "Windows 7/8/10 (64-bit OS required)",
+                "processor": "Intel Core i5-2300 2.8 GHz/AMD Phenom II X4 945 3.0 GHz or equivalent",
+                "memory": "8 GB RAM",
+                "graphics": "NVIDIA GTX 550 Ti 2GB/AMD Radeon HD 7870 2GB or equivalent",
+                "storage": "30 GB available space"
+            },
+            "recommended": {
+                "os": "Windows 7/8/10 (64-bit OS required)",
+                "processor": "Intel Core i7 4790 3.6 GHz/AMD FX-9590 4.7 GHz or equivalent",
+                "memory": "8 GB RAM",
+                "graphics": "NVIDIA GTX 780 3GB/AMD Radeon R9 290X 4GB or equivalent",
+                "storage": "30 GB available space"
+            }
+        },
+        "platforms": [
+            { "id": 1, "name": "Windows" }
+        ],
+        "overall_rating": "4.5",
+        "images": {
+            "icon": "https:",
+            "banner": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/377160/header.jpg?t=1726758475",
+            "main": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/377160/header.jpg?t=1726758475",
+            "about": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/377160/header.jpg?t=1726758475",
+            "achievements": "https://"
+        },
+        "size": "",
+        "screenshots": [
+            {
+                "id": 1,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/377160/ss_f7861bd71e6c0c218d8ff69fb1c626aec0d187cf.600x338.jpg?t=1726758475"
+            },
+            {
+                "id": 2,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/377160/ss_910437ac708aed7c028f6e43a6224c633d086b0a.600x338.jpg?t=1726758475"
+            },
+            {
+                "id": 3,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/377160/ss_f649b8e57749f380cca225db5074edbb1e06d7f5.600x338.jpg?t=1726758475"
+            },
+            {
+                "id": 4,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/377160/ss_5e2d136759e0ff4e0d74940fffc9c64e8cdcd833.600x338.jpg?t=1726758475"
+            },
+            {
+                "id": 5,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/377160/ss_c6b798424a93617b4b825aea3bcd9547c0b0a5ce.600x338.jpg?t=1726758475"
+            },
+            {
+                "id": 6,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/377160/ss_6834be966451a9b0f12eb4f68bfb0853ea0b7267.600x338.jpg?t=1726758475"
+            },
+            {
+                "id": 7,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/377160/ss_0e3f64b96da8ffc1372512f827c263934d3cd5d6.600x338.jpg?t=1726758475"
+            },
+            {
+                "id": 8,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/377160/ss_a3540ed3253f36a666bd9a50698715f3a1316f70.600x338.jpg?t=1726758475"
+            },
+            {
+                "id": 9,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/377160/ss_f3b094ce4bb54e1970abbd4fc7da3a0576894aae.600x338.jpg?t=1726758475"
+            },
+            {
+                "id": 10,
+                "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/377160/ss_d7e392145d393932fa86d6460db03d4a0038e320.600x338.jpg?t=1726758475"
+            }
+        ],
+        "videos": [
+            {
+                "id": 1,
+                "url": "https://www.youtube.com/watch?v=X5aJfebzkrM&ab_channel=BethesdaSoftworks"
+            },
+            {
+                "id": 2,
+                "url": "https://www.youtube.com/watch?v=XW7Of3g2JME&ab_channel=GameSpot"
             }
         ],
         "reviews": [

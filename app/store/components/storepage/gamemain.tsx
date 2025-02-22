@@ -28,22 +28,24 @@ type Game = {
         Discount: string;
         Platform: string | string[];
       };
-      DLC1?: {
-        Name: string;
-        Price: string;
-        Saleprice: string;
-        Discount: string;
-        Platform: string | string[];
-        Image?: string;
-      };
-      DLC2?: {
-        Name: string;
-        Price: string;
-        Saleprice: string;
-        Discount: string;
-        Platform: string | string[];
-        Image?: string;
-      };
+      DLC?: {
+        DLC1?: {
+            Name: string;
+            Price: string;
+            Saleprice: string;
+            Discount: string;
+            Platform: string | string[];
+            Image?: string;
+          };
+          DLC2?: {
+            Name: string;
+            Price: string;
+            Saleprice: string;
+            Discount: string;
+            Platform: string | string[];
+            Image?: string;
+          };
+      }
     };
     features?: string[];
     Languages: {
@@ -134,16 +136,13 @@ export default function GameMain({ game }: GameMainProps) {
     const handleNext = () => {
         setCurrentIndex((prevIndex) => {
             const newIndex = Math.min(prevIndex + 1, mediaItems.length - 1);
+    
+            // Only update startIndex if necessary
+            if (newIndex >= startIndex + 4) {
+                setStartIndex((prevStart) => Math.min(prevStart + 1, mediaItems.length - 4));
+            }
+    
             setCurrentMedia(mediaItems[newIndex].src);
-    
-            setStartIndex((prevStart) => {
-                
-                if (prevStart + 4 >= mediaItems.length) {
-                    return Math.max(mediaItems.length - 4, 0);
-                }
-                return prevStart + 1;
-            });
-    
             return newIndex;
         });
     };
@@ -151,15 +150,17 @@ export default function GameMain({ game }: GameMainProps) {
     const handlePrev = () => {
         setCurrentIndex((prevIndex) => {
             const newIndex = Math.max(prevIndex - 1, 0);
+    
+            // Only update startIndex if necessary
+            if (newIndex < startIndex) {
+                setStartIndex((prevStart) => Math.max(prevStart - 1, 0));
+            }
+    
             setCurrentMedia(mediaItems[newIndex].src);
-    
-            setStartIndex((prevStart) => {
-                return Math.max(prevStart - 1, 0);
-            });
-    
             return newIndex;
         });
     };
+    
 
     return (
         <>
@@ -251,7 +252,7 @@ export default function GameMain({ game }: GameMainProps) {
                                 <button 
                                     onClick={handleNext} 
                                     className="px-3" 
-                                    disabled={currentIndex >= mediaItems.length - 1} // Disable only at the very last item
+                                    disabled={currentIndex >= mediaItems.length - 1} 
                                 >
                                     <MdArrowForwardIos 
                                         size={25} 
@@ -279,7 +280,7 @@ export default function GameMain({ game }: GameMainProps) {
                             <Image
                                 src={game.images?.banner as string} 
                                 alt="About Image"
-                                width={800}  // Adjust the width as needed
+                                width={800} 
                                 height={450}
                                 className="rounded-sm"
                                 />
