@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useState, useEffect } from "react";
 import eldencover from '../../../images/eldencover.jpg'
 import eldensteam from '../../../images/eldensteam.jpg'
-import { FaWindows } from "react-icons/fa";
+import { FaWindows, FaApple, FaSteam } from "react-icons/fa";
 import { IoIosAdd } from "react-icons/io";
 import { FaRegHeart } from "react-icons/fa";
 import { MdArrowBackIos } from "react-icons/md";
@@ -168,12 +168,23 @@ export default function News() {
                                 <h2 className="text-3xl text-white font-bold">{game.title}</h2>
                                 <div className="flex justify-between mt-4 text-lg items-center">
                                     <div className="text-gray-400 flex justify-center items-center">
-                                        <FaWindows size={25}/>
+                                        {game.platforms?.map((platform) => {
+                                            switch (platform.name) {
+                                                case "Windows":
+                                                    return <FaWindows key={platform.id} size={25} />;
+                                                case "macOS":
+                                                    return <FaApple key={platform.id} size={25} />;
+                                                case "Steam":
+                                                    return <FaSteam key={platform.id} size={25} />;
+                                                default:
+                                                    return null; 
+                                            }
+                                        })}
                                     </div>
                                 
                                     <div className="flex flex-row gap-4">
                                         <div className="flex justify-center items-center">
-                                            <p className="text-white">{game.packages?.Game?.Price === "0" ? "Free" : game.packages?.Game?.Price || "N/A"}</p>
+                                            <p className="text-white">{game.packages?.Game?.Price === "0" ? "Free" : "$" + game.packages?.Game?.Price || "N/A"}</p>
                                         </div>
                                         <div className="flex gap-2 flex-row text-white bg-gray-800 px-6 py-3 rounded-md items-center justify-center">
                                         <FaRegHeart />
