@@ -172,7 +172,7 @@ export default function Reviews() {
                                     </div>
                                     <p className="text-sm text-blue-500">534,170 Reviews</p>
 
-                                    <div className="border border-gray-400 rounded-md text-gray-400 p-2 ml-5">See Graph</div>
+                                    <div className="border border-gray-400 rounded-md text-gray-400 p-2 ml-3">See Graph</div>
 
                                 </div>
 

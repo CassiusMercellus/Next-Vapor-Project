@@ -343,7 +343,7 @@ export default function GameMain({ game }: GameMainProps) {
 
                             <div className="flex flex-row items-center w-full pt-4">
                                 <div className="flex justify-between">
-                                    <div className="flex flex-row gap-1">
+                                    <div className="flex flex-wrap gap-1">
                                         {game.tags?.map((tag, index) => (
                                             <p key={index} className="text-gray-500 text-sm bg-gray-800 p-2 rounded-md">
                                                 {tag}

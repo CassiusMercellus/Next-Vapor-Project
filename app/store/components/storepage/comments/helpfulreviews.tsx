@@ -49,7 +49,7 @@ export default function HelpfulReviews() {
                     <p>Was this review helpful?</p>
                 </div>
 
-                <div className="flex flex-row mt-5 gap-2">
+                <div className="flex flex-wrap mt-5 gap-2">
                     <div className="flex flex-row gap-2 bg-slate-950 p-2 rounded-md items-center">
                         <p className="text-gray-400 text-sm">Yes</p>
                         <AiFillLike className="text-gray-400" />

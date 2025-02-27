@@ -43,7 +43,7 @@ export default function Recentreviews() {
                     <p>Was this review helpful?</p>
                 </div>
 
-                <div className="flex flex-row mt-5 gap-1">
+                <div className="flex flex-wrap mt-5 gap-1">
                     <div className="flex flex-row gap-1 bg-slate-950 p-2 rounded-md items-center">
                         <p className="text-gray-400 text-sm">Yes</p>
                         <AiFillLike className="text-gray-400" />

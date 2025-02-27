@@ -36,7 +36,7 @@ export default function Browse() {
                         {/* RPG */}
                         <div className="relative w-1/5">
                             <Image src={Rpg} alt={"rpg"} className="rounded-lg object-cover w-full h-full" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-700 to-transparent rounded-lg"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-yellow-700 to-transparent rounded-lg"></div>
                             <p className="absolute inset-0 flex items-center justify-center text-white font-bold text-xl">
                                 RPG
                             </p>
@@ -45,7 +45,7 @@ export default function Browse() {
                         {/* Fighting */}
                         <div className="relative w-1/5">
                             <Image src={Fighting} alt={"fighting"} className="rounded-lg object-cover w-full h-full" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-gray-700 to-transparent rounded-lg"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-sky-700 to-transparent rounded-lg"></div>
                             <p className="absolute inset-0 flex items-center justify-center text-white font-bold text-xl">
                                 Fighting
                             </p>

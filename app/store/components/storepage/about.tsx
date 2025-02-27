@@ -3,49 +3,133 @@ import { IoIosAdd } from "react-icons/io";
 import { FaRegHeart } from "react-icons/fa";
 import { LuDot } from "react-icons/lu";
 import Image from 'next/image'
-import eldencover from '../../../images/eldencover.jpg'
+import ReactMarkdown from "react-markdown";
 
-export default function About() {
+
+type Game = {
+    id: number;
+    title: string;
+    genres: string;
+    description: string;
+    release_date: string;
+    developer: string;
+    publisher: string[];
+    tags?: string[];
+    packages?: {
+      Game?: {
+        Name: string;
+        Price: string;
+        Saleprice: string;
+        Discount: string;
+        Platform: string | string[];
+      };
+      DLC?: {
+        DLC1?: {
+            Name: string;
+            Price: string;
+            Saleprice: string;
+            Discount: string;
+            Platform: string | string[];
+            Image?: string;
+          };
+          DLC2?: {
+            Name: string;
+            Price: string;
+            Saleprice: string;
+            Discount: string;
+            Platform: string | string[];
+            Image?: string;
+          };
+      }
+    };
+    features?: string[];
+    Languages: {
+        English: string[];
+        Simplified_Chinese?: string[];
+        French?: string[];
+        Italian?: string[];
+        German?: string[];
+      };
+    About?: string;
+    achievements?: string;
+    links?: string[];
+    system_requirements?: {
+      minimum?: {
+        os?: string;
+        processor?: string;
+        memory?: string;
+        graphics?: string;
+        directX?: string;
+        storage?: string;
+        SoundCard?: string;
+      };
+      recommended?: {
+        os?: string;
+        processor?: string;
+        memory?: string;
+        graphics?: string;
+        directX?: string;
+        storage?: string;
+        SoundCard?: string;
+      };
+    };
+    platforms?: {
+      id: number;
+      name: string;
+    }[];
+    overall_rating?: string;
+    images?: {
+      icon?: string;
+      banner?: string;
+      main?: string;
+      about?: string;
+      achievements?: string;
+    };
+    size?: string;
+    screenshots?: {
+      id: number;
+      image: string;
+    }[];
+    videos?: {
+      id: number;
+      url: string;
+    }[];
+    reviews?: {
+      id: number;
+      title: string;
+      rating: number;
+      content: string;
+    }[];
+    streaming?: string;
+  };
+
+interface GameMainProps {
+    game: Game;
+}
+
+export default function About({ game }: GameMainProps) {
     return (
         <>
             <div className="flex flex-col bg-gray-900 pl-4 p-2 rounded-md items-center mt-4 w-full">
                 <div className="flex text-gray-500 justify-between w-full mt-2 mb-4">
-                    <h2 className="font-bold">About Elden Ring</h2>
+                    <h2 className="font-bold">About {game.title}</h2>
                 </div>
 
-                <Image src={eldencover} alt={"elden"} className="w-full h-full rounded-md"></Image>
-
-                <div className="flex flex-col py-5">
-                    <p className="text-white text-xs">THE NEW FANTASY ACTION RPG. Rise, Tarnished. and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.</p>
-
-                    <div className="text-blue-400 mt-5">
-                        <div className="flex items-center gap-1">
-                            <li className="font-bold">A Vast World Full of Excitement</li>
-                        </div>
-                        <p className="text-white text-xs mt-2">A vast world where open fields with a variety of situations and huge dungeons with complex and three-dimensional designs are seamlessly connected. As you explore, the joy of discovering unknown and overwhelming threats await you, leading to a high sense of accomplishment.</p>
-                    </div>
-
-                    <div className="text-blue-400 mt-5">
-                        <div className="flex items-center gap-1">
-                            <li className="font-bold">Create your Own Character</li>
-                        </div>
-                        <p className="text-white text-xs mt-2">In addition to customizating the appearance of your character, you can freely combine the weapons, armor, and magic that you equip. You can develop yhour character according to your play style, such as increasing you muscle strength to become a strong warrior, or mastering magic.</p>
-                    </div>
-
-                    <div className="text-blue-400 mt-5">
-                        <div className="flex items-center gap-1">
-                            <li className="font-bold">An Epic Drama Born from a Myth</li>
-                        </div>
-                        <p className="text-white text-xs mt-2">A multilayered story told in fragments. An epic drama in which the various thoughts of the characters intersect in the Lands Between.</p>
-                    </div>
-
-                    <div className="text-blue-400 mt-5">
-                        <div className="flex items-center gap-1">
-                            <li className="font-bold">Unique Online Play that Loosely Connects You to Others</li>
-                        </div>
-                        <p className="text-white text-xs mt-2">In addition to multiplayer, where you can directly connect with other players and travel together, the game supports a unique asynchronous online element that allows you to feel the presence of others.</p>
-                    </div>
-                    
+                <div className="flex flex-col py-2">
+                    <ReactMarkdown
+                        components={{
+                            h1: ({ node, ...props }) => <h1 className="text-3xl font-bold mb-2" {...props} />,
+                            h2: ({ node, ...props }) => <h2 className="text-2xl font-semibold mt-4 mb-2 text-sky-400" {...props} />,
+                            h3: ({ node, ...props }) => <h3 className="text-xl font-medium my-2" {...props} />,
+                            p: ({ node, ...props }) => <p className="mb-4 leading-relaxed" {...props} />,
+                            ul: ({ node, ...props }) => <ul className="list-disc list-inside my-2" {...props} />,
+                            li: ({ node, ...props }) => <li className="ml-5" {...props} />,
+                            img: ({ node, ...props }) => (
+                                <img className="w-full h-full shadow-lg my-4" {...props} />
+                            ),
+                        }}>
+                        {game.About}
+                    </ReactMarkdown>
                 </div>
             </div>
         </>

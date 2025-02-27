@@ -136,8 +136,8 @@ export default function Storepage({ params }: { params: { id: string } }) {
                 <div className="flex gap-3">
                     <div className="w-2/3">
                         <Expansion game={game}></Expansion>
-                        <About></About>
-                        <Requirements></Requirements>
+                        <About game={game}></About>
+                        <Requirements game={game}></Requirements>
                         <Similar></Similar>
                     </div>
                     <div className="w-1/3">
