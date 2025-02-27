@@ -116,7 +116,7 @@ export default function News() {
 
     const [randomGames, setRandomGames] = useState<Game[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const visibleCount = 4;
+    const visibleCount = 3;
   
     useEffect(() => {
         if (games.length > 0) {
@@ -173,7 +173,7 @@ export default function News() {
                                 
                                     <div className="flex flex-row gap-4">
                                         <div className="flex justify-center items-center">
-                                            <p className="rounded-md flex justify-center items-center text-white pr-4 pl-2 font-bold">{game.price}</p>
+                                            <p className="text-white">{game.packages?.Game?.Price === "0" ? "Free" : game.packages?.Game?.Price || "N/A"}</p>
                                         </div>
                                         <div className="flex gap-2 flex-row text-white bg-gray-800 px-6 py-3 rounded-md items-center justify-center">
                                         <FaRegHeart />
@@ -184,69 +184,21 @@ export default function News() {
                             </div>
                         </div>
                     </div>
+                    ))}
 
-
-                    <div className="bg-gray-950 rounded-md w-1/3">
-                        <div className="flex flex-col justify-between p-4 gap-4">
-                            <Image src={eldencover} alt={"elden"} className="w-full h-full rounded-md"></Image>
-                            <div className="flex flex-col">
-                                <h2 className="text-3xl text-white font-bold">Elden Ring</h2>
-                                <div className="flex justify-between mt-4 text-lg items-center">
-                                    <div className="text-gray-400 flex justify-center items-center">
-                                        <FaWindows size={25}/>
-                                    </div>
-                                
-                                    <div className="flex flex-row gap-4">
-                                        <div className="flex justify-center items-center">
-                                            <p className="rounded-md flex justify-center items-center text-white pr-4 pl-2 font-bold">$59.99</p>
-                                        </div>
-                                        <div className="flex gap-2 flex-row text-white bg-gray-800 px-6 py-3 rounded-md items-center justify-center">
-                                        <FaRegHeart />
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className="bg-gray-950 rounded-md w-1/3">
-                        <div className="flex flex-col justify-between p-4 gap-4">
-                            <Image src={eldencover} alt={"elden"} className="w-full h-full rounded-md"></Image>
-                            <div className="flex flex-col">
-                                <h2 className="text-3xl text-white font-bold">Elden Ring</h2>
-                                <div className="flex justify-between mt-4 text-lg items-center">
-                                    <div className="text-gray-400 flex justify-center items-center">
-                                        <FaWindows size={25}/>
-                                    </div>
-                                
-                                    <div className="flex flex-row gap-4">
-                                        <div className="flex justify-center items-center">
-                                            <p className="rounded-md flex justify-center items-center text-white pr-4 pl-2 font-bold">$59.99</p>
-                                        </div>
-                                        <div className="flex gap-2 flex-row text-white bg-gray-800 px-6 py-3 rounded-md items-center justify-center">
-                                        <FaRegHeart />
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     </div>
 
 
 
-                <div className="flex px-3">
+                    <button className="flex px-3 disabled:opacity-50" onClick={nextGame} disabled={currentIndex + visibleCount >= randomGames.length}>
                         <MdArrowForwardIos size={25} />
-                    </div>
+                    </button>
                 </div>
                 
             </div>
             <div className="py-2 pb-20 bg-slate-900">
                 <div className="flex justify-center gap-2">
-                {Array.from({ length: 7 }).map((_, index) => (
+                {Array.from({ length: 8 }).map((_, index) => (
                     <div
                     key={index}
                     className={`w-8 h-2 rounded-lg ${

@@ -173,10 +173,15 @@ export default function Featured() {
 
                             <div className="flex justify-between">
                                 <div className="flex flex-row gap-1 ">
-                                    <p className="text-gray-500 text-sm bg-gray-800 p-2 rounded-md">Souls-like</p>
-                                    <p className="text-gray-500 text-sm bg-gray-800 p-2 rounded-md">RPG</p>
-                                    <p className="text-gray-500 text-sm bg-gray-800 p-2 rounded-md">Dark Fantasy</p>
-                                    <p className="text-gray-500 text-sm bg-gray-800 p-2 rounded-md">Open-world</p>
+                                {game.tags && game.tags.length > 0 ? (
+                                  game.tags.map((tag, index) => (
+                                    <p key={index} className="text-gray-500 text-sm bg-gray-800 p-2 rounded-md">
+                                      {tag}
+                                    </p>
+                                  ))
+                                ) : (
+                                  <p className="text-gray-500 text-sm bg-gray-800 p-2 rounded-md">No Tags Available</p>
+                                )}
                                     <p className="text-gray-500 text-sm bg-gray-800 p-2 rounded-md"><IoIosAdd size={20}/></p>
                                 </div>
                                 <div className="text-gray-400 flex justify-center items-center">
