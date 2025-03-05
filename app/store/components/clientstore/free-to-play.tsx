@@ -2,8 +2,6 @@
 
 import Image from 'next/image'
 import { useState } from "react";
-import eldencover from '../../../images/eldencover.jpg'
-import eldensteam from '../../../images/eldensteam.jpg'
 import { FaWindows, FaApple, FaSteam } from "react-icons/fa";
 import { IoIosAdd } from "react-icons/io";
 import { FaRegHeart } from "react-icons/fa";
@@ -155,9 +153,9 @@ export default function Freetoplay() {
                             <div className="flex flex-col justify-between p-4 gap-4">
                             <Image src={game.images?.main} alt={game.title} width={300} height={180} className="w-full h-64 rounded-md" />
                             <div className="flex flex-col">
-                                <h2 className="text-3xl text-white font-bold">
+                            <a href={`/store/gamepage/${game.id}`}><h2 className="text-3xl text-white font-bold">
                                 {game.title}
-                                </h2>
+                                </h2></a>
                                 <div className="flex justify-between mt-4 text-lg items-center">
                                 <div className="text-gray-400 flex justify-center items-center">
                                     {game.platforms?.map((platform) => {

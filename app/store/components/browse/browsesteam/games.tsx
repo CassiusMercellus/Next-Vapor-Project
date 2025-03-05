@@ -1,73 +1,281 @@
+"use client";
+
 import Image from 'next/image'
-import eldensteam from "../../../../images/eldensteam.jpg";
+import { useState, useEffect } from "react";
 import eldencover from "../../../../images/eldencover.jpg";
 import { BiSolidLike } from "react-icons/bi";
 import { BiSolidDislike } from "react-icons/bi";
-import { FaWindows } from "react-icons/fa";
+import { FaWindows, FaApple, FaSteam } from "react-icons/fa";
 import { IoIosAdd } from "react-icons/io";
-import { FaRegHeart } from "react-icons/fa";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 
-export default function Games() {
+import { db } from "../../../../../lib/firebase";
+import { doc, updateDoc, arrayUnion, getDoc } from "firebase/firestore";
+import { auth } from "../../../../../lib/firebase";
+
+import games from "@/data/games.json";
+
+
+type Game = {
+    id: number;
+    title: string;
+    genres: string;
+    description: string;
+    release_date: string;
+    developer: string;
+    publisher: string[];
+    tags?: string[];
+    packages?: {
+      Game?: {
+        Name: string;
+        Price: string;
+        Saleprice: string;
+        Discount: string;
+        Platform: string | string[];
+      };
+      DLC?: {
+        DLC1?: {
+            Name: string;
+            Price: string;
+            Saleprice: string;
+            Discount: string;
+            Platform: string | string[];
+            Image?: string;
+          };
+          DLC2?: {
+            Name: string;
+            Price: string;
+            Saleprice: string;
+            Discount: string;
+            Platform: string | string[];
+            Image?: string;
+          };
+      }
+    };
+    features?: string[];
+    Languages: {
+        English: string[];
+        Simplified_Chinese?: string[];
+        French?: string[];
+        Italian?: string[];
+        German?: string[];
+      };
+    About?: string;
+    achievements?: string;
+    links?: string[];
+    system_requirements?: {
+        minimum?: {
+          os?: string;
+          processor?: string;
+          memory?: string;
+          graphics?: string;
+          directX?: string;
+          storage?: string;
+          SoundCard?: string;
+        };
+        recommended?: {
+          os?: string;
+          processor?: string;
+          memory?: string;
+          graphics?: string;
+          directX?: string;
+          storage?: string;
+          SoundCard?: string;
+        };
+      };
+    platforms?: {
+      id: number;
+      name: string;
+    }[];
+    overall_rating?: string;
+    images?: {
+      icon?: string;
+      banner?: string;
+      main?: string;
+      about?: string;
+      achievements?: string;
+    };
+    size?: string;
+    screenshots?: {
+      id: number;
+      image: string;
+    }[];
+    videos?: {
+      id: number;
+      url: string;
+    }[];
+    reviews?: {
+      id: number;
+      title: string;
+      rating: number;
+      content: string;
+    }[];
+    streaming?: string;
+  };
+
+
+export default function Games({ isGrid, gameId }: { isGrid: boolean; gameId: number }) {
+
+    const [wishlist, setWishlist] = useState<number[]>([]);
+    const [userId, setUserId] = useState<string | null>(null);
+
+    useEffect(() => {
+      const fetchUserWishlist = async () => {
+        const currentUser = auth.currentUser;
+        if (currentUser) {
+          setUserId(currentUser.uid);
+          const userRef = doc(db, "users", currentUser.uid);
+          const userSnap = await getDoc(userRef);
+          if (userSnap.exists()) {
+            setWishlist(userSnap.data().wishlist || []);
+          }
+        }
+      };
+  
+      fetchUserWishlist();
+    }, []);
+
+    const toggleWishlist = async (gameId: number) => {
+      if (!userId) return;
+    
+      try {
+        const userRef = doc(db, "users", userId);
+
+        if (wishlist.includes(gameId)) {
+
+          await updateDoc(userRef, {
+            wishlist: wishlist.filter((id) => id !== gameId),
+          });
+          setWishlist((prev) => prev.filter((id) => id !== gameId));
+          console.log("Game removed from wishlist!");
+        } else {
+          await updateDoc(userRef, {
+            wishlist: arrayUnion(gameId),
+          });
+          setWishlist((prev) => [...prev, gameId]);
+          console.log("Game added to wishlist!");
+        }
+      } catch (error) {
+        console.error("Error toggling wishlist:", error);
+      }
+    };
+
+    const game = games.find(game => game.id === Number(gameId));
+
+
+
+        if (!game) {
+        return <p>Game Not Found</p>;
+        
+        }
+
+    
+
+
     return (
         <>
-            <div className="flex justify-between bg-gray-950 p-4 rounded-md gap-5">
-
-                <div className="flex w-1/4">
-                    <Image src={eldencover} alt={'eldencover'} className="rounded-sm" ></Image>
+            <div className={`flex bg-gray-950 p-4 rounded-md gap-5 ${isGrid ? "w-full flex-col" : "w-full justify-between"}`}>
+                <div className={`${isGrid ? "w-full" : "w-1/4"}`}>
+                    {game.images?.main && (
+                        <Image
+                        src={game.images.main}
+                        alt={game.title}
+                        width={300}
+                        height={100}
+                        className="w-full h-48 object-cover"
+                        />
+                    )}
                 </div>
 
-                <div className="flex flex-row w-3/4 justify-between">
+                <div className={`${!isGrid ? "flex flex-row w-3/4 justify-between" : "flex flex-col"}`}>
                     <div className="flex flex-col justify-between">
-                        <p className="text-xl font-bold text-white">Elden Ring</p>
+                      <a href={`/store/gamepage/${game.id}`}><p className="text-xl font-bold text-white">{game.title}</p></a>
                         <div className="flex justify-between">
-                            <div className="flex flex-row gap-1 ">
-                                <p className="text-gray-500 text-sm bg-gray-800 p-2 rounded-md">Souls-like</p>
-                                <p className="text-gray-500 text-sm bg-gray-800 p-2 rounded-md">RPG</p>
-                                <p className="text-gray-500 text-sm bg-gray-800 p-2 rounded-md">Dark Fantasy</p>
-                                <p className="text-gray-500 text-sm bg-gray-800 p-2 rounded-md">Open-world</p>
-                                <p className="text-gray-500 text-sm bg-gray-800 p-2 rounded-md"><IoIosAdd size={20}/></p>
+                            <div className="flex flex-wrap gap-1 ">
+                                {game.tags && game.tags.length > 0 ? (
+                                  game.tags.map((tag, index) => (
+                                    <p key={index} className="text-gray-500 text-sm bg-gray-800 p-2 rounded-md">
+                                      {tag}
+                                    </p>
+                                  ))
+                                ) : (
+                                  <p className="text-gray-500 text-sm bg-gray-800 p-2 rounded-md">No Tags Available</p>
+                                )}
+                                <p className={`text-gray-500 text-sm bg-gray-800 p-2 rounded-md ${isGrid ? "hidden" : "flex"}`}><IoIosAdd size={20}/></p>
                             </div>
                         </div> 
-                        <div className="flex my-3 items-center">
-                            <div className="text-gray-400 flex justify-center items-center">
-                                <FaWindows size={25}/>
-                            </div>
+                        <div className={`flex ${isGrid ? "flex-row" : "flex-col"}`}>
+                            <div className="flex my-3 items-center">
+                                <div className="text-gray-400 flex justify-center items-center">
+                                    {game.platforms?.map((platform) => {
+                                        switch (platform.name) {
+                                            case "Windows":
+                                                return <FaWindows key={platform.id} size={25} />;
+                                            case "macOS":
+                                                return <FaApple key={platform.id} size={25} />;
+                                            case "Steam":
+                                                return <FaSteam key={platform.id} size={25} />;
+                                            default:
+                                                return null; 
+                                        }
+                                    })}
+                                </div>
 
-                            <div className="text-gray-700 text-sm px-4">
-                                <p>Nov 10, 2020</p>
+                                <div className="text-gray-700 text-sm px-4">
+                                    <p>{game.release_date}</p>
+                                </div>
                             </div>
+                            <div className="flex flex-row items-center gap-5">
+                                <div className="flex flex-col w-2/5 items-center">
+                                    <div className="flex flex-row justify-between w-full text-xs">
+                                        <p className="text-blue-400 flex items-center gap-1">80%<BiSolidLike /></p>
+                                        <p className="text-red-400 flex items-center gap-1">20%<BiSolidDislike /></p>
+                                    </div>
+                                    <div className="flex flex-row w-full gap-1">
+                                        <div className="bg-blue-400 h-1 w-4/5 rounded-sm"></div>
+                                        <div className="bg-red-400 h-1 w-1/5 rounded-sm"></div>
+                                    </div>
+                                </div>
+                                <p className="text-sm text-blue-500 w-36">534,170 Reviews</p>
+                            </div> 
                         </div>
-                        <div className="flex flex-row items-center gap-5">
-                            <div className="flex flex-col w-2/5 items-center">
-                                <div className="flex flex-row justify-between w-full text-xs">
-                                    <p className="text-blue-400 flex items-center gap-1">80%<BiSolidLike /></p>
-                                    <p className="text-red-400 flex items-center gap-1">20%<BiSolidDislike /></p>
-                                </div>
-                                <div className="flex flex-row w-full gap-1">
-                                    <div className="bg-blue-400 h-1 w-4/5 rounded-sm"></div>
-                                    <div className="bg-red-400 h-1 w-1/5 rounded-sm"></div>
-                                </div>
-                            </div>
-                            <p className="text-sm text-blue-500">534,170 Reviews</p>
-                        </div> 
                     </div>
                     
                     <div className="flex flex-col justify-between items-end">
-                        <div className="flex text-white bg-gray-800 p-3 rounded-md items-center justify-center w-12">
-                            <FaRegHeart />
-                        </div>
+                        <button className={`flex text-white bg-gray-800 p-3 rounded-md items-center justify-center w-12 ${isGrid ? "hidden" : "flex"}`} onClick={() => toggleWishlist(game.id)}>
+                          {wishlist.includes(game.id) ? (
+                              <FaHeart className="text-white" />
+                          ) : (
+                              <FaRegHeart />
+                          )}
+                        </button>
                         <div className="flex flex-row gap-4 items-center">
-                            <div className="text-gray-700 text-sm px-4">
-                                <p>Until Nov 2</p>
+                            <div className={`text-gray-700 text-sm px-4 ${isGrid ? "hidden" : "flex"}`}>
+                                
                             </div>
                             <div className="flex justify-center items-center">
-                                <p className="bg-lime-400 rounded-md flex justify-center items-center text-black px-4 py-2 font-bold">-60%</p>
-                                <div className="flex flex-col">
-                                    <p className="rounded-md flex justify-center items-center text-gray-600 pr-4 pl-2 font-bold line-through">$59.99</p>
-                                    <p className="text-lime-400 rounded-md flex justify-center items-center pr-4 pl-2 font-bold">$6.78</p>
-                                </div>
+                                {game.packages?.Game?.Price === "0" ? (
+                                    <p className="text-white font-bold">Free</p>
+                                    ) : (
+                                    <>
+                                        {game.packages?.Game?.Saleprice === "0" ? (
+                                        <p className="text-white font-bold">${game.packages?.Game?.Price}</p>
+                                        ) : (
+                                        <>
+                                            <p className="bg-lime-400 rounded-md flex justify-center items-center text-black px-4 py-2 font-bold">-{game.packages?.Game?.Discount}</p>
+                                            <div className="flex flex-col">
+                                            <p className="rounded-md flex justify-center items-center text-gray-600 pr-4 pl-2 font-bold line-through">${game.packages?.Game?.Price}</p>
+                                            <p className="text-lime-400 rounded-md flex justify-center items-center pr-4 pl-2 font-bold">${game.packages?.Game?.Saleprice}</p>
+                                            </div>
+                                        </>
+                                        )}
+                                    </>
+                                )}
                             </div>
                             <div className="bg-blue-500 text-white px-4 py-2 rounded-md">Add to Cart</div>
+                            <div className={`flex text-white bg-gray-800 p-3 rounded-md items-center justify-center w-12 ${!isGrid ? "hidden" : "flex"}`}>
+                                <FaRegHeart />
+                            </div>
                         </div>
                     </div>
                 </div>

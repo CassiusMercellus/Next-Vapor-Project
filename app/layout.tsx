@@ -1,7 +1,9 @@
+import { app, db } from "../lib/firebase";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Page from "./page"
+
 
 const inter = Inter({ subsets: ["latin"] });
 

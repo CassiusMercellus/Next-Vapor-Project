@@ -10,12 +10,13 @@ import Store from './store/page'
 import Library from './library/page'
 import Download from './download/page'
 import Link from 'next/link'
+import Login from './components/login'
 
 export default function Page() {
   return (
     <>
       <Client></Client>
-      <Header></Header>
+      <Login></Login>
       <Footer></Footer>
     </>
   )

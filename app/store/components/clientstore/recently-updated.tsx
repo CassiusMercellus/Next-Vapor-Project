@@ -166,7 +166,7 @@ export default function Updated() {
                             <div className="w-full h-40 bg-gray-700 rounded-md"></div>
                             )}
                             <div className="flex flex-col">
-                            <h2 className="text-2xl text-white font-bold">{game.title}</h2>
+                            <a href={`/store/gamepage/${game.id}`}><h2 className="text-2xl text-white font-bold">{game.title}</h2></a>
                             <p className="text-gray-400 text-sm">
                                 {game.description.length > 100
                                 ? game.description.substring(0, 100) + "..."

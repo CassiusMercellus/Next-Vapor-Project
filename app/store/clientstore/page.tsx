@@ -24,7 +24,7 @@ export default function Clientstore() {
             <News />
             <Topsellers />
             <Under5 />
-            <Streaming />
+            
         </>
     )
 }

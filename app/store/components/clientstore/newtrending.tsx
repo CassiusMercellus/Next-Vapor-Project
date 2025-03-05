@@ -2,17 +2,18 @@
 
 import Image from 'next/image'
 import { useState, useEffect } from "react";
-import eldencover from '../../../images/eldencover.jpg'
-import eldensteam from '../../../images/eldensteam.jpg'
 import { FaWindows, FaApple, FaSteam } from "react-icons/fa";
 import { IoIosAdd } from "react-icons/io";
-import { FaRegHeart } from "react-icons/fa";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 
 
 import games from "@/data/games.json";
-import { notFound } from "next/navigation";
+
+import { db } from "../../../../lib/firebase";
+import { doc, updateDoc, arrayUnion, getDoc } from "firebase/firestore";
+import { auth } from "../../../../lib/firebase";
 
 
 type Game = {
@@ -116,6 +117,10 @@ export default function News() {
 
     const [randomGames, setRandomGames] = useState<Game[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    const [wishlist, setWishlist] = useState<number[]>([]);
+    const [userId, setUserId] = useState<string | null>(null);
+
     const visibleCount = 3;
   
     useEffect(() => {
@@ -133,6 +138,49 @@ export default function News() {
     const prevGame = () => {
       setCurrentIndex((prev) => (prev - 1 + (randomGames.length - visibleCount + 1)) % (randomGames.length - visibleCount + 1));
     };
+
+    useEffect(() => {
+      const fetchUserWishlist = async () => {
+        const currentUser = auth.currentUser;
+        if (currentUser) {
+          setUserId(currentUser.uid);
+          const userRef = doc(db, "users", currentUser.uid);
+          const userSnap = await getDoc(userRef);
+          if (userSnap.exists()) {
+            setWishlist(userSnap.data().wishlist || []);
+          }
+        }
+      };
+  
+      fetchUserWishlist();
+    }, []);
+  
+
+    const toggleWishlist = async (gameId: number) => {
+      if (!userId) return;
+    
+      try {
+        const userRef = doc(db, "users", userId);
+
+        if (wishlist.includes(gameId)) {
+
+          await updateDoc(userRef, {
+            wishlist: wishlist.filter((id) => id !== gameId),
+          });
+          setWishlist((prev) => prev.filter((id) => id !== gameId));
+          console.log("Game removed from wishlist!");
+        } else {
+          await updateDoc(userRef, {
+            wishlist: arrayUnion(gameId),
+          });
+          setWishlist((prev) => [...prev, gameId]);
+          console.log("Game added to wishlist!");
+        }
+      } catch (error) {
+        console.error("Error toggling wishlist:", error);
+      }
+    };
+
 
     return (
         <>
@@ -165,9 +213,9 @@ export default function News() {
                             <div className="w-full h-40 bg-gray-700 rounded-md"></div>
                             )}
                             <div className="flex flex-col">
-                                <h2 className="text-3xl text-white font-bold">{game.title}</h2>
+                            <a href={`/store/gamepage/${game.id}`}><h2 className="text-3xl text-white font-bold">{game.title}</h2></a>
                                 <div className="flex justify-between mt-4 text-lg items-center">
-                                    <div className="text-gray-400 flex justify-center items-center">
+                                    <div className="text-gray-400 flex justify-center items-center gap-2">
                                         {game.platforms?.map((platform) => {
                                             switch (platform.name) {
                                                 case "Windows":
@@ -186,9 +234,17 @@ export default function News() {
                                         <div className="flex justify-center items-center">
                                             <p className="text-white">{game.packages?.Game?.Price === "0" ? "Free" : "$" + game.packages?.Game?.Price || "N/A"}</p>
                                         </div>
-                                        <div className="flex gap-2 flex-row text-white bg-gray-800 px-6 py-3 rounded-md items-center justify-center">
-                                        <FaRegHeart />
-                                        </div>
+                                        <button
+                                          onClick={() => toggleWishlist(game.id)}
+                                          className="flex gap-2 flex-row text-white bg-gray-800 px-6 py-3 rounded-md items-center justify-center"
+                                        >
+                                        
+                                        {wishlist.includes(game.id) ? (
+                                            <FaHeart className="text-white" />
+                                        ) : (
+                                            <FaRegHeart />
+                                        )}
+                                        </button>
                                     </div>
                                     
                                 </div>

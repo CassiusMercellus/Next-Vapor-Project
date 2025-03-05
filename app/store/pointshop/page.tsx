@@ -11,9 +11,15 @@ import { MdExpandMore } from "react-icons/md";
 import { MdExpandLess } from "react-icons/md";
 import { IoIosSearch } from "react-icons/io";
 
+import Header from '../../components/header'
+import Client from '../../components/client'
+import Footer from '../../components/footer'
+
 export default function Pointshop() {
     return (
         <>
+            <Client></Client>
+            <Header></Header>
             <div className="py-5 px-48 bg-gradient-to-b from-blue-950 to-slate-950">
                 <div className="flex flex-row justify-between items-center pb-20">
                     <div className="flex flex-col">
@@ -209,6 +215,7 @@ export default function Pointshop() {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </>
     )
 }

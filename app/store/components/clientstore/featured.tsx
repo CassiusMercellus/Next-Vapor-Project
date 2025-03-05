@@ -4,12 +4,15 @@ import Image from 'next/image'
 import { useState, useEffect } from "react";
 import { FaWindows, FaApple, FaSteam } from "react-icons/fa";
 import { IoIosAdd } from "react-icons/io";
-import { FaRegHeart } from "react-icons/fa";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 
 import games from "@/data/games.json";
-import { notFound } from "next/navigation";
+
+import { db } from "../../../../lib/firebase";
+import { doc, updateDoc, arrayUnion, getDoc } from "firebase/firestore";
+import { auth } from "../../../../lib/firebase";
 
 
 type Game = {
@@ -113,6 +116,24 @@ export default function Featured() {
 
     const [featuredGames, setFeaturedGames] = useState<Game[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [wishlist, setWishlist] = useState<number[]>([]);
+    const [userId, setUserId] = useState<string | null>(null);
+
+    useEffect(() => {
+      const fetchUserWishlist = async () => {
+        const currentUser = auth.currentUser;
+        if (currentUser) {
+          setUserId(currentUser.uid);
+          const userRef = doc(db, "users", currentUser.uid);
+          const userSnap = await getDoc(userRef);
+          if (userSnap.exists()) {
+            setWishlist(userSnap.data().wishlist || []);
+          }
+        }
+      };
+  
+      fetchUserWishlist();
+    }, []);
   
     useEffect(() => {
       const shuffled = [...games].sort(() => 0.5 - Math.random());
@@ -133,6 +154,34 @@ export default function Featured() {
     if (featuredGames.length === 0) return <p className="bg-gradient-to-b from-slate-950 to-slate-900 pt-20 pb-5 px-40">Loading Featured...</p>;
   
     const game = featuredGames[currentIndex];
+
+
+    const toggleWishlist = async (gameId: number) => {
+      if (!userId) return;
+    
+      try {
+        const userRef = doc(db, "users", userId);
+
+        if (wishlist.includes(gameId)) {
+
+          await updateDoc(userRef, {
+            wishlist: wishlist.filter((id) => id !== gameId),
+          });
+          setWishlist((prev) => prev.filter((id) => id !== gameId));
+          console.log("Game removed from wishlist!");
+        } else {
+          await updateDoc(userRef, {
+            wishlist: arrayUnion(gameId),
+          });
+          setWishlist((prev) => [...prev, gameId]);
+          console.log("Game added to wishlist!");
+        }
+      } catch (error) {
+        console.error("Error toggling wishlist:", error);
+      }
+    };
+    
+    
     
     return (
         <>
@@ -155,7 +204,7 @@ export default function Featured() {
                             )}
                         </div>
                         <div className="flex flex-col w-2/5">
-                            <h2 className="text-3xl text-white font-bold">{game.title}</h2>
+                        <a href={`/store/gamepage/${game.id}`}><h2 className="text-3xl text-white font-bold">{game.title}</h2></a>
                             <p className="text-white text-sm">{game.description}</p>
                             <div className="grid grid-cols-2 grid-rows-2 gap-4 p-4 relative">
                                 {game.screenshots &&
@@ -200,10 +249,18 @@ export default function Featured() {
                                 </div>
                             </div>
                             <div className="flex justify-between mt-4 text-lg">
-                                <div className="flex gap-2 flex-row text-white bg-gray-800 px-6 py-3 rounded-md items-center justify-center">
-                                    <p>Wishlist</p>
-                                    <FaRegHeart />
-                                </div>
+                                  <button
+                                    onClick={() => toggleWishlist(game.id)}
+                                    className="flex gap-2 flex-row text-white bg-gray-800 px-6 py-3 rounded-md items-center justify-center"
+                                  >
+                                  <p>Wishlist</p>
+                                  {wishlist.includes(game.id) ? (
+                                      <FaHeart className="text-white" />
+                                  ) : (
+                                      <FaRegHeart />
+                                  )}
+                                  </button>
+                                
                                 <div className="flex flex-row gap-4">
                                     <div className="flex justify-center items-center">
                                         <p className="text-white">{game.packages?.Game?.Price === "0" ? "Free" : game.packages?.Game?.Price || "N/A"}</p>
