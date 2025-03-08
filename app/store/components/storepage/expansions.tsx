@@ -1,8 +1,14 @@
+"use client";
+
 import { FaWindows, FaApple, FaSteam } from "react-icons/fa";
 import { IoIosAdd } from "react-icons/io";
 import { FaRegHeart } from "react-icons/fa";
 import { LuDot } from "react-icons/lu";
 import { useEffect, useState } from 'react';
+
+import { db } from "../../../../lib/firebase";
+import { doc, updateDoc, arrayUnion, arrayRemove, getDoc } from "firebase/firestore";
+import { auth } from "../../../../lib/firebase";
 
 type Game = {
     id: number;
@@ -105,7 +111,80 @@ interface GameMainProps {
     game: Game;
 }
 
+type CartItem = {
+    gameId: number;
+    dlcId?: string; 
+  };
+  
+
 export default function Expansion({ game }: GameMainProps) {
+
+    const [cart, setCart] = useState<CartItem[]>([]);
+
+
+  useEffect(() => {
+    const fetchUserCart = async () => {
+      const currentUser = auth.currentUser;
+      console.log(currentUser);
+
+      if (currentUser) {
+       
+        const userRef = doc(db, "users", currentUser.uid);
+        const userSnap = await getDoc(userRef);
+
+        if (userSnap.exists()) {
+            setCart(userSnap.data().cart || []);
+        }
+      }
+    };
+
+    fetchUserCart();  
+  }, []); 
+
+  const toggleCart = async (gameId: number, dlcId?: string) => {
+    const currentUser = auth.currentUser;
+  
+    if (!currentUser) {
+      console.log("User is not authenticated");
+      return;  // If the user is not authenticated, exit early
+    }
+
+    console.log("gameId:", gameId, "dlcId:", dlcId);
+
+  
+    if (gameId === undefined || (dlcId !== undefined && dlcId === undefined)) {
+      console.error("Invalid gameId or dlcId");
+      return; // Prevent the operation if any ID is undefined
+    }
+  
+    try {
+      const userRef = doc(db, "users", currentUser.uid); // Get user reference using currentUser UID
+      const itemExists = cart.some(
+        (item) => item.gameId === gameId && item.dlcId === dlcId
+      );
+  
+      if (itemExists) {
+        // If item is already in the cart, remove it
+        await updateDoc(userRef, {
+            cart: arrayRemove({ gameId, dlcId }),
+        });
+        setCart((prev) => prev.filter((item) => !(item.gameId === gameId && item.dlcId === dlcId)));
+        console.log("Item removed from cart!");
+      } else {
+        // If item is not in the cart, add it
+        await updateDoc(userRef, {
+            cart: arrayUnion({ gameId, dlcId }),
+        });
+        setCart((prev) => [...prev, { gameId, dlcId }]);
+        console.log("Item added to cart!");
+      }
+    } catch (error) {
+      console.error("Error toggling cart:", error);
+    }
+  };
+  
+    
+
     return (
         <>
             <div className="flex justify-between bg-gray-900 pl-4 p-2 rounded-md items-center mt-4">
@@ -145,23 +224,24 @@ export default function Expansion({ game }: GameMainProps) {
                         )}
                     </div>
 
-                    <div className="bg-blue-500 rounded-md flex justify-center items-center text-white px-6 py-2">
-                        <p>Add to Cart</p>
-                    </div>
+
+                    <button onClick={() => toggleCart(game.id, "")} className="bg-blue-500 rounded-md flex justify-center items-center text-white px-6 py-2 hover:bg-blue-400">
+                        {cart.some((item) => item.gameId === game.id && !item.dlcId) ? "Added to Cart" : "Add to Cart"}
+                    </button>
+
                 </div>
             </div>
 
-
+            {/*
             {game.packages?.DLC?.DLC1 ? (
             <div className="flex justify-between bg-gray-900 pl-4 p-2 rounded-md items-center mt-4 w-full flex-col">
                 <div className="flex flex-row justify-between w-full">
                     <div className="flex flex-col">
-                        {/* Display DLC1 if available */}
                         {game.packages?.DLC?.DLC1 ? (
                             <h2 className="text-xl font-bold">{game.packages.DLC?.DLC1.Name}</h2>
                         ) : null}
                         
-                        {/* Show deal message if DLC1 is available */}
+                        
                         {game.packages?.DLC?.DLC1 && (
                             <p className="text-blue-400 text-sm">DEAL ENDS SOON!</p>
                         )}
@@ -177,7 +257,7 @@ export default function Expansion({ game }: GameMainProps) {
                         <div></div>
 
                         <div className="flex flex-row gap-4">
-                            {/* Display Sale Information for DLC1 */}
+                           
                             {game.packages?.DLC?.DLC1?.Saleprice !== "0" && game.packages?.DLC?.DLC1?.Discount !== "0" ? (
                                 <div className="flex justify-center items-center">
                                     <p className="bg-lime-400 rounded-md flex justify-center items-center text-black px-4 py-2 font-bold">
@@ -199,9 +279,11 @@ export default function Expansion({ game }: GameMainProps) {
                             ) : null}
                         </div>
 
-                        <div className="bg-blue-500 rounded-md flex justify-center items-center text-white px-6 py-2">
-                            <p>Add to Cart</p>
-                        </div>
+                        <button onClick={() => toggleCart(game.id, "DLC1")} className="bg-blue-500 rounded-md flex justify-center items-center text-white px-6 py-2 hover:bg-blue-400"> 
+                        {cart.some((item) => item.gameId === game.id && !item.dlcId) ? "Added to Cart" : "Add to Cart"}
+
+                        </button>
+
                     </div>
                 </div>
             </div>
@@ -211,12 +293,12 @@ export default function Expansion({ game }: GameMainProps) {
             <div className="flex justify-between bg-gray-900 pl-4 p-2 rounded-md items-center mt-4 w-full flex-col">
                 <div className="flex flex-row justify-between w-full">
                     <div className="flex flex-col">
-                        {/* Display DLC2 if available */}
+                        
                         {game.packages?.DLC?.DLC2 ? (
                             <h2 className="text-xl font-bold">{game.packages.DLC?.DLC2.Name}</h2>
                         ) : null}
                         
-                        {/* Show deal message if DLC2 is available */}
+                       
                         {game.packages?.DLC?.DLC2 && (
                             <p className="text-blue-400 text-sm">DEAL ENDS SOON!</p>
                         )}
@@ -233,7 +315,7 @@ export default function Expansion({ game }: GameMainProps) {
                         <div></div>
 
                         <div className="flex flex-row gap-4">
-                            {/* Display Sale Information for DLC2 */}
+                           
                             {game.packages?.DLC?.DLC2?.Saleprice !== "0" && game.packages?.DLC?.DLC2?.Discount !== "0" ? (
                                 <div className="flex justify-center items-center">
                                     <p className="bg-lime-400 rounded-md flex justify-center items-center text-black px-4 py-2 font-bold">
@@ -255,9 +337,10 @@ export default function Expansion({ game }: GameMainProps) {
                             ) : null}
                         </div>
 
-                        <div className="bg-blue-500 rounded-md flex justify-center items-center text-white px-6 py-2">
-                            <p>Add to Cart</p>
-                        </div>
+                        <button onClick={() => toggleCart(game.id, "DLC2")} className="bg-blue-500 rounded-md flex justify-center items-center text-white px-6 py-2 hover:bg-blue-400"> 
+                        {cart.some((item) => item.gameId === game.id && !item.dlcId) ? "Added to Cart" : "Add to Cart"}
+
+                        </button>
                     </div>
                 </div>
             </div>
@@ -347,13 +430,15 @@ export default function Expansion({ game }: GameMainProps) {
                             </p>
                         ) : null}
 
-                        <div className="bg-blue-500 rounded-md flex justify-center items-center text-white px-6 py-2">
-                            <p>Add to Cart</p>
-                        </div>
+                        <button onClick={() => toggleCart(game.id, "")} className="bg-blue-500 rounded-md flex justify-center items-center text-white px-6 py-2 hover:bg-blue-400"> 
+                        {cart.some((item) => item.gameId === game.id && !item.dlcId) ? "Added to Cart" : "Add to Cart"}
+
+                        </button>
                     </div>
                 </div>
             </div>
             ) : null}
+            */}
         </>
     )
 }

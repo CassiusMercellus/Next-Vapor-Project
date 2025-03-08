@@ -3,13 +3,16 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react';
 
-import { FaRegHeart } from "react-icons/fa";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { BiSolidLike } from "react-icons/bi";
 import { BiSolidDislike } from "react-icons/bi";
 import { IoIosAdd } from "react-icons/io";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 
+import { db } from "../../../../lib/firebase";
+import { doc, updateDoc, arrayUnion, getDoc } from "firebase/firestore";
+import { auth } from "../../../../lib/firebase";
 
 type Game = {
     id: number;
@@ -116,6 +119,59 @@ interface GameMainProps {
 
 export default function GameMain({ game }: GameMainProps) {
 
+    const [wishlist, setWishlist] = useState<number[]>([]);
+
+    useEffect(() => {
+      const fetchUserWishlist = async () => {
+        const currentUser = auth.currentUser;
+        console.log(currentUser);
+  
+        if (currentUser) {
+          // If the user is authenticated, fetch their wishlist
+          const userRef = doc(db, "users", currentUser.uid);
+          const userSnap = await getDoc(userRef);
+  
+          if (userSnap.exists()) {
+            setWishlist(userSnap.data().wishlist || []);
+          }
+        }
+      };
+  
+      fetchUserWishlist();  // Fetch wishlist once on component mount
+    }, []); // Empty dependency array ensures it runs only once on mount
+  
+    const toggleWishlist = async (gameId: number) => {
+      const currentUser = auth.currentUser;
+  
+      if (!currentUser) {
+        console.log("User is not authenticated");
+        return;  // If the user is not authenticated, exit early
+      }
+  
+      try {
+        const userRef = doc(db, "users", currentUser.uid); // Get user reference using currentUser UID
+  
+        if (wishlist.includes(gameId)) {
+          // If game is already in the wishlist, remove it
+          await updateDoc(userRef, {
+            wishlist: wishlist.filter((id) => id !== gameId),
+          });
+          setWishlist((prev) => prev.filter((id) => id !== gameId)); // Update local state
+          console.log("Game removed from wishlist!");
+        } else {
+          // If game is not in the wishlist, add it
+          await updateDoc(userRef, {
+            wishlist: arrayUnion(gameId),
+          });
+          setWishlist((prev) => [...prev, gameId]); // Update local state
+          console.log("Game added to wishlist!");
+        }
+      } catch (error) {
+        console.error("Error toggling wishlist:", error);
+      }
+    };
+  
+
     const [currentMedia, setCurrentMedia] = useState<string | null>(
         game.screenshots?.[0]?.image || null
     );
@@ -169,10 +225,17 @@ export default function GameMain({ game }: GameMainProps) {
                     <div className="flex flex-row gap-2">
                         <p className="border border-gray-600 flex items-center p-3 px-4 rounded-md text-gray-500">Ignore</p>
                         <p className="border border-gray-600 flex items-center p-3 px-4 rounded-md text-gray-500">Follow</p>
-                        <div className="flex flex-row items-center gap-2 p-3 bg-gray-800 rounded-md">
+                        <button
+                            onClick={() => toggleWishlist(game.id)}
+                            className="flex gap-2 flex-row text-white bg-gray-800 px-6 py-3 rounded-md items-center justify-center"
+                            >
                             <p>Wishlist</p>
-                            <FaRegHeart />
-                        </div>
+                            {wishlist.includes(game.id) ? (
+                                <FaHeart className="text-white" />
+                            ) : (
+                                <FaRegHeart />
+                            )}
+                        </button>
                         <p className="flex flex-row items-center gap-2 p-3 bg-gray-800 rounded-md">Browse All DLCs</p>
                         <p className="flex flex-row items-center gap-2 p-3 bg-gray-800 rounded-md">Community Hub</p>
                     </div>

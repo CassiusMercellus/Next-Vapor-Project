@@ -15,7 +15,7 @@ export default function Downloaditem() {
                 <div className="flex gap-5">
                     <div className="flex items-center"><HiOutlineBars2 size={25} /></div>
                     <Image src={eldenCover} alt="downloadcover" className="w-72 h-32" />
-                    <p className="text-xl font-bold">Elden Ring</p>
+                    <p className="text-xl font-bold">Test Game</p>
                 </div>
 
                 <div className="flex items-center gap-5">
