@@ -48,7 +48,7 @@ export default function Login() {
         pfp: "",
         wishlist: [],
         games: [],
-        cart: {},
+        cart: [],
         createdAt: new Date(),
       });
 

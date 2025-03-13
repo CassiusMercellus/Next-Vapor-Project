@@ -111,15 +111,11 @@ interface GameMainProps {
     game: Game;
 }
 
-type CartItem = {
-    gameId: number;
-    dlcId?: string; 
-  };
   
 
 export default function Expansion({ game }: GameMainProps) {
 
-    const [cart, setCart] = useState<CartItem[]>([]);
+    const [cart, setCart] = useState<number[]>([]);
 
 
   useEffect(() => {
@@ -141,47 +137,43 @@ export default function Expansion({ game }: GameMainProps) {
     fetchUserCart();  
   }, []); 
 
-  const toggleCart = async (gameId: number, dlcId?: string) => {
+  const toggleCart = async (gameId: number) => {
     const currentUser = auth.currentUser;
   
     if (!currentUser) {
       console.log("User is not authenticated");
-      return;  // If the user is not authenticated, exit early
+      return;
     }
-
-    console.log("gameId:", gameId, "dlcId:", dlcId);
-
   
-    if (gameId === undefined || (dlcId !== undefined && dlcId === undefined)) {
-      console.error("Invalid gameId or dlcId");
-      return; // Prevent the operation if any ID is undefined
+    console.log("gameId:", gameId);
+  
+    if (gameId === undefined) {
+      console.error("Invalid gameId");
+      return;
     }
   
     try {
-      const userRef = doc(db, "users", currentUser.uid); // Get user reference using currentUser UID
-      const itemExists = cart.some(
-        (item) => item.gameId === gameId && item.dlcId === dlcId
-      );
+      const userRef = doc(db, "users", currentUser.uid);
+      const itemExists = cart.includes(gameId); // ✅ No more gameId
   
       if (itemExists) {
-        // If item is already in the cart, remove it
         await updateDoc(userRef, {
-            cart: arrayRemove({ gameId, dlcId }),
+          cart: arrayRemove(gameId), // ✅ No object wrapping
         });
-        setCart((prev) => prev.filter((item) => !(item.gameId === gameId && item.dlcId === dlcId)));
+        setCart((prev) => prev.filter((id) => id !== gameId)); // ✅ Just filtering numbers
         console.log("Item removed from cart!");
       } else {
-        // If item is not in the cart, add it
         await updateDoc(userRef, {
-            cart: arrayUnion({ gameId, dlcId }),
+          cart: arrayUnion(gameId), // ✅ Just pushing the number
         });
-        setCart((prev) => [...prev, { gameId, dlcId }]);
+        setCart((prev) => [...prev, gameId]); // ✅ Add just the number
         console.log("Item added to cart!");
       }
     } catch (error) {
       console.error("Error toggling cart:", error);
     }
   };
+  
   
     
 
@@ -225,8 +217,8 @@ export default function Expansion({ game }: GameMainProps) {
                     </div>
 
 
-                    <button onClick={() => toggleCart(game.id, "")} className="bg-blue-500 rounded-md flex justify-center items-center text-white px-6 py-2 hover:bg-blue-400">
-                        {cart.some((item) => item.gameId === game.id && !item.dlcId) ? "Added to Cart" : "Add to Cart"}
+                    <button onClick={() => toggleCart(game.id)} className="bg-blue-500 rounded-md flex justify-center items-center text-white px-6 py-2 hover:bg-blue-400">
+                        {cart.includes(game.id) ? "Added to Cart" : "Add to Cart"}
                     </button>
 
                 </div>
