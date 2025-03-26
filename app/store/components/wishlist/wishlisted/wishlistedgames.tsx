@@ -12,7 +12,7 @@ import { FaApple } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 import { db } from "../../../../../lib/firebase";
-import { doc, updateDoc, arrayUnion, getDoc } from "firebase/firestore";
+import { arrayRemove, doc, updateDoc, arrayUnion, getDoc } from "firebase/firestore";
 import { auth } from "../../../../../lib/firebase";
 
 import games from "@/data/games.json";
@@ -115,11 +115,13 @@ type Game = {
   };
 
 
+
 export default function Wishlistedgames({ isGrid, gameId }: { isGrid: boolean; gameId: number }) {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [wishlist, setWishlist] = useState<number[]>([]);
     const [userId, setUserId] = useState<string | null>(null);
+    const [cart, setCart] = useState<number[]>([]);
 
     console.log('Game ID:', gameId); 
     
@@ -172,6 +174,66 @@ export default function Wishlistedgames({ isGrid, gameId }: { isGrid: boolean; g
           console.error("Error toggling wishlist:", error);
         }
       };
+
+
+    
+
+
+  useEffect(() => {
+    const fetchUserCart = async () => {
+      const currentUser = auth.currentUser;
+      console.log(currentUser);
+
+      if (currentUser) {
+       
+        const userRef = doc(db, "users", currentUser.uid);
+        const userSnap = await getDoc(userRef);
+
+        if (userSnap.exists()) {
+            setCart(userSnap.data().cart || []);
+        }
+      }
+    };
+
+    fetchUserCart();  
+  }, []); 
+
+  const toggleCart = async (gameId: number) => {
+    const currentUser = auth.currentUser;
+  
+    if (!currentUser) {
+      console.log("User is not authenticated");
+      return;
+    }
+  
+    console.log("gameId:", gameId);
+  
+    if (gameId === undefined) {
+      console.error("Invalid gameId");
+      return;
+    }
+  
+    try {
+      const userRef = doc(db, "users", currentUser.uid);
+      const itemExists = cart.includes(gameId); // ✅ No more gameId
+  
+      if (itemExists) {
+        await updateDoc(userRef, {
+          cart: arrayRemove(gameId), // ✅ No object wrapping
+        });
+        setCart((prev) => prev.filter((id) => id !== gameId)); // ✅ Just filtering numbers
+        console.log("Item removed from cart!");
+      } else {
+        await updateDoc(userRef, {
+          cart: arrayUnion(gameId), // ✅ Just pushing the number
+        });
+        setCart((prev) => [...prev, gameId]); // ✅ Add just the number
+        console.log("Item added to cart!");
+      }
+    } catch (error) {
+      console.error("Error toggling cart:", error);
+    }
+  };
 
     return (
         <>
@@ -292,7 +354,9 @@ export default function Wishlistedgames({ isGrid, gameId }: { isGrid: boolean; g
                                     </>
                                 )}
                             </div>
-                            <div className="bg-blue-500 text-white px-4 py-2 rounded-md">Add to Cart</div>
+                            <button onClick={() => toggleCart(game.id)} className="bg-blue-500 rounded-md flex justify-center items-center text-white px-6 py-2 hover:bg-blue-400">
+                              {cart.includes(game.id) ? "Added to Cart" : "Add to Cart"}
+                            </button>
                         </div>
                     </div>
                 </div>

@@ -4,6 +4,7 @@ import { FaTrash } from "react-icons/fa";
 import Cartdlc from "../components/cart/cartdlc";
 import Cartgames from "../components/cart/cartgames";
 import Client from '../../components/client';
+import Header from '../../components/header';
 import { onAuthStateChanged, User, getAuth } from "firebase/auth";
 import { auth, db } from "../../../lib/firebase";
 import { useState, useEffect } from 'react';
@@ -222,6 +223,7 @@ export default function Cart() {
     return (
             <>
                 <Client />
+                <Header />
                 <div className="bg-gradient-to-b from-slate-950 to-cyan-950 py-8">
                     <div className="px-48">
                         <h1 className="text-4xl font-bold my-5">{userName}'s Shopping Cart</h1>

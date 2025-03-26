@@ -2,7 +2,7 @@
 
 import { db } from "../../../../lib/firebase";
 import { useEffect, useState } from "react";
-import { getFirestore, doc, getDoc } from "firebase/firestore";
+import { getFirestore, doc, updateDoc, arrayUnion, arrayRemove, getDoc } from "firebase/firestore";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { app } from "../../../../lib/firebase";
 
@@ -14,6 +14,7 @@ import { MdExpandLess } from "react-icons/md";
 import { IoIosSearch } from "react-icons/io";
 
 import Wishlistedgames from "./wishlisted/wishlistedgames"
+
 
 import games from "@/data/games.json";
 
@@ -169,8 +170,7 @@ export default function Wishlistfilter() {
 
         fetchWishlist();
     }, [auth, db]);
-
-
+  
 
     return (
         <>
