@@ -122,6 +122,8 @@ export default function Games({ isGrid, gameId }: { isGrid: boolean; gameId: num
     const [isLoading, setIsLoading] = useState(true);
     const [ownedGames, setOwnedGames] = useState<number[]>([]);  
 
+    const [cart, setCart] = useState<number[]>([]);
+
     useEffect(() => {
       const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
         console.log('Current User:', currentUser); // Log current user to ensure it's set
@@ -176,7 +178,7 @@ export default function Games({ isGrid, gameId }: { isGrid: boolean; gameId: num
         return <p>Game Not Found</p>;
         
         }
-  const [cart, setCart] = useState<number[]>([]);
+  
 
   useEffect(() => {
     const fetchUserCart = async () => {

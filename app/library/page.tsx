@@ -326,7 +326,7 @@ export default function Library() {
                           <FaTools className="text-gray-500 px-2" size={45} />
                           <div className="flex flex-col">
                             <p className="text-gray-500 text-sm">Small Update</p>
-                            <p className="">It's just a small but noteworthy update~</p>
+                            <p className="">It&#39;s just a small but noteworthy update&nbsp;</p>
                           </div>
                         </div>
                       </div>
@@ -341,7 +341,7 @@ export default function Library() {
                           <FaTools className="text-gray-500 px-2" size={45} />
                           <div className="flex flex-col">
                             <p className="text-gray-500 text-sm">Big Update</p>
-                            <p className="">Wow here's a BIG update!</p>
+                            <p className="">Wow here&#39;s a BIG update!</p>
                           </div>
                         </div>
                       </div>

@@ -206,7 +206,7 @@ export default function Special() {
 
                     <div className="flex flex-row gap-4">
                     {discountedGames.slice(currentIndex, currentIndex + itemsPerPage).map((game) => (
-                    <div className="bg-gray-950 rounded-md w-1/3">
+                    <div key={currentIndex} className="bg-gray-950 rounded-md w-1/3">
                         <div className="flex flex-col justify-between p-4 gap-4">
                             <Image src={game.images?.main} alt={game.title} width={300} height={180} className="w-full h-64 rounded-md" />
                             <div className="flex flex-col">

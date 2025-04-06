@@ -304,7 +304,7 @@ export default function Cart() {
                 <Header />
                 <div className="bg-gradient-to-b from-slate-950 to-cyan-950 py-8">
                     <div className="px-48">
-                        <h1 className="text-4xl font-bold my-5">{userName}'s Shopping Cart</h1>
+                        <h1 className="text-4xl font-bold my-5">{userName}&#39;s Shopping Cart</h1>
                     </div>
                     <div className="flex flex-row gap-5 px-48">
                         <div className="w-3/4 flex flex-col gap-5">

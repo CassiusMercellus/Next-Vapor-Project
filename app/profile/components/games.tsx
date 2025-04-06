@@ -24,7 +24,7 @@ export default function Games() {
                         <div className="text-2xl font-bold">Profile</div>
                         <MdKeyboardArrowDown className="text-2xl font-bold"/>
                     </div>
-                    <p className="mt-16">I'm profile and this is my favorite spot on Steam!</p>
+                    <p className="mt-16">I&#39;m profile and this is my favorite spot on Steam!</p>
                 </div>
             </div>
             <div className="flex flex-col w-72">

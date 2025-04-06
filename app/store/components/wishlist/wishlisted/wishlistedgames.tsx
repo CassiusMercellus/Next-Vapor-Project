@@ -183,28 +183,6 @@ export default function Wishlistedgames({ isGrid, gameId }: { isGrid: boolean; g
       };
 
 
-    
-
-
-  useEffect(() => {
-    const fetchUserCart = async () => {
-      const currentUser = auth.currentUser;
-      console.log(currentUser);
-
-      if (currentUser) {
-       
-        const userRef = doc(db, "users", currentUser.uid);
-        const userSnap = await getDoc(userRef);
-
-        if (userSnap.exists()) {
-            setCart(userSnap.data().cart || []);
-        }
-      }
-    };
-
-    fetchUserCart();  
-  }, []); 
-
   const toggleCart = async (gameId: number) => {
     const currentUser = auth.currentUser;
   
