@@ -164,7 +164,7 @@ export default function Cart() {
         fetchCart();
     }, [auth, db]);
 
-    const calculateTotal = (cart: number[]): number => {
+    const calculateTotal = (cart: Game[]): number => {
       console.log("Cart items:", cart);
   
       return cart.reduce((total, gameId) => {
