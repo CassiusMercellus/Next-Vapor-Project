@@ -121,6 +121,9 @@ export default function News() {
     const [wishlist, setWishlist] = useState<number[]>([]);
     const [userId, setUserId] = useState<string | null>(null);
 
+    const [ownedGames, setOwnedGames] = useState<number[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
+
     const visibleCount = 3;
   
     useEffect(() => {
@@ -140,19 +143,23 @@ export default function News() {
     };
 
     useEffect(() => {
-      const fetchUserWishlist = async () => {
-        const currentUser = auth.currentUser;
+      const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
+        console.log('Current User:', currentUser); // Log current user to ensure it's set
         if (currentUser) {
           setUserId(currentUser.uid);
-          const userRef = doc(db, "users", currentUser.uid);
+  
+          const userRef = doc(db, 'users', currentUser.uid);
           const userSnap = await getDoc(userRef);
+  
           if (userSnap.exists()) {
             setWishlist(userSnap.data().wishlist || []);
+            setOwnedGames(userSnap.data().games || []);
           }
         }
-      };
+        setIsLoading(false); // Set loading to false after fetching data
+      });
   
-      fetchUserWishlist();
+      return () => unsubscribe(); // Clean up the listener on unmount
     }, []);
   
 
@@ -235,8 +242,14 @@ export default function News() {
                                             <p className="text-white">{game.packages?.Game?.Price === "0" ? "Free" : "$" + game.packages?.Game?.Price || "N/A"}</p>
                                         </div>
                                         <button
-                                          onClick={() => toggleWishlist(game.id)}
-                                          className="flex gap-2 flex-row text-white bg-gray-800 px-6 py-3 rounded-md items-center justify-center"
+                                          onClick={() => {
+                                            if (!ownedGames.includes(game.id)) {
+                                              toggleWishlist(game.id);
+                                            }
+                                          }}
+                                          disabled={ownedGames.includes(game.id)}
+                                          className={`flex gap-2 flex-row text-white bg-gray-800 px-6 py-3 rounded-md items-center justify-center
+                                            ${ownedGames.includes(game.id) ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-700"}`}
                                         >
                                         
                                         {wishlist.includes(game.id) ? (

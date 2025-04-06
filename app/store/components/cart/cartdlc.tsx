@@ -125,6 +125,9 @@ export default function Cartdlc() {
     const [userId, setUserId] = useState<string | null>(null);
     const [wishlist, setWishlist] = useState<number[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isLoading, setIsLoading] = useState(true);
+
+    const [ownedGames, setOwnedGames] = useState<number[]>([]);
     const visibleCount = 2;
       
         useEffect(() => {
@@ -138,23 +141,25 @@ export default function Cartdlc() {
 
 
           useEffect(() => {
-            const fetchUserCart = async () => {
-            const currentUser = auth.currentUser;
-            console.log(currentUser);
-        
+            const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
+              console.log('Current User:', currentUser); // Log current user to ensure it's set
               if (currentUser) {
-               
-                const userRef = doc(db, "users", currentUser.uid);
+                setUserId(currentUser.uid);
+        
+                const userRef = doc(db, 'users', currentUser.uid);
                 const userSnap = await getDoc(userRef);
         
                 if (userSnap.exists()) {
-                    setCart(userSnap.data().cart || []);
+                    setWishlist(userSnap.data().wishlist || []);
+                  setCart(userSnap.data().cart || []);
+                  setOwnedGames(userSnap.data().games || []);
                 }
               }
-            };
+              setIsLoading(false); // Set loading to false after fetching data
+            });
         
-            fetchUserCart();  
-          }, []); 
+            return () => unsubscribe(); // Clean up the listener on unmount
+          }, []);
 
           useEffect(() => {
             const fetchUserWishlist = async () => {
@@ -258,10 +263,15 @@ export default function Cartdlc() {
                                     {game.title.length > 18 ? `${game.title.slice(0, 16)}...` : game.title}
                                 </h2>
                             </a>
-
                             <button
-                                onClick={() => toggleWishlist(game.id)}
-                                className="flex gap-2 flex-row text-white bg-gray-800 p-3 rounded-md items-center justify-center hover:bg-gray-700"
+                                    onClick={() => {
+                                    if (!ownedGames.includes(game.id)) {
+                                        toggleWishlist(game.id);
+                                    }
+                                    }}
+                                    disabled={ownedGames.includes(game.id)}
+                                    className={`flex gap-2 flex-row text-white bg-gray-800 p-3 rounded-md items-center justify-center hover:bg-gray-700
+                                    ${ownedGames.includes(game.id) ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-700"}`}
                                 >
                                 {wishlist.includes(game.id) ? (
                                     <FaHeart className="text-white" />
@@ -290,9 +300,24 @@ export default function Cartdlc() {
                             <div className="flex flex-row gap-4">
                                 <div className="flex justify-center items-center">
                                     <p className="rounded-md flex justify-center items-center text-white px-4 py-2 font-bold">{game.packages?.Game?.Price === "0" ? "Free" : "$" + game.packages?.Game?.Price || "N/A"}</p>
-                                    <button onClick={() => toggleCart(game.id)} className="bg-blue-500 rounded-md flex justify-center items-center text-white px-4 py-2 hover:bg-blue-400">
-                                      {cart.includes(game.id) ? "Added to Cart" : "Add to Cart"}
-                                    </button>
+
+                                    <button
+                                      onClick={() => toggleCart(game.id)}
+                                      className={`rounded-md flex justify-center items-center px-6 py-2 ${
+                                          ownedGames.includes(game.id)
+                                          ? "bg-gray-500 text-white cursor-not-allowed"
+                                          : cart.includes(game.id)
+                                          ? "bg-blue-500 text-white hover:bg-blue-400"
+                                          : "bg-blue-500 text-white hover:bg-blue-400"
+                                      }`}
+                                      disabled={ownedGames.includes(game.id)}
+                                      >
+                                      {ownedGames.includes(game.id)
+                                          ? "Owned"
+                                          : cart.includes(game.id)
+                                          ? "Added to Cart"
+                                          : "Add to Cart"}
+                                  </button>
                                 </div>
                             
                             </div>

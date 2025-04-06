@@ -174,10 +174,10 @@ export default function Updated() {
                             </p>
                             <div className="flex justify-between mt-4 text-lg items-center">
                                 <div className="flex justify-evenly items-center w-full gap-2">
-                                <p className="rounded-md flex justify-center items-center text-gray-200 border border-gray-700 p-2">
+                                <p className="rounded-md flex justify-center items-center text-gray-200 border border-gray-700 p-2 hover:bg-gray-700">
                                     In Library
                                 </p>
-                                <p className="bg-gray-800 rounded-md flex justify-center items-center text-gray-200 p-2">
+                                <p className="bg-gray-800 rounded-md flex justify-center items-center text-gray-200 p-2 hover:bg-gray-700">
                                     View Updates
                                 </p>
                                 </div>

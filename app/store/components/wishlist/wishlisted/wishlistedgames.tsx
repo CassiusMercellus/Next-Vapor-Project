@@ -122,6 +122,8 @@ export default function Wishlistedgames({ isGrid, gameId }: { isGrid: boolean; g
     const [wishlist, setWishlist] = useState<number[]>([]);
     const [userId, setUserId] = useState<string | null>(null);
     const [cart, setCart] = useState<number[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [ownedGames, setOwnedGames] = useState<number[]>([]);
 
     console.log('Game ID:', gameId); 
     
@@ -134,20 +136,25 @@ export default function Wishlistedgames({ isGrid, gameId }: { isGrid: boolean; g
     }
 
     useEffect(() => {
-        const fetchUserWishlist = async () => {
-          const currentUser = auth.currentUser;
-          if (currentUser) {
-            setUserId(currentUser.uid);
-            const userRef = doc(db, "users", currentUser.uid);
-            const userSnap = await getDoc(userRef);
-            if (userSnap.exists()) {
+      const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
+        console.log('Current User:', currentUser); // Log current user to ensure it's set
+        if (currentUser) {
+          setUserId(currentUser.uid);
+  
+          const userRef = doc(db, 'users', currentUser.uid);
+          const userSnap = await getDoc(userRef);
+  
+          if (userSnap.exists()) {
               setWishlist(userSnap.data().wishlist || []);
-            }
+            setCart(userSnap.data().cart || []);
+            setOwnedGames(userSnap.data().games || []);
           }
-        };
-    
-        fetchUserWishlist();
-      }, []);
+        }
+        setIsLoading(false); // Set loading to false after fetching data
+      });
+  
+      return () => unsubscribe(); // Clean up the listener on unmount
+    }, []);
 
 
     const toggleWishlist = async (gameId: number) => {

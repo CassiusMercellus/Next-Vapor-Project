@@ -115,27 +115,31 @@ interface GameMainProps {
 
 export default function Expansion({ game }: GameMainProps) {
 
+    const [userId, setUserId] = useState<string | null>(null);
     const [cart, setCart] = useState<number[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [ownedGames, setOwnedGames] = useState<number[]>([]);     
 
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
+          console.log('Current User:', currentUser); // Log current user to ensure it's set
+          if (currentUser) {
+            setUserId(currentUser.uid);
+    
+            const userRef = doc(db, 'users', currentUser.uid);
+            const userSnap = await getDoc(userRef);
+    
+            if (userSnap.exists()) {
 
-  useEffect(() => {
-    const fetchUserCart = async () => {
-      const currentUser = auth.currentUser;
-      console.log(currentUser);
-
-      if (currentUser) {
-       
-        const userRef = doc(db, "users", currentUser.uid);
-        const userSnap = await getDoc(userRef);
-
-        if (userSnap.exists()) {
-            setCart(userSnap.data().cart || []);
-        }
-      }
-    };
-
-    fetchUserCart();  
-  }, []); 
+              setCart(userSnap.data().cart || []);
+              setOwnedGames(userSnap.data().games || []);
+            }
+          }
+          setIsLoading(false); // Set loading to false after fetching data
+        });
+    
+        return () => unsubscribe(); // Clean up the listener on unmount
+      }, []);
 
   const toggleCart = async (gameId: number) => {
     const currentUser = auth.currentUser;
@@ -174,8 +178,7 @@ export default function Expansion({ game }: GameMainProps) {
     }
   };
   
-  
-    
+
 
     return (
         <>
@@ -216,9 +219,22 @@ export default function Expansion({ game }: GameMainProps) {
                         )}
                     </div>
 
-
-                    <button onClick={() => toggleCart(game.id)} className="bg-blue-500 rounded-md flex justify-center items-center text-white px-6 py-2 hover:bg-blue-400">
-                        {cart.includes(game.id) ? "Added to Cart" : "Add to Cart"}
+                    <button
+                        onClick={() => toggleCart(game.id)}
+                        className={`rounded-md flex justify-center items-center px-6 py-2 ${
+                            ownedGames.includes(game.id)
+                            ? "bg-gray-500 text-white cursor-not-allowed"
+                            : cart.includes(game.id)
+                            ? "bg-blue-500 text-white hover:bg-blue-400"
+                            : "bg-blue-500 text-white hover:bg-blue-400"
+                        }`}
+                        disabled={ownedGames.includes(game.id)}
+                        >
+                        {ownedGames.includes(game.id)
+                            ? "Owned"
+                            : cart.includes(game.id)
+                            ? "Added to Cart"
+                            : "Add to Cart"}
                     </button>
 
                 </div>

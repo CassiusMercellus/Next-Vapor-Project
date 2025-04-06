@@ -123,6 +123,8 @@ export default function Topsellers() {
     const [wishlist, setWishlist] = useState<number[]>([]);
     const [userId, setUserId] = useState<string | null>(null);
 
+    const [ownedGames, setOwnedGames] = useState<number[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     const visibleCount = 6;
 
@@ -154,20 +156,24 @@ export default function Topsellers() {
     };
 
     useEffect(() => {
-          const fetchUserWishlist = async () => {
-            const currentUser = auth.currentUser;
-            if (currentUser) {
-              setUserId(currentUser.uid);
-              const userRef = doc(db, "users", currentUser.uid);
-              const userSnap = await getDoc(userRef);
-              if (userSnap.exists()) {
-                setWishlist(userSnap.data().wishlist || []);
-              }
+        const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
+          console.log('Current User:', currentUser); // Log current user to ensure it's set
+          if (currentUser) {
+            setUserId(currentUser.uid);
+    
+            const userRef = doc(db, 'users', currentUser.uid);
+            const userSnap = await getDoc(userRef);
+    
+            if (userSnap.exists()) {
+              setWishlist(userSnap.data().wishlist || []);
+              setOwnedGames(userSnap.data().games || []);
             }
-          };
-      
-          fetchUserWishlist();
-        }, []);
+          }
+          setIsLoading(false); // Set loading to false after fetching data
+        });
+    
+        return () => unsubscribe(); // Clean up the listener on unmount
+      }, []);
     
 
     const toggleWishlist = async (gameId: number) => {
@@ -268,9 +274,15 @@ export default function Topsellers() {
                                                 </>
                                                 )}
                                             </div>
-                                           <button
-                                                onClick={() => toggleWishlist(game.id)}
-                                                className="flex gap-2 flex-row text-white bg-gray-800 px-6 py-3 rounded-md items-center justify-center"
+                                            <button
+                                                onClick={() => {
+                                                    if (!ownedGames.includes(game.id)) {
+                                                    toggleWishlist(game.id);
+                                                    }
+                                                }}
+                                                disabled={ownedGames.includes(game.id)}
+                                                className={`flex gap-2 flex-row text-white bg-gray-800 px-6 py-3 rounded-md items-center justify-center
+                                                    ${ownedGames.includes(game.id) ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-700"}`}
                                                 >
                                                 {wishlist.includes(game.id) ? (
                                                     <FaHeart className="text-white" />

@@ -122,25 +122,30 @@ export default function Featured() {
   const [userId, setUserId] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Combine user data fetching into a single effect
-  useEffect(() => {
-      const fetchUserData = async () => {
-          const currentUser = auth.currentUser;
-          if (currentUser) {
-              setUserId(currentUser.uid);
-              const userRef = doc(db, "users", currentUser.uid);
-              const userSnap = await getDoc(userRef);
-              
-              if (userSnap.exists()) {
-                  setWishlist(userSnap.data().wishlist || []);
-                  setCart(userSnap.data().cart || []);
-              }
-          }
-          setIsLoading(false);
-      };
+  const [ownedGames, setOwnedGames] = useState<number[]>([]);
 
-      fetchUserData();
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
+      console.log('Current User:', currentUser); // Log current user to ensure it's set
+      if (currentUser) {
+        setUserId(currentUser.uid);
+
+        const userRef = doc(db, 'users', currentUser.uid);
+        const userSnap = await getDoc(userRef);
+
+        if (userSnap.exists()) {
+            setWishlist(userSnap.data().wishlist || []);
+          setCart(userSnap.data().cart || []);
+          setOwnedGames(userSnap.data().games || []);
+        }
+      }
+      setIsLoading(false); // Set loading to false after fetching data
+    });
+
+    return () => unsubscribe(); // Clean up the listener on unmount
   }, []);
+
 
   // Initialize featured games
   useEffect(() => {
@@ -271,10 +276,16 @@ export default function Featured() {
                                 </div>
                             </div>
                             <div className="flex justify-between mt-4 text-lg">
-                                  <button
-                                    onClick={() => toggleWishlist(game.id)}
-                                    className="flex gap-2 flex-row text-white bg-gray-800 px-6 py-3 rounded-md items-center justify-center"
-                                  >
+                                <button
+                                    onClick={() => {
+                                    if (!ownedGames.includes(game.id)) {
+                                        toggleWishlist(game.id);
+                                    }
+                                    }}
+                                    disabled={ownedGames.includes(game.id)}
+                                    className={`flex gap-2 flex-row text-white bg-gray-800 px-6 py-3 rounded-md items-center justify-center
+                                    ${ownedGames.includes(game.id) ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-700"}`}
+                                >
                                   <p>Wishlist</p>
                                   {wishlist.includes(game.id) ? (
                                       <FaHeart className="text-white" />
@@ -285,12 +296,21 @@ export default function Featured() {
                                 
                                 <div className="flex flex-row gap-4">
                                     <div className="flex justify-center items-center">
-                                        <p className="text-white">{game.packages?.Game?.Price === "0" ? "Free" : game.packages?.Game?.Price || "N/A"}</p>
+                                        <p className="text-white">{game.packages?.Game?.Price === "0" ? "Free" : "$" + game.packages?.Game?.Price || "N/A"}</p>
                                     </div>
                                     
-                                      <Link href="/store/cart" onClick={() => toggleCart(game.id)}  className="bg-blue-600 rounded-md px-6 py-3 text-white">
-                                      Buy Now
+                                      <Link href="/store/cart" onClick={() => toggleCart(game.id)}  className={`rounded-md px-6 py-3 text-white ${
+                                        ownedGames.includes(game.id)
+                                        ? "bg-gray-500 text-white cursor-not-allowed"
+                                        : cart.includes(game.id)
+                                        ? "bg-blue-600 text-white hover:bg-blue-500"
+                                        : "bg-blue-600 text-white hover:bg-blue-500"
+                                    }`}>
+                                        {ownedGames.includes(game.id)
+                                        ? "Owned" : "Buy Now"}
                                       </Link>
+
+                                      
                                 </div>
                             </div>
                         </div>

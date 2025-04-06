@@ -10,7 +10,7 @@ import { IoIosAdd } from "react-icons/io";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 
 import { db } from "../../../../../lib/firebase";
-import { doc, updateDoc, arrayUnion, getDoc } from "firebase/firestore";
+import { arrayRemove, doc, updateDoc, arrayUnion, getDoc } from "firebase/firestore";
 import { auth } from "../../../../../lib/firebase";
 
 import games from "@/data/games.json";
@@ -119,20 +119,28 @@ export default function Games({ isGrid, gameId }: { isGrid: boolean; gameId: num
     const [wishlist, setWishlist] = useState<number[]>([]);
     const [userId, setUserId] = useState<string | null>(null);
 
+    const [isLoading, setIsLoading] = useState(true);
+    const [ownedGames, setOwnedGames] = useState<number[]>([]);  
+
     useEffect(() => {
-      const fetchUserWishlist = async () => {
-        const currentUser = auth.currentUser;
+      const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
+        console.log('Current User:', currentUser); // Log current user to ensure it's set
         if (currentUser) {
           setUserId(currentUser.uid);
-          const userRef = doc(db, "users", currentUser.uid);
+  
+          const userRef = doc(db, 'users', currentUser.uid);
           const userSnap = await getDoc(userRef);
+  
           if (userSnap.exists()) {
-            setWishlist(userSnap.data().wishlist || []);
+
+            setCart(userSnap.data().cart || []);
+            setOwnedGames(userSnap.data().games || []);
           }
         }
-      };
+        setIsLoading(false); // Set loading to false after fetching data
+      });
   
-      fetchUserWishlist();
+      return () => unsubscribe(); // Clean up the listener on unmount
     }, []);
 
     const toggleWishlist = async (gameId: number) => {
@@ -168,8 +176,63 @@ export default function Games({ isGrid, gameId }: { isGrid: boolean; gameId: num
         return <p>Game Not Found</p>;
         
         }
+  const [cart, setCart] = useState<number[]>([]);
 
-    
+  useEffect(() => {
+    const fetchUserCart = async () => {
+      const currentUser = auth.currentUser;
+      console.log(currentUser);
+
+      if (currentUser) {
+       
+        const userRef = doc(db, "users", currentUser.uid);
+        const userSnap = await getDoc(userRef);
+
+        if (userSnap.exists()) {
+            setCart(userSnap.data().cart || []);
+        }
+      }
+    };
+
+    fetchUserCart();  
+  }, []); 
+
+  const toggleCart = async (gameId: number) => {
+    const currentUser = auth.currentUser;
+  
+    if (!currentUser) {
+      console.log("User is not authenticated");
+      return;
+    }
+  
+    console.log("gameId:", gameId);
+  
+    if (gameId === undefined) {
+      console.error("Invalid gameId");
+      return;
+    }
+  
+    try {
+      const userRef = doc(db, "users", currentUser.uid);
+      const itemExists = cart.includes(gameId); // ✅ No more gameId
+  
+      if (itemExists) {
+        await updateDoc(userRef, {
+          cart: arrayRemove(gameId), // ✅ No object wrapping
+        });
+        setCart((prev) => prev.filter((id) => id !== gameId)); // ✅ Just filtering numbers
+        console.log("Item removed from cart!");
+      } else {
+        await updateDoc(userRef, {
+          cart: arrayUnion(gameId), // ✅ Just pushing the number
+        });
+        setCart((prev) => [...prev, gameId]); // ✅ Add just the number
+        console.log("Item added to cart!");
+      }
+    } catch (error) {
+      console.error("Error toggling cart:", error);
+    }
+  };    
 
 
     return (
@@ -272,8 +335,20 @@ export default function Games({ isGrid, gameId }: { isGrid: boolean; gameId: num
                                     </>
                                 )}
                             </div>
-                            <div className="bg-blue-500 text-white px-4 py-2 rounded-md">Add to Cart</div>
-                            <div className={`flex text-white bg-gray-800 p-3 rounded-md items-center justify-center w-12 ${!isGrid ? "hidden" : "flex"}`}>
+                            <button onClick={() => toggleCart(game.id)} className={` rounded-md flex justify-center items-center text-white px-4 py-2  ${
+                            ownedGames.includes(game.id)
+                            ? "bg-gray-500 text-white cursor-not-allowed"
+                            : cart.includes(game.id)
+                            ? "bg-blue-500 text-white hover:bg-blue-400"
+                            : "bg-blue-500 text-white hover:bg-blue-400"
+                            }`}>
+                              {ownedGames.includes(game.id)
+                            ? "Owned"
+                            : cart.includes(game.id)
+                            ? "Added to Cart"
+                            : "Add to Cart"}
+                            </button>
+                            <div className={`flex text-white bg-gray-800 p-3 rounded-md items-center justify-center w-12 ${!isGrid ? "hidden" : "flex"} ${ownedGames.includes(game.id) ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-700"}`} >
                                 <FaRegHeart />
                             </div>
                         </div>

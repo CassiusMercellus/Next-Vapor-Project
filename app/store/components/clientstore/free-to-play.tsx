@@ -176,7 +176,7 @@ export default function Freetoplay() {
                                     <p className="rounded-md flex justify-center items-center text-gray-600 pr-4 pl-2 font-bold">
                                     Free
                                     </p>
-                                    <p className="bg-lime-400 rounded-md flex justify-center items-center text-black px-4 py-2 font-bold">
+                                    <p className="bg-lime-400 rounded-md flex justify-center items-center text-black px-4 py-2 font-bold hover:bg-lime-500">
                                     Play Now
                                     </p>
                                 </div>

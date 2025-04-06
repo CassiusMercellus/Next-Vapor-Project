@@ -193,7 +193,7 @@ export default function Cartgames({ gameId }: { gameId: number }) {
                             <p className="text-white font-bold">${game.packages?.Game?.Price}</p>
                             ) : (
                             <>
-                                <p className={` "bg-lime-400 rounded-md flex justify-center items-center text-black px-4 py-2 font-bold"}`}>-{game.packages?.Game?.Discount}</p>
+                                <p className={`bg-lime-400 rounded-md flex justify-center items-center text-black px-4 py-2 font-bold`}>-{game.packages?.Game?.Discount}</p>
                                 <div className="flex flex-col">
                                 <p className="rounded-md flex justify-center items-center text-gray-600 pr-4 pl-2 font-bold line-through">${game.packages?.Game?.Price}</p>
                                 <p className="text-lime-400 rounded-md flex justify-center items-center pr-4 pl-2 font-bold">${game.packages?.Game?.Saleprice}</p>

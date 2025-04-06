@@ -20,7 +20,6 @@ export default function Profile() {
             <div className="flex flex-col w-full mr-8">
                 <GameCollector />
                 <RecentActivity />
-                <GameCard />
                 <Screenshots />
             </div>
             <div className="flex flex-col">

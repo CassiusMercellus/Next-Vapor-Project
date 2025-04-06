@@ -13,7 +13,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 import games from "@/data/games.json";
 
 import { db } from "../../../../lib/firebase";
-import { doc, updateDoc, arrayUnion, getDoc } from "firebase/firestore";
+import { doc, updateDoc, arrayUnion, getDoc, arrayRemove } from "firebase/firestore";
 import { auth } from "../../../../lib/firebase";
 
 
@@ -118,21 +118,29 @@ export default function Special() {
 
   const [wishlist, setWishlist] = useState<number[]>([]);
   const [userId, setUserId] = useState<string | null>(null);
+  const [cart, setCart] = useState<number[]>([]);
+  const [ownedGames, setOwnedGames] = useState<number[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-        const fetchUserWishlist = async () => {
-          const currentUser = auth.currentUser;
+      useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
+          console.log('Current User:', currentUser); // Log current user to ensure it's set
           if (currentUser) {
             setUserId(currentUser.uid);
-            const userRef = doc(db, "users", currentUser.uid);
+    
+            const userRef = doc(db, 'users', currentUser.uid);
             const userSnap = await getDoc(userRef);
+    
             if (userSnap.exists()) {
               setWishlist(userSnap.data().wishlist || []);
+              setCart(userSnap.data().cart || []);
+              setOwnedGames(userSnap.data().games || []);
             }
           }
-        };
+          setIsLoading(false); // Set loading to false after fetching data
+        });
     
-        fetchUserWishlist();
+        return () => unsubscribe(); // Clean up the listener on unmount
       }, []);
 
       const toggleWishlist = async (gameId: number) => {
@@ -143,7 +151,7 @@ export default function Special() {
       
           if (wishlist.includes(gameId)) {
             await updateDoc(userRef, {
-              wishlist: wishlist.filter((id) => id !== gameId),
+              wishlist: arrayRemove(gameId),
             });
             setWishlist((prev) => prev.filter((id) => id !== gameId));
             console.log("Game removed from wishlist!");
@@ -231,10 +239,17 @@ export default function Special() {
                                         </div>
                                     
                                     
-                                      <button
-                                        onClick={() => toggleWishlist(game.id)}
-                                        className="flex gap-2 flex-row text-white bg-gray-800 px-6 py-3 rounded-md items-center justify-center"
-                                      >
+                                        <button
+                                          onClick={() => {
+                                            if (!ownedGames.includes(game.id)) {
+                                              toggleWishlist(game.id);
+                                            }
+                                          }}
+                                          disabled={ownedGames.includes(game.id)}
+                                          className={`flex gap-2 flex-row text-white bg-gray-800 px-6 py-3 rounded-md items-center justify-center
+                                            ${ownedGames.includes(game.id) ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-700"}`}
+                                        >
+
                                         {wishlist.includes(game.id) ? (
                                             <FaHeart className="text-white" />
                                         ) : (

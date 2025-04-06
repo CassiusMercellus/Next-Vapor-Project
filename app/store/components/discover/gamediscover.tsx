@@ -125,20 +125,28 @@ export default function Gamediscover({ game }: { game: Game }) {
   const [wishlist, setWishlist] = useState<number[]>([]);
   const [userId, setUserId] = useState<string | null>(null);
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  const [ownedGames, setOwnedGames] = useState<number[]>([]);
+
   useEffect(() => {
-    const fetchUserWishlist = async () => {
-      const currentUser = auth.currentUser;
+    const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
+      console.log('Current User:', currentUser); // Log current user to ensure it's set
       if (currentUser) {
         setUserId(currentUser.uid);
-        const userRef = doc(db, "users", currentUser.uid);
+
+        const userRef = doc(db, 'users', currentUser.uid);
         const userSnap = await getDoc(userRef);
+
         if (userSnap.exists()) {
-          setWishlist(userSnap.data().wishlist || []);
+            setWishlist(userSnap.data().wishlist || []);
+          setOwnedGames(userSnap.data().games || []);
         }
       }
-    };
+      setIsLoading(false); // Set loading to false after fetching data
+    });
 
-    fetchUserWishlist();
+    return () => unsubscribe(); // Clean up the listener on unmount
   }, []);
 
   const toggleWishlist = async (gameId: number) => {
@@ -248,8 +256,18 @@ export default function Gamediscover({ game }: { game: Game }) {
                     
                     <div className="flex flex-col justify-between items-end w-1/2">
                         <div className="flex flex-row gap-2">
-                            <div className="border flex items-center justify-center rounded-md border-gray-700 p-2 px-4 text-gray-200">Ignore</div>
-                            <button className="border flex items-center justify-center rounded-md border-gray-900 p-2 px-4 text-gray-200 bg-gray-900 gap-2 hover:bg-gray-800" onClick={() => toggleWishlist(game.id)}>
+                            <div className="border flex items-center justify-center rounded-md border-gray-700 p-2 px-4 text-gray-200 hover:bg-gray-700">Ignore</div>
+                            
+                            <button
+                                    onClick={() => {
+                                    if (!ownedGames.includes(game.id)) {
+                                        toggleWishlist(game.id);
+                                    }
+                                    }}
+                                    disabled={ownedGames.includes(game.id)}
+                                    className={`border flex items-center justify-center rounded-md border-gray-900 p-2 px-4 text-gray-200 bg-gray-900 gap-2 hover:bg-gray-800
+                                    ${ownedGames.includes(game.id) ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-700"}`}
+                                >
                               <p>Wishlist</p>
                               {wishlist.includes(game.id) ? (
                                   <FaHeart className="text-white" />

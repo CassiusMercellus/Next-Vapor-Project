@@ -16,8 +16,8 @@ export default function Libraryheader() {
             <div className="flex flex-row w-full justify-between bg-slate-700 items-center h-12">
                 <div className="flex flex-row items-center bg-slate-700 w-1/4 ml-6">
                     <Link href="/" className="mx-1 px-3 my-1 py-1 rounded-sm text-sm hover:bg-slate-600">Home</Link>
-                    <Link href="/" className="mx-1 px-3 my-1 py-1 rounded-sm text-sm hover:bg-slate-600">Collections</Link>
-                    <Link href="/" className="mx-1 px-3 my-1 py-1 rounded-sm text-sm hover:bg-slate-600">News and Updates</Link>
+                    <Link href="/library" className="mx-1 px-3 my-1 py-1 rounded-sm text-sm hover:bg-slate-600">Collections</Link>
+                    <Link href="/library" className="mx-1 px-3 my-1 py-1 rounded-sm text-sm hover:bg-slate-600">News and Updates</Link>
                 </div>
                 <div className="flex flex-row w-1/4 gap-2">
 
@@ -25,23 +25,23 @@ export default function Libraryheader() {
                         <input type="search" placeholder="Search..." className="px-4 w-72 bg-slate-800 rounded-md text-slate-300 border-hidden outline-none"/>
                         <FaSearch size={14} className="text-slate-500" />
                     </div>
-                    <Link href="/" className="flex justify-center h-10 w-10 px-2 items-center rounded-lg bg-gray-800 hover:bg-slate-600"><FaFilter  size={20} className="text-slate-500" /></Link>
-                    <Link href="/" className="flex justify-center h-10 w-10 px-2 items-center rounded-lg bg-gray-800 hover:bg-slate-600"><FaRegClock  size={20} className="text-slate-500" /></Link>
-                    <Link href="/" className="flex justify-center h-10 w-10 px-2 items-center rounded-lg bg-gray-800 hover:bg-slate-600"><FaRegCirclePlay  size={20} className="text-slate-500" /></Link>
+                    <Link href="/library" className="flex justify-center h-10 w-10 px-2 items-center rounded-lg bg-gray-800 hover:bg-slate-600"><FaFilter  size={20} className="text-slate-500" /></Link>
+                    <Link href="/library" className="flex justify-center h-10 w-10 px-2 items-center rounded-lg bg-gray-800 hover:bg-slate-600"><FaRegClock  size={20} className="text-slate-500" /></Link>
+                    <Link href="/library" className="flex justify-center h-10 w-10 px-2 items-center rounded-lg bg-gray-800 hover:bg-slate-600"><FaRegCirclePlay  size={20} className="text-slate-500" /></Link>
                     
                 </div>
 
                 <div className="flex items-center gap-2 h-10">
                     <p className="text-sm">View</p>
-                    <Link href="/" className="flex justify-center h-10 w-10 items-center rounded-lg bg-gray-800 hover:bg-slate-600"><AiFillLayout size={20} className="text-white" /></Link>
-                    <Link href="/" className="flex justify-center h-10 w-10 items-center rounded-lg bg-gray-800 hover:bg-slate-600"><RiLayout2Fill size={20} className="text-slate-500" /></Link>
-                    <Link href="/" className="flex justify-center h-10 w-10 items-center rounded-lg bg-gray-800 hover:bg-slate-600"><RiLayout3Fill size={20} className="text-slate-500" /></Link>
+                    <div className="flex justify-center h-10 w-10 items-center rounded-lg bg-gray-800 hover:bg-slate-600"><AiFillLayout size={20} className="text-white" /></div>
+                    <div className="flex justify-center h-10 w-10 items-center rounded-lg bg-gray-800 hover:bg-slate-600"><RiLayout2Fill size={20} className="text-slate-500" /></div>
+                    <div className="flex justify-center h-10 w-10 items-center rounded-lg bg-gray-800 hover:bg-slate-600"><RiLayout3Fill size={20} className="text-slate-500" /></div>
                 </div>
                 
                 
                 <div className="flex flex-row px-4 items-center bg-slate-700 w-1/4">
-                    <Link href="/" className="mx-4 text-slate-400">Activate a Product</Link>
-                    <Link href="/" className="mx-4 text-slate-400">Add a non-Steam Game</Link>
+                    <Link href="/library" className="mx-4 text-slate-400">Activate a Product</Link>
+                    <Link href="/library" className="mx-4 text-slate-400">Add a non-Steam Game</Link>
                 </div>
                 
                 

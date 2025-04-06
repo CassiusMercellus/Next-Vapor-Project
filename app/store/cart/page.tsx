@@ -1,4 +1,6 @@
 "use client"
+
+import Link from 'next/link';
 import Image from "next/image";
 import { FaTrash } from "react-icons/fa";
 import Cartdlc from "../components/cart/cartdlc";
@@ -8,7 +10,8 @@ import Header from '../../components/header';
 import { onAuthStateChanged, User, getAuth } from "firebase/auth";
 import { auth, db } from "../../../lib/firebase";
 import { useState, useEffect } from 'react';
-import { doc, getDoc, collection, query, where, getDocs, deleteDoc, getFirestore } from "firebase/firestore";
+import { doc, getDoc, collection, query, where, getDocs, deleteDoc, getFirestore, updateDoc } from "firebase/firestore";
+
 
 import gameData from "@/data/games.json";
 
@@ -126,6 +129,7 @@ interface CartGameProps {
 
 
 export default function Cart() {
+  
     const [games, setGames] = useState<any[]>(gameData);
     const [cart, setCart] = useState<Game[]>([]);
     const [loading, setLoading] = useState(true);
@@ -161,24 +165,74 @@ export default function Cart() {
     }, [auth, db]);
 
     const calculateTotal = (cart: number[]): number => {
-        console.log("Cart items:", cart);
-        // Loop through the cart (array of game IDs) and calculate total
-        return cart.reduce((total, gameId) => {
-          const game = games.find((game) => game.id === gameId); // Find the game by its ID
-          if (game && game.packages?.Game?.Price) {
-            // Get the price, remove the '$' symbol, and convert it to a number
-            const price = parseFloat(game.packages.Game.Price.replace('$', ''));
-            total += price; // Add the price to the total
+      console.log("Cart items:", cart);
+  
+      return cart.reduce((total, gameId) => {
+          const game = games.find((game) => game.id === gameId);
+  
+          if (game && game.packages?.Game) {
+              const price = parseFloat(game.packages.Game.Price.replace('$', ''));
+              const salePrice = parseFloat(game.packages.Game.Saleprice.replace('$', ''));
+  
+              const gamePrice = salePrice !== 0 ? salePrice : price;
+  
+              total += gamePrice;
           } else {
-            console.log(`No price available for game with ID ${gameId}`);
+              console.log(`No price available for game with ID ${gameId}`);
           }
           return total;
-        }, 0);
-      };
+      }, 0);
+  };
+  
     
     const total = calculateTotal(cart);
       
-
+    async function updateUserData() {
+      const auth = getAuth();
+      const user = auth.currentUser;
+  
+      if (!user) {
+          console.error('User is not logged in');
+          return;
+      }
+  
+      // Reference to the user's document in Firestore
+      const userRef = doc(db, 'users', user.uid);  // Adjust this to your Firebase collection path
+  
+      try {
+          // Fetch the current user data from Firebase
+          const userSnapshot = await getDoc(userRef);
+  
+          if (!userSnapshot.exists()) {
+              console.error('User data not found');
+              return;
+          }
+  
+          const userData = userSnapshot.data();
+          const { balance, cart, games } = userData;
+  
+          // Check if balance is greater than total
+          if (balance > total) {
+              // Subtract the total from the balance and set the new balance
+              const newBalance = balance - total;
+  
+              // Add the items from the cart to the games array
+              const updatedGames = [...games, ...cart];
+  
+              // Update the user's data in Firestore
+              await updateDoc(userRef, {
+                  balance: newBalance,
+                  games: updatedGames,
+                  cart: [],  // Clear the cart after adding to games
+              });
+  
+          } else {
+              alert('Balance is not sufficient to complete the purchase');
+          }
+      } catch (error) {
+          console.error('Error updating user data:', error);
+      }
+  }
 
     // CART
 
@@ -217,7 +271,31 @@ export default function Cart() {
 
     if (!isClient) return null; 
 
-    
+    async function clearCart() {
+        const auth = getAuth();
+        const user = auth.currentUser;
+        
+        if (!user) {
+          console.error("User is not logged in");
+          return;
+        }
+        
+        // Reference to the user's document in Firestore
+        const userRef = doc(db, 'users', user.uid);
+        
+        try {
+          // Clear the cart in Firestore
+          await updateDoc(userRef, {
+            cart: []  // Set the cart to an empty array
+          });
+      
+          // Update the local state
+          setCart([]);
+
+        } catch (error) {
+          console.error("Error clearing cart:", error);
+        }
+      }
 
 
     return (
@@ -249,20 +327,22 @@ export default function Cart() {
                                 </div>
                                 <div className="flex flex-row gap-10 w-full justify-end items-center">
                                     <p className="text-lg font-bold">${total.toFixed(2)}</p>
-                                    <div className="bg-gray-900 p-2 rounded-sm">
+                                    <Link href="/store/cart" onClick={clearCart} className="bg-gray-900 p-2 rounded-sm">
                                         <FaTrash className="text-red-500" />
-                                    </div>
+                                    </Link>
                                     
                                 </div>
                                 
                                 <div className="flex w-full">
-                                    <div className="pt-10">
-                                        <p className="bg-gray-900 p-2 px-8 rounded-sm">Continue Shopping</p>
-                                    </div>
+                                  <Link href="/store" className="pt-10">
+                                        <p className="bg-gray-900 p-2 px-8 rounded-sm hover:bg-gray-800">Continue Shopping</p>
+                                    </Link>
                                 </div>
                                 <div className="flex flex-row gap-5 w-full justify-end pt-10">
-                                    <h1 className="bg-sky-600 p-2 rounded-sm">Purchase as a Gift</h1>
-                                    <h1 className="bg-sky-600 p-2 rounded-sm">Purchase for Myself</h1>
+                                    <h1 className="bg-sky-600 p-2 rounded-sm hover:bg-sky-500">Purchase as a Gift</h1>
+                                    <Link href="/library">
+                                      <button className="bg-sky-600 p-2 rounded-sm hover:bg-sky-500" onClick={() => updateUserData()}>Purchase for Myself</button>
+                                    </Link>
                                 </div>
 
                             </div>
