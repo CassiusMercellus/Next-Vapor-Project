@@ -150,7 +150,7 @@ export default function Login() {
         {/* Sign Out Button */}
         <button 
           onClick={handleSignOut}
-          className="w-24 bg-red-500 text-white p-3 rounded-lg hover:bg-red-600"
+          className="bg-red-500 text-white p-3 rounded-lg hover:bg-red-600 w-full mt-5"
         >
           Sign Out
         </button>
