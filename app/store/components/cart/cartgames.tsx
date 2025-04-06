@@ -105,13 +105,19 @@ type Game = {
     streaming?: string;
   };
 
+  type CartgamesProps = {
+    game: number;
+  };
 
 
-export default function Cartgames({ gameId }: { gameId: number }) {
+export default function Cartgames({ game }: { game: any }) {
 
     const [cart, setCart] = useState<number[]>([]);
     const [userId, setUserId] = useState<string | null>(null);
     const [isInCart, setIsInCart] = useState(false);
+
+    const fullGameData = games.find((g) => g.id === game);
+
 
     useEffect(() => {
             const fetchUserCart = async () => {
@@ -160,11 +166,8 @@ export default function Cartgames({ gameId }: { gameId: number }) {
         }
         setIsInCart(!isInCart);
       };
-    
 
-    const game = games.find((game) => game.id === gameId);
-
-    if (!game) {
+    if (!fullGameData) {
         return <div>Game not found</div>; 
       }
 
@@ -172,37 +175,37 @@ export default function Cartgames({ gameId }: { gameId: number }) {
         <>
             <div className="bg-gray-950 flex justify-between p-5">
                 <div className="flex flex-row gap-5 items-center">
-                    {game.images?.main && (
-                        <Image src={game.images.main}
-                        alt={game.title}
+                    {fullGameData.images?.main && (
+                        <Image src={fullGameData.images.main}
+                        alt={fullGameData.title}
                         width={100}
                         height={100}
                         className="rounded-sm object-contain" >
                         </Image>
                     )}
-                    <h1 className="text-lg font-bold">{game.title}</h1>
+                    <h1 className="text-lg font-bold">{fullGameData.title}</h1>
                     <FaWindows size={25} className="text-gray-500" />
                 </div>
                 
                 <div className="flex flex-row gap-10 justify-end items-center">
-                    {game.packages?.Game?.Price === "0" ? (
+                    {fullGameData.packages?.Game?.Price === "0" ? (
                         <p className="text-white font-bold">Free</p>
                         ) : (
                         <>
-                            {game.packages?.Game?.Saleprice === "0" ? (
-                            <p className="text-white font-bold">${game.packages?.Game?.Price}</p>
+                            {fullGameData.packages?.Game?.Saleprice === "0" ? (
+                            <p className="text-white font-bold">${fullGameData.packages?.Game?.Price}</p>
                             ) : (
                             <>
-                                <p className={`bg-lime-400 rounded-md flex justify-center items-center text-black px-4 py-2 font-bold`}>-{game.packages?.Game?.Discount}</p>
+                                <p className={`bg-lime-400 rounded-md flex justify-center items-center text-black px-4 py-2 font-bold`}>-{fullGameData.packages?.Game?.Discount}</p>
                                 <div className="flex flex-col">
-                                <p className="rounded-md flex justify-center items-center text-gray-600 pr-4 pl-2 font-bold line-through">${game.packages?.Game?.Price}</p>
-                                <p className="text-lime-400 rounded-md flex justify-center items-center pr-4 pl-2 font-bold">${game.packages?.Game?.Saleprice}</p>
+                                <p className="rounded-md flex justify-center items-center text-gray-600 pr-4 pl-2 font-bold line-through">${fullGameData.packages?.Game?.Price}</p>
+                                <p className="text-lime-400 rounded-md flex justify-center items-center pr-4 pl-2 font-bold">${fullGameData.packages?.Game?.Saleprice}</p>
                                 </div>
                             </>
                             )}
                         </>
                     )}
-                    <button onClick={() => removeCart(game.id)} className="bg-gray-900 p-2 rounded-sm hover:bg-gray-800">
+                    <button onClick={() => removeCart(fullGameData.id)} className="bg-gray-900 p-2 rounded-sm hover:bg-gray-800">
                     {isInCart ? (
                         <FaPlus className="text-gray-500" />
                     ) : (

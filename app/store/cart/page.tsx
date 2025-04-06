@@ -132,40 +132,32 @@ export default function Cart() {
   
     const [games, setGames] = useState<any[]>(gameData);
     const [cart, setCart] = useState<Game[]>([]);
-    const [loading, setLoading] = useState(true);
     const auth = getAuth(app);
     const db = getFirestore(app);
+    const [userId, setUserId] = useState<string | null>(null);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        const fetchCart = async () => {
-            setLoading(true);
-            onAuthStateChanged(auth, async (user) => {
-                if (user) {
-                    try {
-                        const userRef = doc(db, "users", user.uid);
-                        const userSnap = await getDoc(userRef);
-                        if (userSnap.exists()) {
-                            const userCart = userSnap.data().cart || [];
-                            setCart(userCart);
-                            console.log("Fetched Cart: ", userCart);
-                        } else {
-                            console.log("No user data found");
-                        }
-                    } catch (error) {
-                        console.error("Error fetching Cart:", error);
-                    }
-                } else {
-                    console.log("No user is signed in");
-                }
-                setLoading(false);
-            });
-        };
-
-        fetchCart();
-    }, [auth, db]);
+        const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
+          console.log('Current User:', currentUser);
+          if (currentUser) {
+            setUserId(currentUser.uid);
+    
+            const userRef = doc(db, 'users', currentUser.uid);
+            const userSnap = await getDoc(userRef);
+    
+            if (userSnap.exists()) {
+              setCart(userSnap.data().cart || []);
+              console.log(cart)
+            }
+          }
+          setIsLoading(false); 
+        });
+    
+        return () => unsubscribe(); 
+      }, []);
 
     const calculateTotal = (cart: Game[]): number => {
-      console.log("Cart items:", cart);
   
       return cart.reduce((total, gameId) => {
           const game = games.find((game) => game.id === gameId);
@@ -297,7 +289,6 @@ export default function Cart() {
         }
       }
 
-
     return (
             <>
                 <Client />
@@ -310,11 +301,11 @@ export default function Cart() {
                         <div className="w-3/4 flex flex-col gap-5">
                         
 
-                            {loading ? (
-                                <p className="text-gray-400"></p>
+                            {isLoading ? (
+                                <p className="text-gray-400">No Items in Cart.</p>
                             ) : cart.length > 0 ? (
-                                cart.map((gameId, index) => (
-                                    <Cartgames key={index} gameId={gameId} />
+                                cart.map((game, index) => (
+                                    <Cartgames key={index} game={game} />
                                 ))  
                             ) : (
                                 <p className="text-lg text-gray-400">Your cart is empty.</p>
