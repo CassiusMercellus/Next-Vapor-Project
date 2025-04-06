@@ -125,16 +125,7 @@ export default function Wishlistedgames({ isGrid, gameId }: { isGrid: boolean; g
     const [isLoading, setIsLoading] = useState(true);
     const [ownedGames, setOwnedGames] = useState<number[]>([]);
 
-    console.log('Game ID:', gameId); 
     
-    const game = games.find((game) => game.id === gameId);
-
-    console.log('Full Game Data:', game); 
-
-    if (!game) {
-        return <p>Game not found!</p>;
-    }
-
     useEffect(() => {
       const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
         console.log('Current User:', currentUser); // Log current user to ensure it's set
@@ -155,6 +146,14 @@ export default function Wishlistedgames({ isGrid, gameId }: { isGrid: boolean; g
   
       return () => unsubscribe(); // Clean up the listener on unmount
     }, []);
+
+    
+    const game = games.find((game) => game.id === gameId);
+
+    if (!game) {
+        return <p>Game not found!</p>;
+    }
+
 
 
     const toggleWishlist = async (gameId: number) => {
