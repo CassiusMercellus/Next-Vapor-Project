@@ -26,8 +26,8 @@ export default function Login() {
     try {
       await signOut(auth);
       alert("You have signed out successfully.");
-    } catch (error) {
-      console.error("Error signing out: ", error.message);
+    } catch (error ) {
+      console.error("Error signing out: ", (error as Error).message);
     }
   };
 
@@ -83,8 +83,8 @@ export default function Login() {
       
       router.push("/store"); 
     } catch (error) {
-      console.error("Error signing in: ", error.message);
-      setError(error.message); 
+      console.error("Error signing in: ", (error as Error).message);
+      setError((error as Error).message); 
     }
   };
 
