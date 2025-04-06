@@ -1,6 +1,5 @@
 "use client"
 import Image from 'next/image'
-import eldenIcon from '../../images/eldenicon.png'
 import { useState, useEffect, useCallback  } from "react";
 import games from "@/data/games.json";
 
@@ -148,7 +147,7 @@ type Game = {
         <div className="flex flex-col p-5">
         {libraryGames.map((game, index) => (
           <div key={game.id} onClick={() => onGameClick(index)} className="flex gap-3 p-2 rounded-md items-center hover:bg-gray-700">
-            <Image src={game.images?.icon || eldenIcon} alt={game.title}
+            <Image src={game.images?.icon || ""} alt={game.title}
             width={20} height={20}/>
             <p className="text-sm">{game.title}</p>
           </div>
